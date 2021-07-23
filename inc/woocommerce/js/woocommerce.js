@@ -120,32 +120,7 @@
         },
         
         AutoCompleteSearch:function(){
-               /*var searchRequest;
-                   $('.search-autocomplete').autocomplete({
-                   classes: {
-                       "ui-autocomplete" : "ui-my-class"
-                   },
-                   minChars:3,
-                   source: function( request, response, term){
-                   var matcher = $.ui.autocomplete.escapeRegex( request.term );
-                  $.ajax({
-                      type: 'POST',
-                      dataType: 'json',
-                      url: topstore.ajaxUrl,
-                      data: {
-                       action :'top_store_search_site',
-                       'match':matcher,                
-                       },
-        success: function(res){
-              response(res.data);
-         },
-        
-      });
-    }
-  });*/
-
-
-  var cat ='';
+                   var cat ='';
                    $('.search-autocomplete').autocomplete({
                    classes: {
                        "ui-autocomplete" : "th-wp-auto-search",   
@@ -158,8 +133,6 @@
                     }else{
                       var cat = '0';
                     }
-                    
-                    
                     $(".search-autocomplete").removeClass("ui-autocomplete-loading");
                     $("#search-box #search-button").addClass("ui-autocomplete-loading"); 
                     $.ajax({
@@ -218,10 +191,6 @@
                    $(this).autocomplete("search");
                    } 
                 );
-
-
-
-
 },
       }
     TopStoreWooLib.init();

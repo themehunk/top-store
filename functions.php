@@ -99,6 +99,10 @@ define( 'TOP_STORE_THEME_SETTINGS', 'top-store-settings' );
                 'name' => esc_html__( 'Woocommerce', 'top-store' ),
                 'active_filename' => 'woocommerce/woocommerce.php',
             ),
+            'th-variation-swatches' => array(
+                'name' => esc_html__( 'Th Variation Swatches', 'top-store' ),
+                'active_filename' => 'th-variation-swatches/th-variation-swatches.php',
+            ),
             'woo-smart-wishlist' => array(
                  'name' => esc_html__( 'WPC Smart Wishlist for WooCommerce', 'top-store' ),
                  'active_filename' => 'woo-smart-wishlist/wpc-smart-wishlist.php',
