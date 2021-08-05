@@ -15,7 +15,7 @@
 						<div class="thunk-posts-description">
 							<div class="thunk-post-img-wrapper">
 							<div class="thunk-post-img">
-							<?php the_post_thumbnail('post_thumbnail_loop'); ?>
+							<?php the_post_thumbnail('full'); ?>
 						  </div>
 					   </div>
 					   

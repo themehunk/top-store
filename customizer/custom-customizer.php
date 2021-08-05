@@ -72,10 +72,15 @@ function top_store_sanitize_select( $input, $setting ) {
     $input = sanitize_key( $input );
     
     // Get list of choices from the control associated with the setting.
-    $choices = $setting->manager->get_control( $setting->id )->choices;
+    $choices = $setting->manager->get_control( $setting->id );
+  if (is_object($choices)) {
+    $choices = $choices->choices;
+  }
     
     // If the input is a valid key, return it; otherwise, return the default.
+  if (is_array($choices)) {
     return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
+  }
 }
 
 
@@ -144,10 +149,17 @@ function top_store_sanitize_radio( $input, $setting ){
   $input = sanitize_key( $input );
 
   // Get list of choices from the control associated with the setting.
-  $choices = $setting->manager->get_control( $setting->id )->choices;
+  //$choices = $setting->manager->get_control( $setting->id )->choices;
+
+  $choices = $setting->manager->get_control( $setting->id );
+  if (is_object($choices)) {
+    $choices = $choices->choices;
+  }
 
   // If the input is a valid key, return it; otherwise, return the default.
-  return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
+  if (is_array($choices)) {
+    return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
+  }
 }
 // MULTI-CHOICE
 function top_store_sanitize_multi_choices( $input, $setting ){

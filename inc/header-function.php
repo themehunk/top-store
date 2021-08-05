@@ -1,4 +1,5 @@
 <?php 
+include_once 'product-search.php';
 /**
  * Header Function for Top Store theme.
  * 
@@ -307,7 +308,7 @@ $top_store_menu_open = get_theme_mod('top_store_mobile_menu_open','overcenter');
         </div>
             <div class="main-header-col2">
              <?php if ( class_exists( 'WooCommerce' ) ){
-          top_store_product_search_box();
+		  echo top_store_product_search_box(!get_theme_mod('top_store_cat_search_disable'));
           } ?>
             </div>
             <div class="main-header-col3">
@@ -401,36 +402,9 @@ if( $description || is_customize_preview() ):?>
       }
     } 
   }
-}
-/***************************/
-// Product search
-/***************************/
-function top_store_product_search_box(){ ?>             
-<div id='search-box' class="wow thmkfadeInDown" data-wow-duration="1s">
-<form action='<?php echo esc_url( home_url( '/'  ) ); ?>' id='search-form' class="woocommerce-product-search" method='get' target='_top'>
-   <input id='search-text' name='s' placeholder='<?php echo esc_attr(get_theme_mod('search_box_text',esc_attr_x( 'Search for Products', 'placeholder', 'top-store' ))); ?>' class="form-control search-autocomplete" value='<?php echo get_search_query(); ?>' type='text' title='<?php echo esc_attr_x( 'Search for:', 'label', 'top-store' ); ?>' />
-   <?php 
-if ( class_exists( 'WooCommerce' ) && get_theme_mod('top_store_cat_search_disable')!==true):
-  ?>
-   <div class="vert-brd" ></div>
-<?php
-$args = array(
-   'taxonomy' => 'product_cat',
-   'name' => 'product_cat',
-   'value_field' => 'slug',
-   'class' => 'something',
-   'show_option_all'   => __('All Categories','top-store'),
-);
-wp_dropdown_categories( $args );
-endif;
-?>
-                        <button id='search-button' value="<?php echo esc_attr_x( 'Submit','submit button', 'top-store' ); ?>" type='submit'>                     
-                          <i class="fa fa-search" aria-hidden="true"></i>
-                        </button>
-                        <input type="hidden" name="post_type" value="product" />
-                       </form>
- </div>                    
-<?php }
+} ?>
+
+<?php 
 /**********************************/
 // header icon function (Header Layout 1)
 /**********************************/
@@ -582,7 +556,7 @@ add_action('top_store_site_preloader','top_store_preloader');
                      <div class="container">
                       <div class="search-close"><a class="search-close-btn"></a></div>
                      <?php  if ( class_exists( 'WooCommerce' ) ){
-                              top_store_product_search_box();
+                              top_store_product_search_box(!get_theme_mod('big_store_cat_search_disable'));
                           } ?>
                        </div>
        </div> 
