@@ -119,79 +119,143 @@
 
         },
         
-        AutoCompleteSearch:function(){
-                   var cat ='';
-                   $('.search-autocomplete').autocomplete({
-                   classes: {
-                       "ui-autocomplete" : "th-wp-auto-search",   
-                   }, 
-                   minLength:1,
-                   source: function( request, response, term){
-                    var matcher = $.ui.autocomplete.escapeRegex( request.term );
-                    if($("#product_cat").val()){
-                      var cat = $("#product_cat").val();
-                    }else{
-                      var cat = '0';
-                    }
-                    $(".search-autocomplete").removeClass("ui-autocomplete-loading");
-                    $("#search-box #search-button").addClass("ui-autocomplete-loading"); 
-                    $.ajax({
-                      type: 'POST',
-                      dataType: 'json',
-                      url: topstore.ajaxUrl,
-                      data: {
-                      action :'top_store_search_site',
-                       'match':matcher,  
-                       'cat':cat,              
-                       },
-                      success: function(res){ 
-                        if(res.data.length!== 0){
-                        var oldFn = $.ui.autocomplete.prototype._renderItem;
-                        $.ui.autocomplete.prototype._renderItem = function( ul, item){
-                            var re = new RegExp(this.term, "ig") ;
-                            var t = item.label.replace(re,"<span style='font-family:JosefinSans-Bold; color:#fe696a;'>" + this.term + "</span>");
-                            return $( "<li></li>" )
-                                .data( "item.autocomplete", item )
-                                .append( "<a href=" + item.link + "><div class='srch-prd-img'>" + item.imglink + "</div><div class='srch-prd-content'><span class='title'>" + t + "</span><span class='price'>" + item.price + "</spn></div></a>" )
-                                .appendTo( ul );
+AutoCompleteSearch: function () {
+      $(document).on(
+        "click",
+        ".thmk-woocommerce-search-wrap .thmk-woocommerce-search-wrap-submit button",
+        autoCompleteSubmit
+      );
+      function autoCompleteSubmit() {
+        let button_ = $(this);
+        let getUrl = button_.attr("data-url");
+        let mainWrap = button_.closest(".thmk-woocommerce-search-wrap");
+        let text_ = mainWrap.find('input[name="product-search-text"]').val();
+        let category = mainWrap.find('select[name="product_cat"]').val();
+        let title_ = text_ && text_ !== "" ? text_ : "";
+        let cate_ = category && category !== "" ? category : "";
+        // console.log("getUrl -> ", getUrl);
+        if (getUrl) {
+          let urlText =
+            getUrl + `?s=${title_}&product_cat=${cate_}&post_type=product`;
+          window.location.href = urlText;
+        }
+      }
+      // by click in input-----------------------------------------
+      $(document).on(
+        "click",
+        '.thmk-woocommerce-search-wrap input[name="product-search-text"]',
+        function () {
+          const searchBoxTxt = $(this);
+          const mainWrap = searchBoxTxt.closest(
+            ".thmk-woocommerce-search-wrap"
+          );
+          const resultWrap = mainWrap.find(".thmk-woocommerce-search-result");
+          const getLiresult = resultWrap.find("li");
+          let searchVal = searchBoxTxt.val();
+          if (
+            !mainWrap.hasClass("loading") &&
+            searchVal &&
+            searchVal.length >= 2 &&
+            getLiresult.length > 0
+          ) {
+            resultWrap.show();
+          } else {
+            resultWrap.hide();
+          }
+        }
+      );
+      var searchTimeout = null;
+      //   by input keyup----------------------------------------------
+      $(document).on(
+        "keyup",
+        '.thmk-woocommerce-search-wrap input[name="product-search-text"]',
+        autoComplete
+      );
+      function autoComplete(e) {
+        // console.log("event typr", e.type);
+        const searchBoxTxt = $(this);
+        const mainWrap = searchBoxTxt.closest(".thmk-woocommerce-search-wrap");
+        const resultWrap = mainWrap.find(".thmk-woocommerce-search-result");
+        const resultWrapUl = resultWrap.find("ul");
+        const submitButton = mainWrap.find(
+          ".thmk-woocommerce-search-wrap-submit button"
+        );
+        let searchVal = searchBoxTxt.val();
+        if (searchVal && searchVal.length >= 2) {
+          mainWrap.addClass("loading");
+          //   hide click outside
+          jQuery(document).mouseup(function (e) {
+            if (!mainWrap.is(e.target) && mainWrap.has(e.target).length === 0) {
+              resultWrap.hide();
+            }
+          });
+          //   hide click outside
+          let select_ = mainWrap.find(".thmk-woocommerce-select");
+          let cat_ = select_.length && select_.val() ? select_.val() : "";
+          let dataToAjx = {
+            action: "top_store_search_site",
+            match: searchVal,
+            cat: cat_,
+          };
+          //   return;
+          clearTimeout(searchTimeout);
+          searchTimeout = setTimeout(() => {
+            $.ajax({
+              type: "POST",
+              dataType: "json",
+              url: topstore.ajaxUrl,
+              data: dataToAjx,
+              success: function (response) {
+                // console.log("response -> ", response);
+                resultWrap.show();
+                if (response.data.length > 0) {
+                  let productLists = "";
+                  let viewMoreLink = "";
+                  let dataList = response.data;
+                  let getUrl = submitButton.attr("data-url");
+                  if (dataList.length > 5) {
+                    // fruits.slice(0, 5)
+                    dataList = dataList.slice(0, 5);
+                    let urlText =
+                      getUrl +
+                      `?s=${searchVal}&product_cat=${cat_}&post_type=product`;
+                    viewMoreLink +=
+                      '<li class="view-all-search"><a href="' + urlText + '">';
+                    viewMoreLink += "View all results";
+                    viewMoreLink += "</a></li>";
+                  }
+                  $.each(dataList, (index_, val_) => {
+                    productLists += '<li><a href="' + val_.link + '">';
+                    productLists +=
+                      '<div class="srch-prd-img"><img src="' +
+                      val_.imglink +
+                      '"></div>';
+                    productLists += '<div class="srch-prd-content">'; //content
+                    productLists +=
+                      '<span class="title">' + val_.label + "</span>";
+                    productLists += '<span class="price">'; //price
+                    productLists += val_.price;
+                    productLists += "</span>"; //price
+                    productLists += "</div>"; //content
+                    productLists += "</a></li>";
+                  });
+                  productLists += viewMoreLink;
+                  resultWrapUl.html(productLists);
+                  mainWrap.removeClass("loading");
+                } else {
+                  let htmlBlank = '<li class="no-result">No Result Found</li>';
+                  resultWrapUl.html(htmlBlank);
+                  mainWrap.removeClass("loading");
+                }
+              },
+            });
+          }, 50);
+        } else {
+          resultWrap.hide();
+        }
+      }
+    },
 
-                        }
-                      }else{
-                         $.ui.autocomplete.prototype._renderItem = function( ul, item){
-                         return $( "<li></li>" )
-                                .data( "item.autocomplete", item )
-                                .append( "<div class='no-result-msg'>No Result Found</div>" )
-                                .appendTo( ul );
-                              }
-
-                      };
-                        response(res.data.slice(0, 5));   
-                        if(res.data.length > 5){
-                        var href = window.location.href;
-                        var index = href.indexOf('/wp-admin');
-                        var homeUrl = href.substring(0, index);
-                        var serachurl = homeUrl + '?s='+ matcher +'&product_cat='+cat+'&post_type=product';
-                        $(".th-wp-auto-search").append('<a href="'+ serachurl +'" class="search-bar__view-all" >View all results</a>');
-                       }
-                        $(".search-autocomplete").removeClass("ui-autocomplete-loading");
-                        $(".woocommerce-product-search #search-button").removeClass("ui-autocomplete-loading"); 
-                      
-                      },
-
-                    });
-                  },
-                  response: function(event, ui){
-                          if (ui.content.length == 0){
-                              var noResult = { value:"",label:"",imglink:"",price:"" }; 
-                              ui.content.push(noResult);  
-                              
-                          }
-                      },
-                }).bind('focus change', function(){ 
-                   $(this).autocomplete("search");
-                   } 
-                );
-},
       }
     TopStoreWooLib.init();
 })(jQuery);

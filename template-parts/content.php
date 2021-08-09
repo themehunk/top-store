@@ -13,7 +13,7 @@
 						<div class="thunk-post-img-wrapper">
 							<div class="thunk-post-img">
 								<a href="<?php the_permalink();?>" class="post-thumb-link">
-									<?php the_post_thumbnail('post_thumbnail_loop'); ?>
+									<?php the_post_thumbnail('full'); ?>
 								</a>
 							</div>
 						</div>

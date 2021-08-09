@@ -24,7 +24,11 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 == Changelog ==
 
 = 1.1.9 =
+* Theme Make compatible with Th variation swatches plugin 
 * Th variation swatches plugin added.
+* Product search updated.
+* Customizer draft issue fixed.
+* Sidebar and footer widget title font size issue fixed.
 
 = 1.1.8 =
 * Product search updated.
@@ -98,13 +102,12 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 
 == Upgrade Notice ==
 
-= 1.1.5 =
-* Top slider speed option added.
-* Cart count in mobile issue resoilved.
-* Subcategory arrow issue resolved.
-* Wpc icon in mobile header issue resolved.
-* Account page in mobile style issue resolved.
-
+= 1.1.9 =
+* Theme Make compatible with Th variation swatches plugin 
+* Th variation swatches plugin added.
+* Product search updated.
+* Customizer draft issue fixed.
+* Sidebar and footer widget title font size issue fixed.
 
 == Resources ==
 == Screenshots ==

@@ -746,6 +746,9 @@ transition: inherit;
             0% {opacity: 0;}
             100% {opacity: 1;}
  }
+
+
+
 }
 @media screen and (max-width: 768px){
 /*mobile pan style*/
@@ -994,5 +997,3 @@ border-top: 4px solid rgb(58, 176, 226);
     display: inline-block;
     margin-left: 10px;
 }
-
-
