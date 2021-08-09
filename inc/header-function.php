@@ -402,9 +402,7 @@ if( $description || is_customize_preview() ):?>
       }
     } 
   }
-} ?>
-
-<?php 
+}
 /**********************************/
 // header icon function (Header Layout 1)
 /**********************************/
