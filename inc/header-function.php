@@ -415,7 +415,7 @@ $acc_icon = get_theme_mod('top_store_account_mobile_disable',false);
 <div class="header-icon">
      <?php 
      //Yith wishlist Icon
-    if( class_exists( 'YITH_WCWL' ) && (! class_exists( 'WPCleverWoosw' ))){
+    if( class_exists( 'YITH_WCWL' ) ){
       if($whs_icon == true){ 
        if (wp_is_mobile()!== true):
         ?>
@@ -427,10 +427,8 @@ $acc_icon = get_theme_mod('top_store_account_mobile_disable',false);
         <a class="whishlist" href="<?php echo esc_url( top_store_whishlist_url() ); ?>">
           <span class="th-whishlist-text"><?php _e('My Favourite','top-store');?></span>
           <span><?php _e('Wishlist','top-store');?></span><i  class="fa fa-heart-o" aria-hidden="true"></i></a>
-    <?php  } }
-
-        //WPC Smart Wishlist Icon
-    if( class_exists( 'WPCleverWoosw' )){
+    <?php  } 
+    } elseif( class_exists( 'WPCleverWoosw' )){
       if($whs_icon == true){ 
        if (wp_is_mobile()!== true):
         ?>
@@ -442,7 +440,9 @@ $acc_icon = get_theme_mod('top_store_account_mobile_disable',false);
         <a class="whishlist" href="<?php echo esc_url( WPcleverWoosw::get_url()); ?>">
           <span class="th-whishlist-text"><?php _e('My Favourite','top-store');?></span>
           <span><?php _e('Wishlist','top-store');?></span><i  class="fa fa-heart-o" aria-hidden="true"></i></a>
-    <?php  } }
+    <?php  }
+
+     }
 
      if($acc_icon == true){
        if (wp_is_mobile()!== true):
