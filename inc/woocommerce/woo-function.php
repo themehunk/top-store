@@ -36,7 +36,7 @@ function top_store_whishlist_check($pid){
 
      if( class_exists( 'YITH_Woocompare' ) ){
         echo top_store_add_to_compare_fltr($pid);
-        }elseif( class_exists( 'WPCleverWooscp' )){
+        }elseif( class_exists( 'WPCleverWoosc' )){
         echo top_store_wpc_add_to_compare_fltr($pid);          
     }
 
@@ -299,7 +299,7 @@ function top_store_add_to_compare_fltr($pid){
 // WPC add to compare
 /****************/
 function top_store_wpc_add_to_compare_fltr($pid){
-        echo '<div class="thunk-compare">'.do_shortcode('[wooscp id='.$pid.']').'</div>';
+        echo '<div class="thunk-compare">'.do_shortcode('[woosc id='.$pid.']').'</div>';
 }
 
 /**********************/

@@ -103,13 +103,13 @@ define( 'TOP_STORE_THEME_SETTINGS', 'top-store-settings' );
                 'name' => esc_html__( 'Th Variation Swatches', 'top-store' ),
                 'active_filename' => 'th-variation-swatches/th-variation-swatches.php',
             ),
-            'woo-smart-wishlist' => array(
-                 'name' => esc_html__( 'WPC Smart Wishlist for WooCommerce', 'top-store' ),
-                 'active_filename' => 'woo-smart-wishlist/wpc-smart-wishlist.php',
+            'yith-woocommerce-wishlist' => array(
+                 'name' => esc_html__( 'YITH WooCommerce Wishlist', 'top-store' ),
+                 'active_filename' => 'yith-woocommerce-wishlist/yith-woocommerce-wishlist.php',
              ),
-            'woo-smart-compare' => array(
-                 'name' => esc_html__( 'WPC Smart Compare for WooCommerce', 'top-store' ),
-                 'active_filename' => 'woo-smart-compare/wpc-smart-compare.php',
+            'yith-woocommerce-compare' => array(
+                 'name' => esc_html__( 'YITH WooCommerce Compare', 'top-store' ),
+                 'active_filename' => 'yith-woocommerce-compare/yith-woocommerce-compare.php',
              ),
             'lead-form-builder' => array(
                 'name' => esc_html__( 'Lead Form Builder', 'top-store' ),

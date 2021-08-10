@@ -420,7 +420,7 @@ if( (class_exists( 'YITH_Woocompare' )) ){
 $top_store_style.=" .woocommerce .entry-summary .woosc-btn{
   display:none;
 }";
-}elseif((class_exists( 'WPCleverWooscp' ))){
+}elseif((class_exists( 'WPCleverWoosc' ))){
 $top_store_style.=" .woocommerce .entry-summary a.compare.button{
   display:none;
 }";
