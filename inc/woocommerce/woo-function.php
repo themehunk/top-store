@@ -283,15 +283,18 @@ add_action( 'woocommerce_after_single_product_summary', 'top_store_single_summar
 /****************/
 
 function top_store_add_to_compare_fltr($pid){
+   if( class_exists( 'YITH_Woocompare' ) ){
           echo '<div class="thunk-compare"><span class="compare-list"><div class="woocommerce product compare-button"><a href="'.esc_url(home_url()).'?action=yith-woocompare-add-product&id='.esc_attr($pid).'" class="compare button" data-product_id="'.esc_attr($pid).'" rel="nofollow"></a></div></span></div>';
-
+}
         }
 /**********************/
 /** YITH wishlist **/
 /**********************/
 
    function top_store_whish_list($pid){
-        echo '<div class="thunk-wishlist"><span class="thunk-wishlist-inner">'.do_shortcode('[yith_wcwl_add_to_wishlist product_id='.$pid.' icon="fa fa-heart-o" label="wishlist" already_in_wishslist_text="Already" browse_wishlist_text="Added"]' ).'</span></div>'; 
+     if( class_exists( 'YITH_WCWL' ) ){
+        echo '<div class="thunk-wishlist"><span class="thunk-wishlist-inner">'.do_shortcode('[yith_wcwl_add_to_wishlist product_id='.$pid.' icon="fa fa-heart-o" label="wishlist" already_in_wishslist_text="Already" browse_wishlist_text="Added"]' ).'</span></div>';
+        } 
  }
 
 
@@ -299,15 +302,19 @@ function top_store_add_to_compare_fltr($pid){
 // WPC add to compare
 /****************/
 function top_store_wpc_add_to_compare_fltr($pid){
+   if( class_exists( 'WPCleverWoosc' ) ){
         echo '<div class="thunk-compare">'.do_shortcode('[woosc id='.$pid.']').'</div>';
+}
 }
 
 /**********************/
 /** WPC WOOSW wishlist **/
 /**********************/
 function top_store_wpc_whish_list($pid){
+   if( class_exists( 'WPCleverWoosw' ) ){
    echo '<div class="thunk-wishlist"><span class="thunk-wishlist-inner">'.do_shortcode('[woosw id='.$pid.']').'</span></div>';
  }
+}
 
 
 
