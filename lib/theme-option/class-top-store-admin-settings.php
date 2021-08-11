@@ -560,17 +560,11 @@ if ( ! class_exists( 'Top_Store_Admin_Settings' ) ){
                 }elseif($plugin_slug=='th-variation-swatches'){
      				echo'<img src="'.esc_url(TOP_STORE_THEME_URI. 'lib/theme-option/assets/images/th-variation-swatches.png' ).'" />'; 
                 $detail='';
-                }elseif($plugin_slug=='woo-smart-wishlist'){
-                	echo'<img src="'.esc_url(TOP_STORE_THEME_URI. 'lib/theme-option/assets/images/wishlist.png' ).'" />'; 
-                $detail='';
-                }elseif($plugin_slug=='woo-smart-compare'){
-                	echo'<img src="'.esc_url(TOP_STORE_THEME_URI. 'lib/theme-option/assets/images/compare.png' ).'" />'; 
-                $detail='';
                 }elseif($plugin_slug=='yith-woocommerce-wishlist'){
-                	echo'<img src="'.esc_url(TOP_STORE_THEME_URI. 'lib/theme-option/assets/images/whislist.png' ).'" />'; 
+                	echo'<img src="'.esc_url(TOP_STORE_THEME_URI. 'lib/theme-option/assets/images/yith-woocommerce-wishlist.png' ).'" />'; 
                 $detail='';
                 }elseif($plugin_slug=='yith-woocommerce-compare'){
-                	echo'<img src="'.esc_url(TOP_STORE_THEME_URI. 'lib/theme-option/assets/images/compare.png' ).'" />'; 
+                	echo'<img src="'.esc_url(TOP_STORE_THEME_URI. 'lib/theme-option/assets/images/yith-woocommerce-compare.png' ).'" />'; 
                 $detail='';
                 }elseif($plugin_slug=='one-click-demo-import'){
                 	echo'<img src="'.esc_url(  TOP_STORE_THEME_URI . 'lib/theme-option/assets/images/one-click-demo-import.png' ).'" />'; 

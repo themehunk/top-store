@@ -3208,6 +3208,19 @@ ul.products .thunk-product-hover .add_to_cart_button:hover:after,
     font-family: 'fontawesome';
     margin-left: 0;
 }
+.thunk-compare .woosc-btn:before{
+    content: "\f0ec";
+    font-family: 'fontawesome';
+    margin-left: 0;
+}
+
+.thunk-compare .woosc-btn{
+  background: transparent;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 13px;
+
+}
 .thunk-wishlist,.thunk-compare,
 .thunk-quik{
    width: 32px;

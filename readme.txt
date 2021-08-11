@@ -24,6 +24,7 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 == Changelog ==
 
 = 1.1.9 =
+* Yith plugin added.
 * Theme Make compatible with Th variation swatches plugin 
 * Th variation swatches plugin added.
 * Product search updated.
@@ -103,6 +104,7 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 == Upgrade Notice ==
 
 = 1.1.9 =
+* Yith plugin added.
 * Theme Make compatible with Th variation swatches plugin 
 * Th variation swatches plugin added.
 * Product search updated.
