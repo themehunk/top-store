@@ -24,6 +24,7 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 == Changelog ==
 
 = 1.2.0 =
+* Th advance product search plugin added.
 * Checkout page search button issue fixed.
 
 = 1.1.9 =
@@ -107,13 +108,9 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 == Upgrade Notice ==
 
 = 1.2.0 =
+* Th advance product search plugin added.
 * Checkout page search button issue fixed.
-* Yith plugin added.
-* Theme Make compatible with Th variation swatches plugin 
-* Th variation swatches plugin added.
-* Product search updated.
-* Customizer draft issue fixed.
-* Sidebar and footer widget title font size issue fixed.
+
 
 == Resources ==
 == Screenshots ==
