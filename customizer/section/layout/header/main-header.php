@@ -4,20 +4,6 @@
 /***************************************/
 // Disable product category search box
 /****************************************/
-
-$wp_customize->add_setting( 'top_store_cat_search_disable', array(
-                'default'               => false,
-                'sanitize_callback'     => 'top_store_sanitize_checkbox',
-            ) );
-$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'top_store_cat_search_disable', array(
-                'label'                 => esc_html__('Check to disable Category in Search Box', 'top-store'),
-                'type'                  => 'checkbox',
-                'section'               => 'top-store-main-header',
-                'settings'              => 'top_store_cat_search_disable',
-                'priority'   => 1,
-            ) ) );
-
-
 // choose col layout
 if(class_exists('Top_Store_WP_Customize_Control_Radio_Image')){
         $wp_customize->add_setting(

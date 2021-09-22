@@ -98,7 +98,10 @@ define( 'TOP_STORE_THEME_SETTINGS', 'top-store-settings' );
             'woocommerce' => array(
                 'name' => esc_html__( 'Woocommerce', 'top-store' ),
                 'active_filename' => 'woocommerce/woocommerce.php',
-            ),
+            ),'th-advance-product-search' => array(
+                 'name' => esc_html__( 'TH Advance Product Search', 'shopline' ),
+                 'active_filename' => 'th-advance-product-search/th-advance-product-search.php',
+             ),
             'th-variation-swatches' => array(
                 'name' => esc_html__( 'Th Variation Swatches', 'top-store' ),
                 'active_filename' => 'th-variation-swatches/th-variation-swatches.php',

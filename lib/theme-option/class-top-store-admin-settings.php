@@ -557,6 +557,9 @@ if ( ! class_exists( 'Top_Store_Admin_Settings' ) ){
                 }elseif($plugin_slug=='woocommerce'){
                 	echo'<img src="'.esc_url(TOP_STORE_THEME_URI. 'lib/theme-option/assets/images/woocommerce.png' ).'" />'; 
                 $detail='';
+                }elseif($plugin_slug=='th-advance-product-search'){
+     				echo'<img src="'.esc_url(TOP_STORE_THEME_URI. 'lib/theme-option/assets/images/th-advance-product-search.png' ).'" />'; 
+     			$detail='';	
                 }elseif($plugin_slug=='th-variation-swatches'){
      				echo'<img src="'.esc_url(TOP_STORE_THEME_URI. 'lib/theme-option/assets/images/th-variation-swatches.png' ).'" />'; 
                 $detail='';
