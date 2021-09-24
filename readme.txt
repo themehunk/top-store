@@ -110,9 +110,8 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 
 == Upgrade Notice ==
 
-= 1.2.0 =
-* Th advance product search plugin added.
-* Checkout page search button issue fixed.
+= 1.2.1 =
+* Th advance product search plugin installation message issue fixed.
 
 
 == Resources ==

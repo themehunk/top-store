@@ -301,7 +301,7 @@ $top_store_menu_open = get_theme_mod('top_store_mobile_menu_open','overcenter');
             
           </div>
           <div class="main-header-col2">
-             <?php  if ( class_exists( 'WooCommerce' ) && class_exists('TH_Advance_Product_Search') ){
+             <?php  if ( class_exists('TH_Advance_Product_Search') ){
                 echo do_shortcode('[th-aps]');
             }elseif ( is_user_logged_in()) {
                 $url = admin_url('themes.php?page=top-store');
