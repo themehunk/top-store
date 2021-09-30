@@ -7219,13 +7219,25 @@ li.thunk-woo-product-list .thunk-product-hover .woosw-btn{display:none;}
   font-size: 16px;
 }
 
-/*Th advance product search */
-.main-header-col2 a.plugin-active-msg{
-  color: #fff;
-}
+
+/* th advance product search */
+.main-header-col2 a.plugin-active-msg, 
 .search-wrapper.open a.plugin-active-msg{
-  color: #666;
+    background-color: #5662eb;
+    display: block;
+    font-size: 14px;
+    padding: 5px;
+    color: #fff;
+    border-radius: 5px;
+    width: 60%;
+    margin-left: 20%;
+    text-align: center;
 }
+.main-header-col2 a.plugin-active-msg:hover, 
+.search-wrapper.open a.plugin-active-msg:hover{
+text-decoration: underline !important;
+}
+
 
 
 @media screen and (max-width: 1300px){
