@@ -301,9 +301,9 @@ $top_store_menu_open = get_theme_mod('top_store_mobile_menu_open','overcenter');
             
           </div>
           <div class="main-header-col2">
-             <?php  if ( class_exists( 'WooCommerce' ) && class_exists('TH_Advance_Product_Search') ){
-                echo do_shortcode('[th-aps]');
-            } ?>
+             <?php  
+                top_store_th_advance_product_search();
+               ?>
           </div>
           <div class="main-header-col3">
             <div class="thunk-icon-market">
@@ -537,9 +537,7 @@ $top_store_menu_open = get_theme_mod('top_store_mobile_menu_open','overcenter');
           <div class="search-wrapper">
             <div class="container">
               <div class="search-close"><a class="search-close-btn"></a></div>
-              <?php  if ( class_exists( 'WooCommerce' ) && class_exists('TH_Advance_Product_Search') ){
-                echo do_shortcode('[th-aps]');
-              } ?>
+              <?php  top_store_th_advance_product_search(); ?>
             </div>
           </div>
           <?php }
@@ -547,3 +545,15 @@ $top_store_menu_open = get_theme_mod('top_store_mobile_menu_open','overcenter');
           if(get_theme_mod('top_store_sticky_header',false)==true):
           add_action('top_store_sticky_header','top_store_sticky_header_markup');
           endif;
+
+//********************************
+//th advance product search 
+//*******************************
+function top_store_th_advance_product_search(){
+  if ( class_exists('TH_Advance_Product_Search') ){
+                echo do_shortcode('[th-aps]');
+              } elseif ( !class_exists('TH_Advance_Product_Search') && is_user_logged_in()) {
+                $url = admin_url('themes.php?page=top-store');
+                      echo '<a href="'.$url.'" target="_blank" class="plugin-active-msg">'.__('Please Install "th advance product search" Plugin','top-store').'</a>';
+                    }
+}
