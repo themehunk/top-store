@@ -95,10 +95,14 @@ if ( ! class_exists( 'Top_Store_Admin_Settings' ) ){
             add_action( 'top_store_welcome_page_main_content', __CLASS__ . '::top_store_recommend_plugins',10 );
 
              add_action( 'top_store_welcome_page_main_content', __CLASS__ . '::top_store_useful_plugins',10 );
+
+             add_action( 'top_store_welcome_page_main_content', __CLASS__ . '::top_store_child_theme_download',10 );
            
 			add_action( 'top_store_welcome_page_main_content', __CLASS__ . '::top_store_welcome_page_pro_content',15 );
 			add_action( 'top_store_recommend_plugins_setup', __CLASS__ . '::top_store_plugin_setup_api',17);
 			add_action( 'top_store_useful_plugins_setup', __CLASS__ . '::top_store_useful_plugin_setup_api',17);
+
+			add_action( 'top_store_child_theme_download_setup', __CLASS__ . '::top_store_child_theme_download_setup_api',17);
 
 			add_action( 'top_store_welcome_page_main_content', __CLASS__ . '::top_store_welcome_page_starter_sites_section',10 );
 			// AJAX.
@@ -242,6 +246,38 @@ if ( ! class_exists( 'Top_Store_Admin_Settings' ) ){
 			    </div>
 			</div>
 			<?php } 
+
+
+			/**
+		 * Child Theme Download
+		 *
+		 */
+		static public function top_store_child_theme_download(){	
+			?>
+			<div id="top-store-child-theme-download" class="postbox top-store-child-theme-download panel">
+				<div class="inside">
+
+					<div class="rcp">
+					<div class="rcp-name"><h4><?php echo esc_html__('Top Store Child Theme Download','top-store'); ?></h4> </div>
+					<?php 
+					echo'<img src="'.esc_url( TOP_STORE_THEME_URI. '/screenshot.png' ).'"  width="75" />';
+
+						$top_store_child_theme_download_link       = apply_filters( 'top_store_child_theme_download_link','https://themehunk.com/?smd_process_download=1&download_id=26235');
+						$top_store_support_link_text  = apply_filters( 'top_store_child_theme_download_link_text', __( 'Child Theme Download', 'top-store' ));
+							echo '<p class="rcp-detail">'.esc_html($detail).' </p>';
+                echo '<p class="action-btn">
+                        <span>Version:'.esc_html('1.0.0').'</span></p>';
+                echo'<button> <a class="download-btn"  href="'.esc_url($top_store_child_theme_download_link).'"  > '.esc_html($top_store_support_link_text) .'</a>'.'</button>';
+
+							?>
+
+							</div>
+
+			    </div>
+			</div>
+			<?php } 
+
+
 
 
         /**
@@ -695,6 +731,10 @@ if ( ! class_exists( 'Top_Store_Admin_Settings' ) ){
         }
     }
 }
+
+		
+
+
 		/**
 		 * Update Admin Title.
 		 *
