@@ -13,11 +13,6 @@
  * @since 1.0.0
  */
 get_header();
-
-function mg_news_pagination_rewrite() {
-  add_rewrite_rule(get_option('category_base').'/page/?([0-9]{1,})/?$', 'index.php?pagename='.get_option('category_base').'&paged=$matches[1]', 'top');
-}
-add_action('init', 'mg_news_pagination_rewrite');
 $top_store_pages_sidebar = top_store_pages_sidebar(); ?>
 <div id="content" class="page-content blog">
             <div class="content-wrap" >
