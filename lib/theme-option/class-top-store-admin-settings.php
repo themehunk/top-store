@@ -264,7 +264,6 @@ if ( ! class_exists( 'Top_Store_Admin_Settings' ) ){
 
 						$top_store_child_theme_download_link       = apply_filters( 'top_store_child_theme_download_link','https://themehunk.com/?smd_process_download=1&download_id=26235');
 						$top_store_support_link_text  = apply_filters( 'top_store_child_theme_download_link_text', __( 'Child Theme Download', 'top-store' ));
-							echo '<p class="rcp-detail">'.esc_html($detail).' </p>';
                 echo '<p class="action-btn">
                         <span>Version:'.esc_html('1.0.0').'</span></p>';
                 echo'<button> <a class="download-btn"  href="'.esc_url($top_store_child_theme_download_link).'"  > '.esc_html($top_store_support_link_text) .'</a>'.'</button>';
