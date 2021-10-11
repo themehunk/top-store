@@ -16,6 +16,7 @@
 					<div class="tabs-list">
 					<a href="#top-store-recommend-plugins" class="tab active" data-id="recommend"><?php esc_html_e( 'Recommend Plugins', 'top-store' ); ?></a> 
 					<a href="#top-store-useful-plugins" class="tab" data-id="useful"><?php esc_html_e( 'Useful Plugins', 'top-store' ); ?></a>
+					<a href="#top-store-child-theme-download" class="tab" data-id="child-download"><?php esc_html_e( 'Child Theme Download', 'top-store' ); ?></a>
 					</div>
 						<?php do_action( 'top_store_welcome_page_content_before' ); ?>
                         <div class="top-store-content">

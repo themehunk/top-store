@@ -344,8 +344,16 @@ border-bottom:0px;
 }
 
 .top-store-menu-page-wrapper .top-store-content .postbox.top-store-recommend-plugins,
-.top-store-menu-page-wrapper .top-store-content .postbox.top-store-useful-plugins{
+.top-store-menu-page-wrapper .top-store-content .postbox.top-store-useful-plugins,
+.top-store-menu-page-wrapper .top-store-content .postbox.top-store-child-theme-download{
 width:100%;
+}
+.top-store-menu-page-wrapper .top-store-content .postbox.top-store-child-theme-download{
+padding-bottom: 15px;
+}
+
+.top-store-menu-page-wrapper .top-store-content a.download-btn {
+    text-decoration: none;
 }
 .top-store-container .postbox.top-store-recommend-plugins .rcp,
 .top-store-container .postbox.top-store-useful-plugins .rcp {
