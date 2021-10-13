@@ -14,8 +14,8 @@ get_template_part( 'inc/blog-function');
 //breadcrumbs
 get_template_part( 'lib/breadcrumbs/breadcrumbs');
 //theme-option
-get_template_part( 'lib/theme-option/class-top-store-admin-settings');
-get_template_part( 'lib/theme-option/theme-option-function');
+//get_template_part( 'lib/theme-option/class-top-store-admin-settings');
+//get_template_part( 'lib/theme-option/theme-option-function');
 //custom-style
 get_template_part( 'inc/top-store-custom-style');
 // customizer
@@ -42,3 +42,6 @@ require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 get_template_part( 'inc/woocommerce/woo-core');
 get_template_part( 'inc/woocommerce/woo-function');
 get_template_part('inc/woocommerce/woocommerce-ajax');
+
+//Th Option
+get_template_part( '/lib/th-option/th-option');
