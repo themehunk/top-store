@@ -11,7 +11,7 @@
     <p><?php _e("Before modifying theme core files. You should create child theme to make those changes update proof. Please follow this link to create child theme.",'top-store'); ?></p>
     <p>
     <a target="_blank" href="https://themehunk.com/docs/how-to-create-a-child-theme-using-themehunk-themes/">
-        <?php _e('Need help ?','top-store'); ?></a>
+        <?php _e('Create Child Theme','top-store'); ?></a>
     </p>
 </div>
 

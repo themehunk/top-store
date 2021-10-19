@@ -6,46 +6,17 @@
             <p>
             <b><?php _e('14+ pre-made templates','top-store'); ?> </b><br>
             <?php _e('You ll get more advanced features and functionalities with Top Store pro. Switch to pro version and enjoy creating online store.','top-store'); ?> </p>
-                <center><a class="button button-primary" target="_blank" href="https://themehunk.com/product/top-store-pro/"><?php _e('Upgrade','top-store'); ?> </a></center>
+                <center><a class="button ztabtn" target="_blank" href="https://themehunk.com/product/top-store-pro/"><?php _e('Upgrade','top-store'); ?> </a></center>
             </div>
 
-            <hr>
-
-            <div class="section">
-
-                <h3><?php echo esc_html__('Top Store Child Theme Download','top-store'); ?></h3>
-
-                    <div class="childtheme-info">
-
-                     <div class="childtheme-img">   
-                    <?php 
-                    echo'<img src="'.esc_url( TOP_STORE_THEME_URI. '/screenshot.png' ).'"  width="128" />'; ?>
-
-                    </div>
-
-                    <div class="childtheme-download-btn">
-                        <?php 
-
-                        $top_store_child_theme_download_link       = apply_filters( 'top_store_child_theme_download_link','https://themehunk.com/?smd_process_download=1&download_id=26235');
-                        $top_store_support_link_text  = apply_filters( 'top_store_child_theme_download_link_text', __( 'Download Now', 'top-store' ));
-                echo '<p class="action-btn">
-                        <span>Version:'.esc_html('1.0.0').'</span></p>';
-                echo'<a class="button button-primary"  href="'.esc_url($top_store_child_theme_download_link).'"  > '.esc_html($top_store_support_link_text) .'</a>'.'';
-
-                            ?>
-
-                            </div>
-                        </div>
-
-
-            </div>    
-
+    
+            
 
             <hr>
             <div class="section">
                 <h3><?php _e('Leave us a review','top-store'); ?></h3>
                 <p><?php _e('We would love to hear your feedback.','top-store'); ?> </p>
-                 <a href="https://wordpress.org/support/theme/top-store/reviews/" target="_blank" class="sidebar-link"><?php _e('Submit review','top-store'); ?></a>
+                 <a href="https://wordpress.org/support/theme/top-store/reviews/?rate=5#new-post" target="_blank" class="sidebar-link"><?php _e('Submit review','top-store'); ?></a>
 
             </div>
             <hr>

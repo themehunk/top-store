@@ -91,22 +91,19 @@ define( 'TOP_STORE_THEME_SETTINGS', 'top-store-settings' );
 		) );
 		// Recommend plugins
         add_theme_support( 'recommend-plugins', array(
-             'hunk-companion' => array(
-                'name' => esc_html__( 'Hunk Companion', 'top-store' ),
-                 'img' => 'icon-128x128.png',
-                'active_filename' => 'hunk-companion/hunk-companion.php',
-            ),
 
-             'one-click-demo-import' => array(
-                'name' => esc_html__( 'One Click Demo Import', 'top-store' ),
+        	  'lead-form-builder' => array(
+                'name' => esc_html__( 'Lead Form Builder', 'top-store' ),
                  'img' => 'icon-128x128.png',
-                'active_filename' => 'one-click-demo-import/one-click-demo-import.php',
+                'active_filename' => 'lead-form-builder/lead-form-builder.php',
             ),
-            'woocommerce' => array(
-                'name' => esc_html__( 'Woocommerce', 'top-store' ),
+            'wp-popup-builder' => array(
+                'name' => esc_html__( 'WP Popup Builder – Popup Forms & Newsletter', 'top-store' ),
                  'img' => 'icon-128x128.png',
-                'active_filename' => 'woocommerce/woocommerce.php',
-            ),'th-advance-product-search' => array(
+                'active_filename' => 'wp-popup-builder/wp-popup-builder.php',
+            ), 
+
+             'th-advance-product-search' => array(
                  'name' => esc_html__( 'TH Advance Product Search', 'shopline' ),
                   'img' => 'icon-128x128.gif',
                  'active_filename' => 'th-advance-product-search/th-advance-product-search.php',
@@ -115,6 +112,16 @@ define( 'TOP_STORE_THEME_SETTINGS', 'top-store-settings' );
                 'name' => esc_html__( 'Th Variation Swatches', 'top-store' ),
                  'img' => 'icon-128x128.gif',
                 'active_filename' => 'th-variation-swatches/th-variation-swatches.php',
+            ),
+            'hunk-companion' => array(
+                'name' => esc_html__( 'Hunk Companion', 'top-store' ),
+                 'img' => 'icon-128x128.png',
+                'active_filename' => 'hunk-companion/hunk-companion.php',
+            ),
+            'woocommerce' => array(
+                'name' => esc_html__( 'Woocommerce', 'top-store' ),
+                 'img' => 'icon-128x128.png',
+                'active_filename' => 'woocommerce/woocommerce.php',
             ),
             'yith-woocommerce-wishlist' => array(
                  'name' => esc_html__( 'YITH WooCommerce Wishlist', 'top-store' ),
@@ -126,16 +133,6 @@ define( 'TOP_STORE_THEME_SETTINGS', 'top-store-settings' );
                  'img' => 'icon-128x128.jpg',
                  'active_filename' => 'yith-woocommerce-compare/init.php',
              ),
-            'lead-form-builder' => array(
-                'name' => esc_html__( 'Lead Form Builder', 'top-store' ),
-                 'img' => 'icon-128x128.png',
-                'active_filename' => 'lead-form-builder/lead-form-builder.php',
-            ),
-            'wp-popup-builder' => array(
-                'name' => esc_html__( 'WP Popup Builder – Popup Forms & Newsletter', 'top-store' ),
-                 'img' => 'icon-128x128.png',
-                'active_filename' => 'wp-popup-builder/wp-popup-builder.php',
-            ), 
 
              'themehunk-megamenu-plus' => array(
                 'name' => esc_html__( 'ThemeHunk Megamenu – Menu builder', 'open-shop' ),

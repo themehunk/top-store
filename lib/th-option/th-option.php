@@ -21,7 +21,17 @@ function menu_tab() {
 function admin_scripts( $hook ) {
 if ($hook === 'appearance_page_thunk_started'  ) {
 wp_enqueue_style( 'thunk-started-css', get_template_directory_uri() . '/lib/th-option/assets/css/started.css' );
-wp_enqueue_script('open-shop-admin-load', get_template_directory_uri() . '/lib/th-option/assets/js/th-options.js',array( 'jquery', 'updates' ),'1', true);
+wp_enqueue_script('top-store-admin-load', get_template_directory_uri() . '/lib/th-option/assets/js/th-options.js',array( 'jquery', 'updates' ),'1', true);
+
+$data = apply_filters(
+                    'th_option_localize_vars',
+                    array(
+                        'oneClickDemo' =>esc_url( admin_url( 'themes.php?page=pt-one-click-demo-import' )),
+
+                        )
+                );
+    wp_localize_script( 'top-store-admin-load', 'THAdmin', $data); 
+
 }
 }
 function tab_constant(){
@@ -29,8 +39,9 @@ function tab_constant(){
     $tab_array = array();
     $tab_array['header'] = array('theme_brand' => __('ThemeHunk','top-store'),
     'theme_brand_url' => esc_url($theme_data->get( 'AuthorURI' )),
-    'welcome'=>sprintf(esc_html__('Welcome to %1s - Version %2s', 'top-store'), esc_html__($theme_data->get( 'Name' )), $theme_data->get( 'Version' ) ),
-    'welcome_desc' => esc_html__($theme_data->get( 'Name' ).' is beautiful one page shopping Woocommerce theme. This theme carries multiple powerful features which will help you in creating an amazing shopping site.You can design any type of shopping site and generate more profit.', 'top-store' )
+    'welcome'=>sprintf(esc_html__('Welcome to %1s ', 'top-store'), esc_html__($theme_data->get( 'Name' )), $theme_data->get( 'Version' ) ),
+    'welcome_desc' => esc_html__($theme_data->get( 'Name' ).' is beautiful one page shopping Woocommerce theme.', 'top-store' ),
+	'v'=> 'Version '.$theme_data->get( 'Version' )
     );
     return $tab_array;
 }
