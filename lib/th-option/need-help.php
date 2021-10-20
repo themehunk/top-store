@@ -18,7 +18,7 @@
 
 <div class="theme_link">
 
-    <h3><?php _e('Documentation','open-shop'); ?><!-- <php echo $theme_config['plugin_title']; ?> --></h3>
+    <h3><?php _e('Documentation','top-store'); ?></h3>
     <p><?php _e('Our WordPress Theme is well Documented, you can go with our Documentation and learn to customize Top Store.','top-store'); ?></p>
     <p><a target="_blank" href="https://themehunk.com/docs/top-store/"><?php _e(' Go to docs','top-store'); ?></a></p>
     
@@ -26,7 +26,7 @@
 
 
 <div class="theme_link">
-    <h3><?php _e('Join Group','open-shop'); ?><!-- <php echo $theme_config['plugin_title']; ?> --></h3>
+    <h3><?php _e('Join Group','top-store'); ?><!-- <php echo $theme_config['plugin_title']; ?> --></h3>
     <p> <?php _e('Join the community of friendly ThemeHunk users. Get connected, share opinion, ask questions and help each other !','top-store');?></p>    
     <p><?php _e("Please Join Our Facebook Group",'top-store'); ?></p>
 

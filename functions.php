@@ -104,7 +104,7 @@ define( 'TOP_STORE_THEME_SETTINGS', 'top-store-settings' );
             ), 
 
              'th-advance-product-search' => array(
-                 'name' => esc_html__( 'TH Advance Product Search', 'shopline' ),
+                 'name' => esc_html__( 'TH Advance Product Search', 'top-store' ),
                   'img' => 'icon-128x128.gif',
                  'active_filename' => 'th-advance-product-search/th-advance-product-search.php',
              ),
@@ -135,7 +135,7 @@ define( 'TOP_STORE_THEME_SETTINGS', 'top-store-settings' );
              ),
 
              'themehunk-megamenu-plus' => array(
-                'name' => esc_html__( 'ThemeHunk Megamenu – Menu builder', 'open-shop' ),
+                'name' => esc_html__( 'ThemeHunk Megamenu – Menu builder', 'top-store' ),
                 'img' => 'icon-128x128.png',
                 'active_filename' => 'themehunk-megamenu-plus/themehunk-megamenu.php',
             ), 
@@ -146,18 +146,18 @@ define( 'TOP_STORE_THEME_SETTINGS', 'top-store-settings' );
         // Import Data Content plugins
         add_theme_support( 'import-demo-content', array(
              'hunk-companion' => array(
-                'name' => esc_html__( 'Hunk Companion', 'open-shop' ),
+                'name' => esc_html__( 'Hunk Companion', 'top-store' ),
                 'img' => 'icon-128x128.png',
                 'active_filename' => 'hunk-companion/hunk-companion.php',
             ),
 
             'one-click-demo-import' => array(
-                'name' => esc_html__( 'One Click Demo Import', 'open-shop' ),
+                'name' => esc_html__( 'One Click Demo Import', 'top-store' ),
                 'img' => 'icon-128x128.png',
                 'active_filename' => 'one-click-demo-import/one-click-demo-import.php',
             ), 
             'woocommerce' => array(
-                'name' => esc_html__( 'Woocommerce', 'open-shop' ),
+                'name' => esc_html__( 'Woocommerce', 'top-store' ),
                 'img' => 'icon-128x128.png',
                 'active_filename' => 'woocommerce/woocommerce.php',
             ),

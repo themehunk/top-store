@@ -1,7 +1,7 @@
 <div class="sidebar-section">
             <div class="section">
             <h3 class="hndle ui-sortable-handle">
-                <span><?php _e('Top Store Pro WordPress Theme','open-shop'); ?> </span>
+                <span><?php _e('Top Store Pro WordPress Theme','top-store'); ?> </span>
             </h3>
             <p>
             <b><?php _e('14+ pre-made templates','top-store'); ?> </b><br>

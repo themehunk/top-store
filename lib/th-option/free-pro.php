@@ -121,7 +121,7 @@
                   <tr class="feature-row">
                      <td class="title">
                         <div class="title-wrap">
-                           <h4> <?php _e('Brand Section','open-shop'); ?> </h4>
+                           <h4> <?php _e('Brand Section','top-store'); ?> </h4>
                         </div>
                      </td>
                      <td class="status success"><span class="dashicon dashicons dashicons-yes" size="30"></span></td>
@@ -132,7 +132,7 @@
                   <tr class="feature-row">
                      <td class="title">
                         <div class="title-wrap">
-                           <h4><?php _e('Move to top','open-shop'); ?> </h4>
+                           <h4><?php _e('Move to top','top-store'); ?> </h4>
                         </div>
                      </td>
                      <td class="status success"><span class="dashicon dashicons dashicons-yes" size="30"></span></td>
@@ -243,7 +243,7 @@
                         </div>
                      </td>
                      <td class="status success"><span class="dashicon dashicons dashicons-yes" size="30"></span><span class="info"><?php _e('Numbered','top-store'); ?> </td>
-                     <td class="status success"><span class="dashicon dashicons dashicons-yes" size="30"></span><span class="info"><?php _e('(Numbered, Load More, Infinite Scroll)','open-shop'); ?> </td>
+                     <td class="status success"><span class="dashicon dashicons dashicons-yes" size="30"></span><span class="info"><?php _e('(Numbered, Load More, Infinite Scroll)','top-store'); ?> </td>
                   </tr>
 
                   <tr class="feature-row">
@@ -282,7 +282,7 @@
                   <tr class="feature-row">
                      <td class="title">
                         <div class="title-wrap">
-                           <h4><?php _e('Section Ordering','open-shop'); ?> </h4>
+                           <h4><?php _e('Section Ordering','top-store'); ?> </h4>
                         </div>
                      </td>
                      <td class="status error"><span class="dashicon dashicons dashicons-no-alt" size="30"></span></td>
