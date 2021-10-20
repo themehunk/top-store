@@ -6,7 +6,7 @@
         <div class="th-option-top-hdr">
             <div class="col-1">
                 <div class="logo-img">
-                <a target="_blank" href="<?php echo $theme_header['theme_brand_url']; ?>/?wp=oneline-lite" class=""> <span class="logo-image"><img src="<?php echo get_template_directory_uri(); ?>/lib/th-option/assets/images/icon.png"/><?php echo $theme_header['theme_brand']; ?></span></a>
+                <a target="_blank" href="<?php echo esc_url($theme_header['theme_brand_url']); ?>/?wp=oneline-lite" class=""> <span class="logo-image"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/lib/th-option/assets/images/icon.png"/><?php echo $theme_header['theme_brand']; ?></span></a>
             </div>
             </div>
             <div class="col-2">
@@ -15,7 +15,7 @@
                     <span><?php echo $theme_header['welcome_desc']; ?></span>
                 </div>
                 <span class="version"><?php echo $theme_header['v']; ?></span>
-                <span><?php echo _e("FREE THEME"); ?></span>
+                <span><?php _e("FREE THEME",'top-store'); ?></span>
             </div>
         </div>
         <div class="th-option-bottom-hdr">
@@ -52,7 +52,7 @@
                 <div class="title-plugin">
                 <h3><?php _e('Click Here To import Demo Content','top-store'); ?></h3>
 				 
-				 <p> <?php _e("You need to Install required plugins like- Hunk Companion, WooCommerce and One click demo import plugin. After installing required plugins Import Butoon will activate."); ?></p>
+				 <p> <?php _e("You need to Install required plugins like- Hunk Companion, WooCommerce and One click demo import plugin. After installing required plugins Import Butoon will activate.", 'top-store'); ?></p>
               <a class="button disabled importdemo"><?php _e( 'Import Demo', 'top-store' ); ?></a>
 				 
 				

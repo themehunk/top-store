@@ -7,12 +7,12 @@
         <?php
         if($this->_check_homepage_setup()){
             $class = "activated";
-            $btn_text = "Home Page Activated";
+            $btn_text = __("Home Page Activated",'top-store');
             $Bstyle = "display:none;";
             $style = "display:inline-block;";
         }else{
             $class = "default-home";
-             $btn_text = "Set Home Page";
+             $btn_text = __("Set Home Page",'top-store');
              $Bstyle = "display:inline-block;";
             $style = "display:none;";
 
