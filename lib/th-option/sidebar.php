@@ -24,7 +24,7 @@
             <div class="section">
                 <h3><?php _e('Video Tutorials','top-store'); ?></h3>
                 <p><?php _e('Want a guide? We have video tutorials to walk you through getting started.','top-store'); ?> </p>
-                <a href="https://www.youtube.com/watch?v=hZqdlkyDepE" target="_blank" class="sidebar-link"><?php _e('Watch Videos','top-store'); ?></a>
+                <a href="https://www.youtube.com/watch?v=lyYYCNaTjrk&list=PLe42R8TvpeK3NJhL9hDq41M0BrLoUpJRq" target="_blank" class="sidebar-link"><?php _e('Watch Videos','top-store'); ?></a>
             </div>
             <hr>
 

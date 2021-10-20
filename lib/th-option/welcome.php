@@ -2,18 +2,26 @@
 <!--- tab first -->
 <div class="theme_link">
     <h3><?php _e('Setup Home Page','top-store'); ?><!-- <php echo $theme_config['plugin_title']; ?> --></h3>
-    <p><?php _e('Click button to set theme default home page','top-store'); ?></p>
+    <p><?php _e('Click button to set theme default home page.','top-store'); ?></p>
      <p>
         <?php
         if($this->_check_homepage_setup()){
-            $class = "activated disabled";
-            $btn_text = "Default Homepage Activated";
+            $class = "activated";
+            $btn_text = "Home Page Activated";
+            $Bstyle = "display:none;";
+            $style = "display:inline-block;";
         }else{
             $class = "default-home";
-             $btn_text = "Setup Default Homepage";
+             $btn_text = "Set Home Page";
+             $Bstyle = "display:inline-block;";
+            $style = "display:none;";
+
+
         }
         ?>
-        <button class="button activate-now button-primary <?PHP echo $class; ?>"><?php _e('Set Home Page','top-store'); ?></button>
+        <button style="<?php echo $Bstyle; ?>"; class="button activate-now <?PHP echo $class; ?>"><?php _e($btn_text,'top-store'); ?></button>
+        <a style="<?php echo $style; ?>";  target="_blank" href="<?php echo get_home_url(); ?>" class="button alink button-primary"><?php _e('View Home Page','top-store'); ?></a>
+
          </p>
     <p>
         <a target="_blank" href="https://www.youtube.com/watch?v=lyYYCNaTjrk"><?php _e('Manually Setup','top-store'); ?></a>

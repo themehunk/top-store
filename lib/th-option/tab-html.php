@@ -27,14 +27,7 @@
 
         </div>
     </div>
-		
-		
     </div>
-
-
-
-
-
 </div>
 <div class="content-wrap">
     <div class="main">
@@ -62,13 +55,13 @@
 				 <p> <?php _e("You need to Install required plugins like- Hunk Companion, WooCommerce and One click demo import plugin. After installing required plugins Import Butoon will activate."); ?></p>
               <a class="button disabled importdemo"><?php _e( 'Import Demo', 'top-store' ); ?></a>
 				 
-				 
+				
              </div>
 
              </div>
              
                   
-                <?php echo $this->import_demo_content_setup_api(); ?>
+                <?php $this->plugin_install('import-demo-content'); ?>
             
             </div>
 
@@ -78,7 +71,7 @@
 
         <div id="Recommanded-Plugin" class="tabcontent">
             <div class="rp-two-column">
-            <?php echo $this->plugin_setup_api(); ?>
+            <?php $this->plugin_install(); ?>
             </div>
         </div>
 
