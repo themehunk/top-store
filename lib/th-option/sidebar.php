@@ -4,7 +4,7 @@
                 <span><?php _e('Top Store Pro WordPress Theme','top-store'); ?> </span>
             </h3>
             <p>
-            <b><?php _e('14+ pre-made templates','top-store'); ?> </b><br>
+            <b><?php _e('14+ pre-made premium templates','top-store'); ?> </b><br>
             <?php _e('You ll get more advanced features and functionalities with Top Store pro. Switch to pro version and enjoy creating online store.','top-store'); ?> </p>
                 <center><a class="button ztabtn" target="_blank" href="https://themehunk.com/product/top-store-pro/"><?php _e('Upgrade','top-store'); ?> </a></center>
             </div>
