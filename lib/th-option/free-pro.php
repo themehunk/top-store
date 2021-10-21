@@ -4,7 +4,7 @@
                <tbody class="table-body">
                   <tr class="table-head">
                      <th class="title" align="left"><?php _e('Features','top-store'); ?></th>
-                     <th class="status" align="center"><?php _e('Top Store lite','top-store'); ?> </th>
+                     <th class="status" align="center"><?php _e('Top Store','top-store'); ?> </th>
                      <th class="status" align="center"><?php _e('Top Store Pro','top-store'); ?> </th>
                   </tr>
 

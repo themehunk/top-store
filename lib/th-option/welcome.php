@@ -35,7 +35,7 @@
 
 
 <h3><?php _e('Documentation','top-store'); ?><!-- <php echo $theme_config['plugin_title']; ?> --></h3>
-    <p><?php _e('Our WordPress Theme is well Documented, you can go with our Documentation and learn to customize Top Store.','top-store'); ?></p>
+    <p><?php _e('Our WordPress Theme is well documented, you can go with our documentation and learn to customize Top Store.','top-store'); ?></p>
     <p><a target="_blank" href="https://themehunk.com/docs/top-store/"><?php _e(' Go to docs','top-store'); ?></a></p>
 
              
@@ -47,7 +47,7 @@
 <!--- tab second -->
 <div class="theme_link">
     <h3><?php _e('Customize Your Website','top-store'); ?><!-- <php echo $theme_config['plugin_title']; ?> --></h3>
-    <p><?php _e('Top Store Lite theme support live customizer for home page set up. Everything visible at home page can be changed through customize panel','top-store'); ?></p>
+    <p><?php _e('Top Store theme support live customizer for home page set up. Everything visible at home page can be changed through customize panel','top-store'); ?></p>
     <p>
     <a href="<?php echo admin_url('customize.php'); ?>" class="button button-primary"><?php _e('Start Customize','top-store'); ?></a>
     </p>
