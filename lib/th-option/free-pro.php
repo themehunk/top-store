@@ -18,7 +18,7 @@
                      <td class="status success"><span class="dashicon dashicons" size="30"></span>
                      <span class="info"><?php _e('3','top-store'); ?> </span></td>
                      <td class="status success"><span class="dashicon dashicons" size="30"></span>
-                     <span class="info"><a href="https://themehunk.com/product/top-store/#tabfix" target="_blank"><?php _e('11','top-store'); ?> </a></span></td>
+                     <span class="info"><a href="https://themehunk.com/product/top-store/#tabfix" target="_blank"><?php _e('14','top-store'); ?> </a></span></td>
                   </tr>
 
 
