@@ -40,7 +40,7 @@ function tab_constant(){
     $tab_array = array();
     $tab_array['header'] = array('theme_brand' => __('ThemeHunk','top-store'),
     'theme_brand_url' => esc_url($theme_data->get( 'AuthorURI' )),
-    'welcome'=>sprintf(esc_html__('Welcome to %1s ', 'top-store'), esc_html__($theme_data->get( 'Name' )), $theme_data->get( 'Version' ) ),
+    'welcome'=>sprintf(esc_html__('Welcome To %1s Theme', 'top-store'), esc_html__($theme_data->get( 'Name' )), $theme_data->get( 'Version' ) ),
     'welcome_desc' => esc_html__($theme_data->get( 'Name' ).' is beautiful one page shopping Woocommerce theme.', 'top-store' ),
 	'v'=> 'Version '.$theme_data->get( 'Version' )
     );

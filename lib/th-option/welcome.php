@@ -1,7 +1,7 @@
 
 <!--- tab first -->
 <div class="theme_link">
-    <h3><?php _e('Setup Home Page','top-store'); ?><!-- <php echo $theme_config['plugin_title']; ?> --></h3>
+    <h3><?php _e('Setup Home Page','top-store'); ?></h3>
     <p><?php _e('Click button to set theme default home page.','top-store'); ?></p>
      <p>
         <?php

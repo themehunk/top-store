@@ -28,7 +28,6 @@
 <div class="theme_link">
     <h3><?php _e('Join Group','top-store'); ?><!-- <php echo $theme_config['plugin_title']; ?> --></h3>
     <p> <?php _e('Join the community of friendly ThemeHunk users. Get connected, share opinion, ask questions and help each other !','top-store');?></p>    
-    <p><?php _e("Please Join Our Facebook Group",'top-store'); ?></p>
 
     <a href="https://www.facebook.com/groups/themehunk" target="_blank" rel="external noreferrer noopener" class="facebook-gropup is-link"><span class="dashicon dashicons dashicons-facebook-alt"></span><span>
         <?php _e(' Join our Facebook Group','top-store'); ?></span></a>
