@@ -553,7 +553,7 @@ function top_store_th_advance_product_search(){
   if ( class_exists('TH_Advance_Product_Search') ){
                 echo do_shortcode('[th-aps]');
               } elseif ( !class_exists('TH_Advance_Product_Search') && is_user_logged_in()) {
-                $url = admin_url('themes.php?page=top-store');
+                $url = admin_url('themes.php?page=thunk_started'); 
                       echo '<a href="'.$url.'" target="_blank" class="plugin-active-msg">'.__('Please Install "th advance product search" Plugin','top-store').'</a>';
                     }
 }

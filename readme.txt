@@ -23,8 +23,11 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 
 == Changelog ==
 
+= 1.2.5 =
+* Th advance product search plugin url issue fixed.
+
 = 1.2.4 =
-* top store option issue fixed.
+* Top store option issue fixed.
 
 = 1.2.3 =
 * Th option updated.
@@ -120,8 +123,8 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 
 == Upgrade Notice ==
 
-= 1.2.4 =
-* Th option header and tab style improved.
+= 1.2.5 =
+* Th advance product search plugin url issue fixed.
 
 
 == Resources ==

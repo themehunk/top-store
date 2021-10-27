@@ -6,7 +6,7 @@
         <div class="th-option-top-hdr">
             <div class="col-1">
                 <div class="logo-img">
-                <a target="_blank" href="<?php echo esc_url($theme_header['theme_brand_url']); ?>/?wp=oneline-lite" class=""> <span class="logo-image"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/lib/th-option/assets/images/icon.png"/><?php echo $theme_header['theme_brand']; ?></span></a>
+                <a target="_blank" href="<?php echo esc_url($theme_header['theme_brand_url']); ?>/?wp=top-store" class=""> <span class="logo-image"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/lib/th-option/assets/images/icon.png"/><?php echo $theme_header['theme_brand']; ?></span></a>
             </div>
             </div>
             <div class="col-2">
