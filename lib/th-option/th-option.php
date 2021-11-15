@@ -8,6 +8,7 @@ add_action('admin_menu', array($this,'menu_tab'));
     // AJAX.
     add_action( 'wp_ajax_th_activeplugin',array($this,'th_activeplugin') );
     add_action( 'wp_ajax_default_home',array($this, 'default_home') );
+    add_action( 'admin_notices', array($this, 'child_theme_admin_notice') );
 }
 function menu_tab() {
     $menu_title = esc_html__('Top Store Options', 'top-store');
@@ -33,6 +34,7 @@ $data = apply_filters(
                 );
     wp_localize_script( 'top-store-admin-load', 'THAdmin', $data); 
 
+
 }
 }
 function tab_constant(){
@@ -41,8 +43,8 @@ function tab_constant(){
     $tab_array['header'] = array('theme_brand' => __('ThemeHunk','top-store'),
     'theme_brand_url' => esc_url($theme_data->get( 'AuthorURI' )),
     'welcome'=>sprintf(esc_html__('Welcome To %1s Theme', 'top-store'), esc_html__($theme_data->get( 'Name' )), $theme_data->get( 'Version' ) ),
-    'welcome_desc' => esc_html__($theme_data->get( 'Name' ).' is beautiful one page shopping Woocommerce theme.', 'top-store' ),
-	'v'=> 'Version '.$theme_data->get( 'Version' )
+    'welcome_desc' => esc_html__($theme_data->get( 'Name' ).' is a powerful responsive eCommerce WordPress theme.', 'top-store' ),
+    'v'=> 'Version '.$theme_data->get( 'Version' )
     );
     return $tab_array;
 }
@@ -131,7 +133,9 @@ function _check_homepage_setup(){
       );
 
         }
-        
+		
+
+
 function plugin_install_button($plugin){
             $button = '<div class="rcp theme_link th-row">';
             $button .= ' <div class="th-column"><img src="'.esc_url( $plugin['thumb'] ).'" /> </div>';
@@ -148,10 +152,12 @@ function plugin_install_button($plugin){
 
 
 
+
 /**
  * Include Welcome page content
  */
  public  function plugin_install($rplugins = 'recommend-plugins'){
+
     $recommend_plugins = get_theme_support( $rplugins );
 
        if ( is_array( $recommend_plugins ) && isset( $recommend_plugins[0] ) ){
@@ -219,6 +225,14 @@ function plugin_install_button($plugin){
     } // plugin check
 }
 
-
+	public function child_theme_admin_notice() {
+    ?>
+    <div class="notice notice-success is-dismissible child-theme-notice">
+        <p><?php _e( "We highly recommended to use child theme. Child theme inherit the style and functionality of parent theme, you can easily update the parent theme without losing its Customization. That's why we recommended to use child theme to make your site update proof.", 'top-store' ); ?></p>
+        <a href="<?php echo esc_url('https://themehunk.com/child-theme/#top-store-child'); ?>" class="button" target="_blank"><?php _e('Get child theme Now','top-store') ?></a>
+    </div>
+    <?php
+}	
+	
 } // class end
 $boj = new top_store_theme_option(); ?>

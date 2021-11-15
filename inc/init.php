@@ -13,9 +13,6 @@ get_template_part( 'inc/footer-function');
 get_template_part( 'inc/blog-function');
 //breadcrumbs
 get_template_part( 'lib/breadcrumbs/breadcrumbs');
-//theme-option
-//get_template_part( 'lib/theme-option/class-top-store-admin-settings');
-//get_template_part( 'lib/theme-option/theme-option-function');
 //custom-style
 get_template_part( 'inc/top-store-custom-style');
 // customizer
