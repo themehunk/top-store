@@ -42,3 +42,4 @@ get_template_part('inc/woocommerce/woocommerce-ajax');
 
 //Th Option
 get_template_part( '/lib/th-option/th-option');
+get_template_part( 'lib/th-option/child-notify');

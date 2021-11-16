@@ -8,7 +8,7 @@ add_action('admin_menu', array($this,'menu_tab'));
     // AJAX.
     add_action( 'wp_ajax_th_activeplugin',array($this,'th_activeplugin') );
     add_action( 'wp_ajax_default_home',array($this, 'default_home') );
-    add_action( 'admin_notices', array($this, 'child_theme_admin_notice') );
+    
 }
 function menu_tab() {
     $menu_title = esc_html__('Top Store Options', 'top-store');
@@ -225,14 +225,7 @@ function plugin_install_button($plugin){
     } // plugin check
 }
 
-	public function child_theme_admin_notice() {
-    ?>
-    <div class="notice notice-success is-dismissible child-theme-notice">
-        <p><?php _e( "We highly recommended to use child theme. Child theme inherit the style and functionality of parent theme, you can easily update the parent theme without losing its Customization. That's why we recommended to use child theme to make your site update proof.", 'top-store' ); ?></p>
-        <a href="<?php echo esc_url('https://themehunk.com/child-theme/#top-store-child'); ?>" class="button" target="_blank"><?php _e('Get child theme Now','top-store') ?></a>
-    </div>
-    <?php
-}	
+	
 	
 } // class end
 $boj = new top_store_theme_option(); ?>
