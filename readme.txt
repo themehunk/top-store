@@ -23,6 +23,10 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 
 == Changelog ==
 
+= 1.2.7 =
+* Th product compare plugin added.
+* Th advance product search pro plugin issue fixed.
+
 = 1.2.6 =
 * Th option panel updated.
 * Child theme notification added.

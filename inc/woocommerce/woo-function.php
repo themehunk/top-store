@@ -34,7 +34,7 @@ function top_store_whishlist_check($pid){
         echo top_store_wpc_whish_list($pid);          
     }
 
-     if( class_exists( 'YITH_Woocompare' ) ){
+     if( class_exists( 'th_product_compare' ) ){
         echo top_store_add_to_compare_fltr($pid);
         }elseif( class_exists( 'WPCleverWoosc' )){
         echo top_store_wpc_add_to_compare_fltr($pid);          
@@ -242,6 +242,7 @@ add_action( 'woocommerce_before_shop_loop', 'top_store_shop_content_start',1);
 add_action( 'woocommerce_after_shop_loop', 'top_store_shop_content_end',1);
 remove_action( 'woocommerce_before_shop_loop_item', 'woocommerce_template_loop_product_link_open');
 remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_rating', 5 );
+remove_action('woocommerce_init','th_compare_add_action_shop_list');
 
 //To integrate with a theme, please use bellow filters to hide the default buttons. hide default wishlist button on product archive page
 add_filter( 'woosw_button_position_archive', function() {
@@ -278,14 +279,20 @@ if( ! function_exists( 'top_store_single_summary_end' ) ){
 add_action( 'woocommerce_before_single_product_summary', 'top_store_single_summary_start',0);
 add_action( 'woocommerce_after_single_product_summary', 'top_store_single_summary_end',0);
 
-/****************/
-// YITH add to compare
-/****************/
+/***********************/
+// Th Product compare
+/***********************/
 
 function top_store_add_to_compare_fltr($pid){
-   if( class_exists( 'YITH_Woocompare' ) ){
-          echo '<div class="thunk-compare"><span class="compare-list"><div class="woocommerce product compare-button"><a href="'.esc_url(home_url()).'?action=yith-woocompare-add-product&id='.esc_attr($pid).'" class="compare button" data-product_id="'.esc_attr($pid).'" rel="nofollow"></a></div></span></div>';
-}
+
+if(class_exists(('th_product_compare') )){
+    global $product;
+    $pid = $product->get_id();
+    echo '<div class="thunk-compare"><span class="compare-list"><div class="woocommerce product compare-button">
+          <a class="th-product-compare-btn compare" data-th-product-id="'.$pid.'"></a>
+          </div></span></div>';
+
+           }
         }
 /**********************/
 /** YITH wishlist **/
