@@ -314,18 +314,22 @@ $top_store_menu_open = get_theme_mod('top_store_mobile_menu_open','overcenter');
               
               ?>
               <div class="cart-icon" >
-                <?php
-                do_action( 'top_store_cart_count' );
-                do_action( 'top_store_woo_cart' );
-                ?>
+
+                  <?php if ( shortcode_exists( 'taiowc' ) ){
+             echo do_shortcode('[taiowc]');
+       } ?> 
+
+                
               </div>
               <?php  endif; }
               elseif(get_theme_mod('top_store_cart_mobile_disable')==false){?>
               <div class="cart-icon" >
-                <?php
-                do_action( 'top_store_cart_count' );
-                do_action( 'top_store_woo_cart' );
-                ?>
+
+                 <?php if ( shortcode_exists( 'taiowc' ) ){
+             echo do_shortcode('[taiowc]');
+       } ?> 
+                
+
               </div>
               <?php  } } ?>
             </div>
@@ -521,10 +525,11 @@ $top_store_menu_open = get_theme_mod('top_store_mobile_menu_open','overcenter');
                       ?>
                       <?php if(class_exists( 'WooCommerce' )){ ?>
                       <div class="cart-icon" >
-                        <?php
-                        do_action( 'top_store_cart_count' );
-                        do_action( 'top_store_woo_cart' );
-                        ?>
+
+                         <?php if ( shortcode_exists( 'taiowc' ) ){
+                          echo do_shortcode('[taiowc]');
+                        } ?> 
+                        
                       </div>
                       <?php  } ?>
                     </div>

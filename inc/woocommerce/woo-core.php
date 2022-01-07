@@ -159,6 +159,10 @@ if ( ! class_exists( 'top_store_Woocommerce_Ext' ) ) :
 					$classes[] = 'top-store-shadow-hover-' . esc_attr($shadow_hvr_style);
 				}	
 			}
+
+			if(class_exists('Taiowc_Pro')){
+                $classes[] ='taiowc-fly-cart';
+			}
 		
 			return $classes;
 		}

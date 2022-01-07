@@ -3,8 +3,8 @@ Contributors: ThemeHunk
 Tags: e-commerce, blog, grid-layout, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-logo, custom-menu, add_editor_style, featured-image-header, featured-images, footer-widgets, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready.
 Requires at least: WordPress 5.3
 Requires PHP: 5.3
-Tested up to: 5.8
-Stable tag: 1.2.6
+Tested up to: 5.8.3
+Stable tag: 1.2.8
 License: GPLv3 or later
 License URL: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -22,6 +22,16 @@ Yes our theme supports builder
 Yes, this theme is tested with latest version of WordPress, you can use it for your site.
 
 == Changelog ==
+
+= 1.2.8 =
+* Th option panel notification udpated.
+* Add pro and docs button in customizer.
+* Below footer copyright section disable.
+* Th all in one woo cart plugin added.
+* Th option panel sidebar text updated.
+* Th all in one woo cart plugin class taiowc-fly-cart added.
+* Remove theme support for widget block editor.
+
 
 = 1.2.7 =
 * Th product compare plugin added.
