@@ -14,8 +14,8 @@
           // top-footer 
           do_action( 'top_store_top_footer' ); 
           // widget-footer
-		      do_action( 'top_store_widget_footer' );
-		      // below-footer
+		  do_action( 'top_store_widget_footer' );
+		  // below-footer
           do_action( 'top_store_below_footer' );  
         ?>
      </footer> <!-- end footer -->

@@ -387,8 +387,8 @@ body.top-store-dark .ribbon-btn:hover,body.top-store-dark .header-support-conten
    $top_store_main_hdr_txt_clr = esc_html(get_theme_mod('top_store_main_hdr_txt_clr','#fff'));
    $top_store_style.= ".main-header:before,body.top-store-dark .main-header:before{
    background:{$top_store_main_hdr_bg_clr};}.site-title span a,.main-header-bar .header-icon a,.main-header-bar .thunk-icon-market .cart-contents,.th-whishlist-text, .account-text:nth-of-type(1){color:{$top_store_main_hdr_txt_clr};}
-   .thunk-icon-market .cart-icon .taiowc-icon{fill:{$top_store_main_hdr_txt_clr};}
-   .thunk-icon-market .cart-icon .taiowc-cart-item{color:{$top_store_main_hdr_txt_clr};}
+   .thunk-icon-market .cart-icon .taiowc-icon,.thunk-icon-market .taiowc-icon svg{fill:{$top_store_main_hdr_txt_clr};}
+   .thunk-icon-market .cart-icon .taiowc-cart-item,.thunk-icon-market .taiowc-content .taiowc-total{color:{$top_store_main_hdr_txt_clr};}
     body.top-store-dark .site-title span a,body.top-store-dark .main-header-bar,body.top-store-dark .main-header-bar .header-icon a,body.top-store-dark .main-header-bar .thunk-icon-market .cart-contents,body.top-store-dark .th-whishlist-text,body.top-store-dark .account-text:nth-of-type(1){color:{$top_store_main_hdr_txt_clr};}
    ";
 

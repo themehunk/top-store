@@ -508,11 +508,21 @@ wp.customize('header_image', function (value){
         $('.top-header').css('background-image', 'url( '+ to +')');
     });
 });
+
+wp.customize( 'top_store_main_hdr_txt_clr', function( setting ){
+        setting.bind( function( cssval ){
+                var dynamicStyle = '';
+                dynamicStyle += '.site-title span a,.main-header-bar,.main-header-bar .header-icon a,.main-header-bar .thunk-icon-market .cart-contents,.th-whishlist-text, .account-text:nth-of-type(1),.sticky-header-col2 .top-store-menu > li > a,.sticky-header-col3 .thunk-icon .cart-icon a.cart-contents, .sticky-header-col3 .header-icon a.prd-search, .sticky-header-col3 .header-icon a.whishlist, .sticky-header-col3 .header-icon a.account,.sticky-header .site-title span a,.sticky-header .site-description,body.top-store-dark .site-title span a,body.top-store-dark .main-header-bar,body.top-store-dark .main-header-bar .header-icon a,body.top-store-dark .main-header-bar .thunk-icon-market .cart-contents,body.top-store-dark .th-whishlist-text,body.top-store-dark .account-text:nth-of-type(1),body.top-store-dark .sticky-header-col2 .top-store-menu > li > a,body.top-store-dark .sticky-header-col3 .thunk-icon .cart-icon a.cart-contents, body.top-store-dark .sticky-header-col3 .header-icon a.prd-search, body.top-store-dark .sticky-header-col3 .header-icon a.whishlist, body.top-store-dark .sticky-header-col3 .header-icon a.account,body.top-store-dark .sticky-header .site-title span a,body.top-store-dark .sticky-header .site-description,body.top-store-dark .sticky-header-col3 .header-icon span a, .thunk-icon-market .cart-icon .taiowc-cart-item,.thunk-icon-market .taiowc-content .taiowc-total{ color: ' + cssval + '} ';
+                dynamicStyle += '.thunk-icon-market .cart-icon .taiowc-icon,.thunk-icon-market .cart-icon .taiowc-cart-item,.thunk-icon-market .cart-icon .taiowc-icon,.thunk-icon-market .taiowc-icon svg{ fill: ' + cssval + '} ';
+                top_store_add_dynamic_css( 'top_store_main_hdr_txt_clr', dynamicStyle );
+        } );
+
+} );
+
 top_store_css( 'top_store_above_hdr_bg_clr','background','.top-header:before,body.top-store-dark .top-header:before');
 top_store_css( 'top_store_main_hdr_bg_clr','background','.main-header:before,.sticky-header:before,body.top-store-dark .main-header:before,body.top-store-dark .sticky-header:before');
-top_store_css( 'top_store_main_hdr_txt_clr','color','.site-title span a,.main-header-bar,.main-header-bar .header-icon a,.main-header-bar .thunk-icon-market .cart-contents,.th-whishlist-text, .account-text:nth-of-type(1),.sticky-header-col2 .top-store-menu > li > a,.sticky-header-col3 .thunk-icon .cart-icon a.cart-contents, .sticky-header-col3 .header-icon a.prd-search, .sticky-header-col3 .header-icon a.whishlist, .sticky-header-col3 .header-icon a.account,.sticky-header .site-title span a,.sticky-header .site-description,body.top-store-dark .site-title span a,body.top-store-dark .main-header-bar,body.top-store-dark .main-header-bar .header-icon a,body.top-store-dark .main-header-bar .thunk-icon-market .cart-contents,body.top-store-dark .th-whishlist-text,body.top-store-dark .account-text:nth-of-type(1),body.top-store-dark .sticky-header-col2 .top-store-menu > li > a,body.top-store-dark .sticky-header-col3 .thunk-icon .cart-icon a.cart-contents, body.top-store-dark .sticky-header-col3 .header-icon a.prd-search, body.top-store-dark .sticky-header-col3 .header-icon a.whishlist, body.top-store-dark .sticky-header-col3 .header-icon a.account,body.top-store-dark .sticky-header .site-title span a,body.top-store-dark .sticky-header .site-description,body.top-store-dark .sticky-header-col3 .header-icon span a, .thunk-icon-market .cart-icon .taiowc-cart-item');
-top_store_css( 'top_store_main_hdr_txt_clr','fill','.thunk-icon-market .cart-icon .taiowc-icon');
-    // Move to Top
+
+// Move to Top
 top_store_css( 'top_store_move_to_top_bg_clr','background','#move-to-top');
 top_store_css( 'top_store_move_to_top_icon_clr','color','#move-to-top');
 })( jQuery );

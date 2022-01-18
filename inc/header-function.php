@@ -315,9 +315,7 @@ $top_store_menu_open = get_theme_mod('top_store_mobile_menu_open','overcenter');
               ?>
               <div class="cart-icon" >
 
-                  <?php if ( shortcode_exists( 'taiowc' ) ){
-             echo do_shortcode('[taiowc]');
-       } ?> 
+                  <?php top_store_th_cart(); ?> 
 
                 
               </div>
@@ -325,9 +323,7 @@ $top_store_menu_open = get_theme_mod('top_store_mobile_menu_open','overcenter');
               elseif(get_theme_mod('top_store_cart_mobile_disable')==false){?>
               <div class="cart-icon" >
 
-                 <?php if ( shortcode_exists( 'taiowc' ) ){
-             echo do_shortcode('[taiowc]');
-       } ?> 
+                 <?php top_store_th_cart(); ?> 
                 
 
               </div>
@@ -526,9 +522,7 @@ $top_store_menu_open = get_theme_mod('top_store_mobile_menu_open','overcenter');
                       <?php if(class_exists( 'WooCommerce' )){ ?>
                       <div class="cart-icon" >
 
-                         <?php if ( shortcode_exists( 'taiowc' ) ){
-                          echo do_shortcode('[taiowc]');
-                        } ?> 
+                         <?php top_store_th_cart(); ?> 
                         
                       </div>
                       <?php  } ?>
@@ -551,14 +545,57 @@ $top_store_menu_open = get_theme_mod('top_store_mobile_menu_open','overcenter');
           add_action('top_store_sticky_header','top_store_sticky_header_markup');
           endif;
 
-//********************************
+//********************************//
 //th advance product search 
-//*******************************
+//*******************************//
 function top_store_th_advance_product_search(){
-  if ( shortcode_exists('th-aps') ){
+
+              if ( shortcode_exists('th-aps') ){
+
                 echo do_shortcode('[th-aps]');
+
               } elseif ( !shortcode_exists('th-aps') && is_user_logged_in()) {
-                $url = admin_url('themes.php?page=thunk_started&searchp');
-                      echo '<a href="'.$url.'" target="_blank" class="plugin-active-msg">'.__('Please Install "th advance product search" Plugin','top-store').'</a>';
-                    }
+
+                $url = admin_url('themes.php?page=thunk_started&th-tab=recommended-plugin');
+
+                ?>
+
+                <a target="_blank" class="plugin-active-msg" href="<?php echo esc_url($url);?>">
+
+                  <?php _e('Please Install "th advance product search" Plugin','top-store');?>
+                  
+                </a>
+
+
+                <?php      
+
+            }
+}
+
+//********************************//
+//th woo cart 
+//*******************************//
+
+function top_store_th_cart(){
+
+  if ( shortcode_exists('taiowc') ){
+
+                echo do_shortcode('[taiowc]');
+
+              } elseif ( !shortcode_exists('taiowc') && is_user_logged_in()) {
+
+                $url = admin_url('themes.php?page=thunk_started&th-tab=recommended-plugin');
+
+                ?>
+
+                <a target="_blank" class="cart-plugin-active-msg" href="<?php echo esc_url($url);?>">
+
+                  <?php _e('Add Cart','top-store');?>
+                  
+                </a>
+
+
+                <?php      
+
+            }
 }
