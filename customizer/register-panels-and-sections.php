@@ -147,21 +147,21 @@ $wp_customize->add_panel( 'top-store-panel-frontpage', array(
 $top_store_top_slider_section = new top_store_WP_Customize_Section( $wp_customize, 'top_store_top_slider_section', array(
     'title'    => __( 'Top Slider', 'top-store' ),
     'panel'    => 'top-store-panel-frontpage',
-    'priority' => 4,
+    'priority' => 1,
   ));
 $wp_customize->add_section( $top_store_top_slider_section );
 
 $top_store_category_tab_section = new top_store_WP_Customize_Section( $wp_customize, 'top_store_category_tab_section', array(
     'title'    => __( 'Tabbed Product Carousel', 'top-store' ),
     'panel'    => 'top-store-panel-frontpage',
-    'priority' => 4,
+    'priority' => 3,
   ));
 $wp_customize->add_section( $top_store_category_tab_section );
 
 $top_store_product_slide_section = new top_store_WP_Customize_Section( $wp_customize, 'top_store_product_slide_section', array(
     'title'    => __( 'Product Carousel', 'top-store' ),
     'panel'    => 'top-store-panel-frontpage',
-    'priority' => 4,
+    'priority' => 5,
   ));
 $wp_customize->add_section( $top_store_product_slide_section );
 
@@ -175,28 +175,28 @@ $wp_customize->add_section( $top_store_cat_slide_section );
 $top_store_product_slide_list = new top_store_WP_Customize_Section( $wp_customize, 'top_store_product_slide_list', array(
     'title'    => __( 'Product List Carousel', 'top-store' ),
     'panel'    => 'top-store-panel-frontpage',
-    'priority' => 4,
+    'priority' => 7,
   ));
 $wp_customize->add_section( $top_store_product_slide_list );
 // ribbon
 $top_store_ribbon = new top_store_WP_Customize_Section( $wp_customize, 'top_store_ribbon', array(
     'title'    => __( 'Ribbon', 'top-store' ),
     'panel'    => 'top-store-panel-frontpage',
-    'priority' => 4,
+    'priority' => 2,
   ));
 $wp_customize->add_section( $top_store_ribbon );
 
 $top_store_banner = new top_store_WP_Customize_Section( $wp_customize, 'top_store_banner', array(
     'title'    => __( 'Banner', 'top-store' ),
     'panel'    => 'top-store-panel-frontpage',
-    'priority' => 4,
+    'priority' => 6,
   ));
 $wp_customize->add_section( $top_store_banner );
 
 $top_store_brand = new top_store_WP_Customize_Section( $wp_customize, 'top_store_brand', array(
     'title'    => __( 'Brand', 'top-store' ),
     'panel'    => 'top-store-panel-frontpage',
-    'priority' => 4,
+    'priority' => 8,
   ));
 $wp_customize->add_section( $top_store_brand );
 
