@@ -395,3 +395,9 @@ if ( ! function_exists( 'wp_body_open' ) ) {
 		do_action( 'wp_body_open' );
 	}
 }
+if ( !empty(get_option( 'theme_mods_top-store-pro')) ) {
+function top_store_theme_switch() {
+    update_option( 'theme_mods_top-store-pro', get_option( 'theme_mods_top-store') );
+}
+add_action('switch_theme', 'top_store_theme_switch');
+}
