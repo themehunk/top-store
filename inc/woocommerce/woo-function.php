@@ -279,7 +279,7 @@ if(class_exists(('th_product_compare') )){
 
    function top_store_whish_list($pid){
      if( class_exists( 'YITH_WCWL' ) ){
-        echo '<div class="thunk-wishlist"><span class="thunk-wishlist-inner">'.do_shortcode('[yith_wcwl_add_to_wishlist product_id='.$pid.' icon="fa fa-heart-o" label="wishlist" already_in_wishslist_text="Already" browse_wishlist_text="Added"]' ).'</span></div>';
+        echo '<div class="thunk-wishlist"><span class="thunk-wishlist-inner">'.do_shortcode('[yith_wcwl_add_to_wishlist product_id='.$pid.' icon="th-icon th-icon-heart1" label="wishlist" already_in_wishslist_text="Already" browse_wishlist_text="Added"]' ).'</span></div>';
         } 
  }
 
@@ -319,9 +319,9 @@ echo esc_html($user->display_name);
 /** My Account Menu **/
 function top_store_account(){
  if ( is_user_logged_in() ){?>
-<a class="account" href="<?php echo esc_url(get_permalink( get_option('woocommerce_myaccount_page_id') ));?>"><span class="account-text"><?php _e('Hello , ','top-store');?> <?php top_store_display_admin_name(); ?></span><span class="account-text"><?php _e('My account','top-store');?></span><i class="fa fa-user-o" aria-hidden="true"></i></a>
+<a class="account" href="<?php echo esc_url(get_permalink( get_option('woocommerce_myaccount_page_id') ));?>"><span class="account-text"><?php _e('Hello , ','top-store');?> <?php top_store_display_admin_name(); ?></span><span class="account-text"><?php _e('My account','top-store');?></span><i class="th-icon th-icon-user"></i></a>
 <?php } else {?>
-<span><a href="<?php echo esc_url(get_permalink( get_option('woocommerce_myaccount_page_id') ));?>"><span class="account-text"><?php _e('Login / Signup','top-store');?></span><span class="account-text"><?php _e('My account','top-store');?></span><i class="fa fa-lock" aria-hidden="true"></i></a></span>
+<span><a href="<?php echo esc_url(get_permalink( get_option('woocommerce_myaccount_page_id') ));?>"><span class="account-text"><?php _e('Login / Signup','top-store');?></span><span class="account-text"><?php _e('My account','top-store');?></span><i class="th-icon th-icon-lock1"></i></a></span>
 <?php }
  }
 

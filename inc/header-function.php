@@ -408,26 +408,26 @@ $top_store_menu_open = get_theme_mod('top_store_mobile_menu_open','overcenter');
       if (wp_is_mobile()!== true):
       ?>
       <a class="whishlist" href="<?php echo esc_url( top_store_whishlist_url() ); ?>">
-        <span class="th-whishlist-text"><?php _e('My Favourite','top-store');?></span> <span><?php _e('Wishlist','top-store');?></span><i  class="fa fa-heart-o" aria-hidden="true"></i></a>
+        <span class="th-whishlist-text"><?php _e('My Favourite','top-store');?></span> <span><?php _e('Wishlist','top-store');?></span><i class="th-icon th-icon-heartline"></i></a>
         
         <?php endif; }
         elseif($whs_icon == false){?>
         <a class="whishlist" href="<?php echo esc_url( top_store_whishlist_url() ); ?>">
           <span class="th-whishlist-text"><?php _e('My Favourite','top-store');?></span>
-          <span><?php _e('Wishlist','top-store');?></span><i  class="fa fa-heart-o" aria-hidden="true"></i></a>
+          <span><?php _e('Wishlist','top-store');?></span><i class="th-icon th-icon-heartline"></i></a>
           <?php  }
           } elseif( class_exists( 'WPCleverWoosw' )){
           if($whs_icon == true){
           if (wp_is_mobile()!== true):
           ?>
           <a class="whishlist" href="<?php echo esc_url( WPcleverWoosw::get_url()); ?>">
-            <span class="th-whishlist-text"><?php _e('My Favourite','top-store');?></span> <span><?php _e('Wishlist','top-store');?></span><i  class="fa fa-heart-o" aria-hidden="true"></i></a>
+            <span class="th-whishlist-text"><?php _e('My Favourite','top-store');?></span> <span><?php _e('Wishlist','top-store');?></span><i class="th-icon th-icon-heartline"></i></a>
             
             <?php endif; }
             elseif($whs_icon == false){?>
             <a class="whishlist" href="<?php echo esc_url( WPcleverWoosw::get_url()); ?>">
               <span class="th-whishlist-text"><?php _e('My Favourite','top-store');?></span>
-              <span><?php _e('Wishlist','top-store');?></span><i  class="fa fa-heart-o" aria-hidden="true"></i></a>
+              <span><?php _e('Wishlist','top-store');?></span><i class="th-icon th-icon-heartline"></i></a>
               <?php  }
               }
               if($acc_icon == true){
@@ -508,24 +508,47 @@ $top_store_menu_open = get_theme_mod('top_store_mobile_menu_open','overcenter');
                   <div class="thunk-icon">
                     
                     <div class="header-icon">
-                      <a class="prd-search" href="#"><i class="fa fa-search"></i></a>
+                      <a class="prd-search-icon"><?php  if ( shortcode_exists('tapsp') ){
+
+          echo do_shortcode('[tapsp layout="icon_style"]'); 
+
+        }elseif( shortcode_exists('th-aps') ){
+
+              echo do_shortcode('[th-aps layout="icon_style"]'); 
+              
+        }?></a>     
                       <?php
                       if( class_exists( 'WPCleverWoosw' )){ ?>
-                      <a class="whishlist" href="<?php echo esc_url( WPcleverWoosw::get_url()); ?>"><i  class="fa fa-heart-o" aria-hidden="true"></i></a>
+
+                      <a class="whishlist" href="<?php echo esc_url( WPcleverWoosw::get_url()); ?>">
+
+                        <i  class="th-icon th-icon-heartline" aria-hidden="true"></i>
+
+                      </a>
+
                       <?php  }
+
                       if( class_exists( 'YITH_WCWL' ) && (! class_exists( 'WPCleverWoosw' ))){
+
                       ?>
-                      <a class="whishlist" href="<?php echo esc_url( top_store_whishlist_url() ); ?>"><i  class="fa fa-heart-o" aria-hidden="true"></i></a>
+                      <a class="whishlist" href="<?php echo esc_url( top_store_whishlist_url() ); ?>"><i  class="th-icon th-icon-heartline" aria-hidden="true"></i></a>
+
                       <?php }
+
                       top_store_account();
+
                       ?>
+
                       <?php if(class_exists( 'WooCommerce' )){ ?>
+
                       <div class="cart-icon" >
 
-                         <?php top_store_th_cart(); ?> 
+                      <?php top_store_th_cart(); ?> 
                         
                       </div>
+
                       <?php  } ?>
+
                     </div>
                     
                   </div>
@@ -554,7 +577,11 @@ function top_store_th_advance_product_search(){
 
                 echo do_shortcode('[th-aps]');
 
-              } elseif ( !shortcode_exists('th-aps') && is_user_logged_in()) {
+              }elseif ( shortcode_exists('tapsp') ){
+
+                echo do_shortcode('[tapsp]');
+
+              }elseif ( !shortcode_exists('th-aps') && !shortcode_exists('tapsp') && is_user_logged_in()) {
 
                 $url = admin_url('themes.php?page=thunk_started&th-tab=recommended-plugin');
 
@@ -582,7 +609,11 @@ function top_store_th_cart(){
 
                 echo do_shortcode('[taiowc]');
 
-              } elseif ( !shortcode_exists('taiowc') && is_user_logged_in()) {
+              }elseif ( shortcode_exists('taiowcp') ){
+
+                echo do_shortcode('[taiowcp]');
+
+              } elseif ( !shortcode_exists('taiowc') && !shortcode_exists('taiowcp') && is_user_logged_in()) {
 
                 $url = admin_url('themes.php?page=thunk_started&th-tab=recommended-plugin');
 

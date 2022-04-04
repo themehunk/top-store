@@ -330,8 +330,8 @@ ul.products .thunk-product-hover .add_to_cart_button:hover:after,
 .woocommerce ul.products li.product .add_to_cart_button:hover:after, 
 .woocommerce .added_to_cart.wc-forward:hover:after,.summary .yith-wcwl-add-to-wishlist .add_to_wishlist:hover:before, .summary .yith-wcwl-add-to-wishlist .yith-wcwl-wishlistaddedbrowse a::before, .summary .yith-wcwl-add-to-wishlist .yith-wcwl-wishlistexistsbrowse a::before,.th-hlight-icon,.ribbon-btn:hover,.thunk-product .yith-wcwl-wishlistexistsbrowse:before,.woocommerce .entry-summary a.compare.button:hover:before,.th-slide-button,.th-slide-button:after,.sider.overcenter .sider-inner ul.top-store-menu li a:hover,.reply a,.single-product .product_meta a,.woosw-btn:hover:before,.woosw-added:before,.wooscp-btn:hover:before,#top-store-mobile-bar .count-item, a.th-product-compare-btn.button.btn_type.th-added-compare:before{color:{$top_store_theme_clr}} 
     
-    .thunk-icon-market .cart-icon .taiowc-icon:hover{fill:{$top_store_theme_clr};}
-   .thunk-icon-market .cart-icon .taiowc-cart-item:hover{color:{$top_store_theme_clr};}
+    .thunk-icon-market .cart-icon .taiowc-icon:hover,.woocommerce .entry-summary .th-product-compare-btn.btn_type.th-added-compare, .woocommerce .entry-summary a.th-product-compare-btn:before,.thunk-icon-market .cart-icon .taiowcp-icon:hover{color:{$top_store_theme_clr};}
+   .thunk-icon-market .cart-icon .taiowc-cart-item:hover,.thunk-icon-market .cart-icon .taiowcp-cart-item:hover{color:{$top_store_theme_clr};}
  ";
 
     
@@ -387,8 +387,8 @@ body.top-store-dark .ribbon-btn:hover,body.top-store-dark .header-support-conten
    $top_store_main_hdr_txt_clr = esc_html(get_theme_mod('top_store_main_hdr_txt_clr','#fff'));
    $top_store_style.= ".main-header:before,body.top-store-dark .main-header:before{
    background:{$top_store_main_hdr_bg_clr};}.site-title span a,.main-header-bar .header-icon a,.main-header-bar .thunk-icon-market .cart-contents,.th-whishlist-text, .account-text:nth-of-type(1){color:{$top_store_main_hdr_txt_clr};}
-   .thunk-icon-market .cart-icon .taiowc-icon,.thunk-icon-market .taiowc-icon svg{fill:{$top_store_main_hdr_txt_clr};}
-   .thunk-icon-market .cart-icon .taiowc-cart-item,.thunk-icon-market .taiowc-content .taiowc-total{color:{$top_store_main_hdr_txt_clr};}
+   .thunk-icon-market .cart-icon .taiowc-icon,.thunk-icon-market .taiowc-icon .th-icon,.thunk-icon-market .cart-icon .taiowcp-icon,.thunk-icon-market .taiowcp-icon .th-icon{color:{$top_store_main_hdr_txt_clr};}
+   .thunk-icon-market .cart-icon .taiowc-cart-item,.thunk-icon-market .taiowc-content .taiowc-total,.thunk-icon-market .cart-icon .taiowcp-cart-item,.thunk-icon-market .taiowcp-content .taiowcp-total{color:{$top_store_main_hdr_txt_clr};}
     body.top-store-dark .site-title span a,body.top-store-dark .main-header-bar,body.top-store-dark .main-header-bar .header-icon a,body.top-store-dark .main-header-bar .thunk-icon-market .cart-contents,body.top-store-dark .th-whishlist-text,body.top-store-dark .account-text:nth-of-type(1){color:{$top_store_main_hdr_txt_clr};}
    ";
 

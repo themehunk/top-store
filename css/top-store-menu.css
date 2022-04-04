@@ -146,7 +146,7 @@ background-color: #fff;
 .menu-toggle .icon-bar{
     display: block !important;
     width: 22px;
-    height: 2px;
+    height: 1px;
     background-color:#090909;
     -webkit-border-radius: 1px;
     -moz-border-radius: 1px;
@@ -598,6 +598,7 @@ display:flex;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 14px;
+        margin-left: 8px;
 }
 .menu-toggle .menu-btn .text span,.bar-menu-toggle .menu-btn .text span{
 margin-left:5px;
