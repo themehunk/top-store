@@ -261,7 +261,7 @@ if ( ! class_exists( 'top_store_Woocommerce_Ext' ) ) :
 			             <div class="thunk-quickview">
                                <span class="quik-view">
                                    <a href="#" class="opn-quick-view-text" data-product_id="' . esc_attr($product_id) . '">
-                                      <span><i class="fa fa-eye" aria-hidden="true"></i></span>
+                                      <span><i class="th-icon th-icon-search" aria-hidden="true"></i></span>
                                     
                                    </a>
                             </span>

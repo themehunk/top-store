@@ -353,6 +353,7 @@ add_action( 'widgets_init', 'top_store_widgets_init' );
 function top_store_scripts(){
 	// enqueue css
 	wp_enqueue_style( 'font-awesome', TOP_STORE_THEME_URI . '/third-party/fonts/font-awesome/css/font-awesome.css', '', TOP_STORE_THEME_VERSION );
+	wp_enqueue_style( 'th-icon', TOP_STORE_THEME_URI . '/third-party/fonts/th-icon/style.css', '', TOP_STORE_THEME_VERSION );
 	wp_enqueue_style( 'animate', TOP_STORE_THEME_URI . '/css/animate.css','',TOP_STORE_THEME_VERSION);
 	wp_enqueue_style( 'top-store-menu', TOP_STORE_THEME_URI . '/css/top-store-menu.css','',TOP_STORE_THEME_VERSION);
 	wp_enqueue_style( 'top-store-style', get_stylesheet_uri(), array(), TOP_STORE_THEME_VERSION );

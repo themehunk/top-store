@@ -22,6 +22,9 @@ Yes our theme supports builder
 Yes, this theme is tested with latest version of WordPress, you can use it for your site.
 
 == Changelog ==
+= 1.3.1 =
+* th icon add.
+* style improved.
 
 = 1.3.1 =
 * Section ordering made correct.
