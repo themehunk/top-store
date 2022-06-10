@@ -140,6 +140,9 @@ margin-right:0%;
 
 
 /** tab desing **/
+.title-plugin{
+margin-bottom: 15px;
+}
 .title-plugin h4 {
     font-size: 16px;
     margin: 15px 0;

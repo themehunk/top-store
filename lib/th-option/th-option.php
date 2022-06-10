@@ -141,13 +141,11 @@ function plugin_install_button($plugin){
             $button = '<div class="rcp theme_link th-row">';
             $button .= ' <div class="th-column"><img src="'.esc_url( $plugin['thumb'] ).'" /> </div>';
             $button .= '<div class="th-column">';
-
             $button .= '<div class="title-plugin">
-            <h4>'.esc_html( $plugin['plugin_name'] ). ' </h4><a class="plugin-detail thickbox open-plugin-details-modal" href="'.esc_url( $plugin['detail_link'] ).'">'.esc_html__( 'Details & Version', 'top-store' ).'</a>
+            <h4>'.esc_html( $plugin['plugin_name'] ). ' </h4><a target="_blank" class="actplugin plugin-detail open-plugin-details-modal" href="'.esc_url( $plugin['detail_link'] ).'">'.esc_html__( 'View Details', 'top-store' ).'</a>
             </div>';
              $button .='<button data-activated="Activated" data-msg="Activating" data-init="'.esc_attr($plugin['plugin_init']).'" data-slug="'.esc_attr( $plugin['slug'] ).'" class="button '.esc_attr( $plugin['button_class'] ).'">'.esc_html($plugin['button_txt']).'</button>';
             $button .= '</div></div>';
-
             echo $button;
 }
 
@@ -213,11 +211,15 @@ function plugin_install_button($plugin){
                         network_admin_url( 'plugin-install.php' )
                     );
 
+                    $other_plugin = array('woocommerce','yith-woocommerce-wishlist','one-click-demo-import');
+
+
+
                     $pluginArr['plugin_name'] =  $plugin['name'];
                     $pluginArr['slug']= $slug;
                     $pluginArr['thumb']= "https://ps.w.org/". $slug."/assets/".$plugin['img'];
                     $pluginArr['plugin_init']= $plugin_init;
-                    $pluginArr['detail_link']= $detail_link;
+                    $pluginArr['detail_link']= in_array($slug, $other_plugin)? $detail_link:"https://themehunk.com/free-plugins"; 
                     $pluginArr['button_txt']= $button_txt;
                     $pluginArr['button_class']= $button_class;
 

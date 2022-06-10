@@ -12,7 +12,7 @@
  * Theme functions and definitions
  */
 if ( ! function_exists( 'top_store_setup' ) ) :
-define( 'TOP_STORE_THEME_VERSION','1.0.0');
+define( 'TOP_STORE_THEME_VERSION','1.3.2');
 define( 'TOP_STORE_THEME_DIR', get_template_directory() . '/' );
 define( 'TOP_STORE_THEME_URI', get_template_directory_uri() . '/' );
 define( 'TOP_STORE_THEME_SETTINGS', 'top-store-settings' );
@@ -132,24 +132,27 @@ define( 'TOP_STORE_THEME_SETTINGS', 'top-store-settings' );
                  'img' => 'icon-128x128.png',
                 'active_filename' => 'wp-popup-builder/wp-popup-builder.php',
             ), 
+
+			'unlimited-blocks' => array(
+				'name' => esc_html__( 'Unlimited blocks For Gutenberg', 'novellite' ),
+				'img' => 'icon-128x128.png',
+				'active_filename' => 'unlimited-blocks/unlimited-blocks.php',
+				),
             'woocommerce' => array(
                 'name' => esc_html__( 'Woocommerce', 'top-store' ),
                  'img' => 'icon-128x128.png',
                 'active_filename' => 'woocommerce/woocommerce.php',
             ),
-
-            'yith-woocommerce-wishlist' => array(
-                 'name' => esc_html__( 'YITH WooCommerce Wishlist', 'top-store' ),
-                  'img' => 'icon-128x128.jpg',
-                 'active_filename' => 'yith-woocommerce-wishlist/init.php',
-             ),
-            
             'themehunk-megamenu-plus' => array(
                 'name' => esc_html__( 'ThemeHunk Megamenu – Menu builder', 'top-store' ),
                 'img' => 'icon-128x128.png',
                 'active_filename' => 'themehunk-megamenu-plus/themehunk-megamenu.php',
             ), 
-            
+			'yith-woocommerce-wishlist' => array(
+				'name' => esc_html__( 'YITH WooCommerce Wishlist', 'top-store' ),
+				 'img' => 'icon-128x128.jpg',
+				'active_filename' => 'yith-woocommerce-wishlist/init.php',
+			),  
 
         ) );
 
