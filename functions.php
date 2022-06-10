@@ -134,7 +134,7 @@ define( 'TOP_STORE_THEME_SETTINGS', 'top-store-settings' );
             ), 
 
 			'unlimited-blocks' => array(
-				'name' => esc_html__( 'Unlimited blocks For Gutenberg', 'novellite' ),
+				'name' => esc_html__( 'Unlimited blocks For Gutenberg', 'top-store' ),
 				'img' => 'icon-128x128.png',
 				'active_filename' => 'unlimited-blocks/unlimited-blocks.php',
 				),
