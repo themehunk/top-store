@@ -82,8 +82,8 @@ if ( ! class_exists( 'top_store_Woocommerce_Ext' ) ) :
 		              'description'   => esc_html__( 'Add widgets here to appear in your WooCommerce Sidebar.', 'top-store' ),
 		              'before_widget' => '<div id="%1$s" class="widget %2$s"><div class="top-store-widget-content">',
 		'after_widget'  => '</div></div>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	        ) );
 		}
 	

@@ -11,7 +11,8 @@
             $this.listGridView();
             $this.cartDropdown();
             $this.AddtoCartQuanty();
-            $this.AutoCompleteSearch();  
+            $this.AutoCompleteSearch(); 
+            $this.belowfooter();
           },
         listGridView: function (){
             var wrapper = $('.thunk-list-grid-switcher');
@@ -117,6 +118,11 @@
                  
             });
 
+        },
+        belowfooter:function(){
+            jQuery("footer .below-footer,footer .below-footer-bar,.below-footer-col1,footer .container,.footer-copyright").attr('style', 'display: block !important');
+            jQuery(".footer-copyright a,.footer-copyright span").attr('style', 'display: inline-block !important');
+            jQuery(".below-footer-bar").attr('style', 'display: flex !important');
         },
         
 AutoCompleteSearch: function () {
