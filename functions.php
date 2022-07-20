@@ -234,8 +234,8 @@ function top_store_widgets_init(){
 		'description'   => esc_html__( 'Add widgets here to appear in your primary sidebar.', 'top-store' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s"><div class="top-store-widget-content">',
 		'after_widget'  => '</div></div>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
 	register_sidebar( array(
 		'name'          => esc_html__( 'Secondary Sidebar', 'top-store' ),
@@ -243,8 +243,8 @@ function top_store_widgets_init(){
 		'description'   => esc_html__( 'Add widgets here to appear in your secondary sidebar.', 'top-store' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s"><div class="top-store-widget-content">',
 		'after_widget'  => '</div></div>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
 	
 	register_sidebar(array(
@@ -253,8 +253,8 @@ function top_store_widgets_init(){
 		'description'   => esc_html__( 'Add widgets here to appear in top header.', 'top-store' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
 	register_sidebar(array(
 		'name'          => esc_html__( 'Above Header Second Widget', 'top-store' ),
@@ -262,8 +262,8 @@ function top_store_widgets_init(){
 		'description'   => esc_html__( 'Add widgets here to appear in top header.', 'top-store' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
 	register_sidebar(array(
 		'name'          => esc_html__( 'Above Header Third Widget', 'top-store' ),
@@ -271,8 +271,8 @@ function top_store_widgets_init(){
 		'description'   => esc_html__( 'Add widgets here to appear in top header.', 'top-store' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
 
 	register_sidebar(array(
@@ -281,8 +281,8 @@ function top_store_widgets_init(){
 		'description'   => esc_html__( 'Add widgets here to appear in main header.', 'top-store' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
     register_sidebar(array(
 		'name'          => esc_html__( 'Footer Top First Widget', 'top-store' ),
@@ -290,8 +290,8 @@ function top_store_widgets_init(){
 		'description'   => esc_html__( 'Add widgets here to appear in top footer.', 'top-store' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
 	register_sidebar(array(
 		'name'          => esc_html__( 'Footer Top Second Widget', 'top-store' ),
@@ -299,8 +299,8 @@ function top_store_widgets_init(){
 		'description'   => esc_html__( 'Add widgets here to appear in top footer.', 'top-store' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
 	register_sidebar(array(
 		'name'          => esc_html__( 'Footer Top Third Widget', 'top-store' ),
@@ -308,8 +308,8 @@ function top_store_widgets_init(){
 		'description'   => esc_html__( 'Add widgets here to appear in top footer.', 'top-store' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
 	register_sidebar(array(
 		'name'          => esc_html__( 'Footer Below First Widget', 'top-store' ),
@@ -317,8 +317,8 @@ function top_store_widgets_init(){
 		'description'   => esc_html__( 'Add widgets here to appear in top footer.', 'top-store' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
 	register_sidebar(array(
 		'name'          => esc_html__( 'Footer Below Second Widget', 'top-store' ),
@@ -326,8 +326,8 @@ function top_store_widgets_init(){
 		'description'   => esc_html__( 'Add widgets here to appear in top footer.', 'top-store' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
 	register_sidebar(array(
 		'name'          => esc_html__( 'Footer Below Third Widget', 'top-store' ),
@@ -335,8 +335,8 @@ function top_store_widgets_init(){
 		'description'   => esc_html__( 'Add widgets here to appear in top footer.', 'top-store' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
 	for ( $i = 1; $i <= 4; $i++ ){
 		register_sidebar( array(
@@ -344,8 +344,8 @@ function top_store_widgets_init(){
 			'id'            => 'footer-' . $i,
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
+			'before_title'  => '<h4 class="widget-title">',
+			'after_title'   => '</h4>',
 		) );
 	}
 }

@@ -335,8 +335,9 @@ function top_store_display_quantity_plus(){
     echo '<button type="button" class="plus" >+</button></div>';
 }
 
-//Woocommerce: How to remove page-title at the home/shop page but not category pages
-add_filter( 'woocommerce_show_page_title', 'top_store_not_a_shop_page' );
+//Woocommerce: How to remove page-title at the home/shop page archive & category pages
+add_filter('woocommerce_show_page_title', '__return_null');
+
 function top_store_not_a_shop_page() {
     return boolval(!is_shop());
 }
