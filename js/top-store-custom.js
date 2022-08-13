@@ -145,6 +145,12 @@
                                  animationSpeed:'fast', //slow, medium, fast
                                  accoridonExpAll:true//Expands all the accordion menu on click
                              });
+
+                             if ($(window).width() <= 1024) {
+                              $(".children.sub-menu").closest("li").find("> a").on("click",function(e){
+                                e.preventDefault();
+                              });  
+                             } 
         },
         DefaultMenu: function(){
                  $("#menu-all-pages.top-store-menu").topStoreResponsiveMenu({
