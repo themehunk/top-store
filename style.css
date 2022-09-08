@@ -4,7 +4,7 @@ Theme URI: https://themehunk.com/product/top-store/
 Author: ThemeHunk
 Author URI: https://www.themehunk.com
 Description: Top Store is a powerful responsive eCommerce WordPress theme specially designed for eStore websites. Theme is deeply integrated with WooCommerce plugin to sell your products online. Best suited for websites like electronic, food, home appliances site, gadget store, jewelry shop, fashion shop, furniture, grocery, clothing, and decorative stores. Theme contains multiple widgets options, Header and footer layout combinations, Color and Background option. It also has Sidebar option for both the FrontPage and inner pages to show Widgets. Some highlighted features are Advance product search, Top slider layout, Product carousel, Product carousel with tabbed category filter, Woo Category slider, Product list layout, Top header with three layouts, Ribbon section, Brand Section, Call to Action section. It is supported by widgets like Highlight Widget, Testimonial Widget and Blog post widget slider. Theme has some special features like Quick View, Compare Products, Wishlist, Dropdown cart, AJAX Search, Pre loader, and Social icons. Top Store is Integrated with Lead Form Builder and WP Popup Builder Plugin. You can Import the whole demo in just one click. It has a neat and clean Customize panel which makes your website designing easier. Check Out Demo – https://themehunk.com/wp-themes/topstore/
-Version: 1.3.6
+Version: 1.3.7
 Requires at least: 5.0
 Tested up to: 6.1
 Requires PHP: 5.5
@@ -6145,10 +6145,14 @@ width: auto;
     -webkit-animation: none;
     animation: none;
 }
-.sticky-header .header-icon a, .sticky-header .thunk-icon .cart-icon a.cart-contents {
+.sticky-header .header-icon a, 
+.sticky-header .thunk-icon .cart-icon a.cart-contents {
     color: #111;
     padding: 0 20px 0 0;
     line-height: initial;
+}
+.sticky-header .cart-icon .taiowc-icon .th-icon{
+  color: #111;
 }
 .sticky-header .header-icon a i, .sticky-header-col3 .thunk-icon .cart-icon a.cart-contents i {
     font-size: 24px;
@@ -7346,6 +7350,9 @@ text-decoration: underline !important;
 .top-store-site footer i.fa{
    font-family: 'fontAwesome';
 }
+.theme-top-store .fa{
+  font-weight: 400;
+}
 @media screen and (max-width: 1300px){
   .header-icon span{
     font-size: 8px;
@@ -7878,6 +7885,7 @@ h5 {
 .woocommerce-checkout>.col2-set {
     float: left;
     width: 100%;
+    margin-bottom: 18px;
 }
 .woocommerce-checkout #order_review {
     float: left;
@@ -7885,6 +7893,9 @@ h5 {
 }
 .thunk-highlight-col{
   width:50%;
+}
+.woocommerce-checkout h3#order_review_heading{
+  float: none;
 }
 
 .cat-list a span {
