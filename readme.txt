@@ -24,6 +24,7 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 == Changelog ==
 = 1.3.7 =
 * Theme checked and issues resolved.
+* Above header & footer layout limit added.
 
 = 1.3.6 =
 * Above Header elementor css conflict issue resolved.
@@ -175,6 +176,7 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 
 = 1.3.7 =
 * Theme checked and issues resolved.
+* Above header & footer layout limit added.
 
 
 == Resources ==
