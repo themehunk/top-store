@@ -70,7 +70,8 @@ class ThemeHunk_Child_Notify{
         ?>
       </h1>
 
-        <p><?php _e( "Get Started with ".esc_html( $my_theme->Name )." and Start customizing your website, also Install the Child theme if you want to edit the core code of the theme.", 'top-store' ); ?></p>
+    
+        <p><?php echo esc_html( __('Get Started with','top-store').$my_theme->Name.__('and Start customizing your website, also Install the Child theme if you want to edit the core code of the theme.','top-store')); ?></p>
         <a href="<?php echo esc_url(admin_url('themes.php?page=thunk_started')); ?>" class="button button-primary th-blue"><?php _e('Get Started with '.esc_html( $my_theme->Name ),'top-store') ?></a>
 
         <a href="<?php echo esc_url(admin_url('themes.php?page=thunk_started')); ?>" class=" button-secondary"><?php _e('Get Child Theme Now','top-store') ?></a>

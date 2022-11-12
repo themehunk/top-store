@@ -325,6 +325,7 @@ body #alm-quick-view-modal div.product .flex-viewport {
     width: 50%;
     width: -webkit-calc( 50% - 30px);
     width: calc( 50% - 30px);
+    z-index: 9;
   }
 }
 

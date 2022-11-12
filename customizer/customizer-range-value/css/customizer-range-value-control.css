@@ -155,3 +155,24 @@ input::-moz-focus-inner, input::-moz-focus-outer {
 .customize-control .responsive-switchers li button:hover { background-color: #c2cbd2; }
 .customize-control .responsive-switchers li button.active { background-color: #13aff0; }
 .customize-control .responsive-switchers li button i { width: auto; height: auto; font-size: inherit; line-height: 18px; }
+
+#customize-control-top_store_above_header_layout label,
+#customize-control-top_store_above_footer_layout label{
+	position: relative;
+}
+#customize-control-top_store_above_header_layout label:nth-of-type(3):after,
+#customize-control-top_store_above_header_layout label:nth-of-type(4):after,
+#customize-control-top_store_above_footer_layout label:nth-of-type(2):after,
+#customize-control-top_store_above_footer_layout label:nth-of-type(4):after{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: '\f160';
+    font-family: "Dashicons";
+    left: 0;
+    top: 0;
+    font-size: 21px;
+}
