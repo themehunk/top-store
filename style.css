@@ -4,14 +4,14 @@ Theme URI: https://themehunk.com/product/top-store/
 Author: ThemeHunk
 Author URI: https://www.themehunk.com
 Description: Top Store is a powerful responsive eCommerce WordPress theme specially designed for eStore websites. Theme is deeply integrated with WooCommerce plugin to sell your products online. Best suited for websites like electronic, food, home appliances site, gadget store, jewelry shop, fashion shop, furniture, grocery, clothing, and decorative stores. Theme contains multiple widgets options, Header and footer layout combinations, Color and Background option. It also has Sidebar option for both the FrontPage and inner pages to show Widgets. Some highlighted features are Advance product search, Top slider layout, Product carousel, Product carousel with tabbed category filter, Woo Category slider, Product list layout, Top header with three layouts, Ribbon section, Brand Section, Call to Action section. It is supported by widgets like Highlight Widget, Testimonial Widget and Blog post widget slider. Theme has some special features like Quick View, Compare Products, Wishlist, Dropdown cart, AJAX Search, Pre loader, and Social icons. Top Store is Integrated with Lead Form Builder and WP Popup Builder Plugin. You can Import the whole demo in just one click. It has a neat and clean Customize panel which makes your website designing easier. Check Out Demo – https://themehunk.com/wp-themes/topstore/
-Version: 1.3.8
+Version: 1.3.9
 Requires at least: 5.0
 Tested up to: 6.1
 Requires PHP: 5.5
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 Text Domain: top-store
-Tags: e-commerce, blog, grid-layout, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-logo, custom-menu, featured-image-header, featured-images, custom-header, footer-widgets, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
+Tags: e-commerce, blog, block-patterns, grid-layout, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-logo, custom-menu, featured-image-header, featured-images, custom-header, footer-widgets, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -7356,6 +7356,9 @@ text-decoration: underline !important;
 .wp-block-latest-comments__comment{
   line-height: inherit;
 }
+#move-to-top{
+  bottom: 152px;
+}
 @media screen and (max-width: 1300px){
   .header-icon span{
     font-size: 8px;
@@ -8000,7 +8003,7 @@ width:50%;
 .thaps-search-box .thaps-search-form {
     margin-left:0;
 }
-  .thunk-icon-market {
+.thunk-icon-market {
     margin-right: 15px;
     margin-top: 15px;
 }
@@ -8839,7 +8842,7 @@ font-size:11px;
 }
 #move-to-top {
     right: 30px;
-    bottom: 58px;
+    bottom: 97px;
 }
 #top-store-mobile-bar .account-text{
 display:none;
