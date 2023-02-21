@@ -25,6 +25,7 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 = 1.3.9 =
 * Theme Checked with latest php 8.1.2.
 * style issues resolved.
+* Blank Template added.
 
 = 1.3.8 =
 * wp-block-latest-comments style improved.
@@ -185,6 +186,7 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 = 1.3.9 =
 * Theme Checked with latest php 8.1.2.
 * style issues resolved.
+* Blank Template added.
 
 
 == Resources ==
