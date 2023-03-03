@@ -108,7 +108,7 @@
 			],
 			"palette": [
 				{
-		            "color": "#0f1629",
+		            "color": "#f7f7f7",
 		            "name": "Background",
 		            "slug": "background"
        			},
@@ -129,16 +129,16 @@
 		        },
 		        {
 		          "slug": "bodytext",
-		          "color": "#fff",
+		          "color": "#666",
 		          "name": "Body Text"
 		        },
 		        {
 		          "slug": "button-border",
-		          "color": "#ffe68d",
+		          "color": "#00badb",
 		          "name": "Button Border"
 		        },
 		        {
-		          "color": "#ffe68d",
+		          "color": "#00badb",
 		          "name": "Accent",
 		          "slug": "accent"
 		        }
@@ -158,7 +158,7 @@
 		},
 		"layout": {
 			"contentSize": "800px",
-			"wideSize": "1280px"
+			"wideSize": "1350px"
 		},
 		"spacing": {
 			"units": [
