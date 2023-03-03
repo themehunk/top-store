@@ -1875,7 +1875,7 @@ border:0;
 .menu-category-list ul[data-menu-style="vertical"]  li  a  .arrow:before,
 .menu-category-list ul[data-menu-style="vertical"]  li.menu-active  a  .arrow:before {
     float: initial;
-    content: "\f105"!important;
+    content: "\f105";
     font-family: 'FontAwesome';
 }
 .menu-category-list ul[data-menu-style="vertical"] li.menu-active {

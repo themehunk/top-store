@@ -62,9 +62,8 @@ font-family: "Lato-Regular", sans-serif;
     width: 10px;
 }
 .top-store-menu li ul.sub-menu li > a > .arrow:before {
-    content: "\f105" !important;
+    content: "\f105";
 }
-
 .top-store-menu  ul.sub-menu {
 position: absolute;
 box-shadow: 0 4px 10px 0 rgba(3,3,3,.1);
@@ -114,7 +113,7 @@ background-color: #fff;
     font-size: 16px;
     font-family: FontAwesome;
     height: auto;
-    content: "\f104";
+    content: "\f105";
     text-shadow: none;
 }
 .top-store-menu > li > ul.sub-menu > li ul.sub-menu {
@@ -220,6 +219,13 @@ transition: all 0.2s ease-in-out;
 /*end hamburger menu*/
 /****************************/
 @media screen and (max-width: 1024px){
+    .top-store-menu li,
+    .top-store-menu a{
+        position: relative;
+    }
+    .top-store-menu li ul.sub-menu li > a > .arrow:before{
+        content: "\f107";
+    }
 .overcenter .top-store-menu{
 text-align: center;
 }
@@ -292,7 +298,7 @@ display: -webkit-inline-box;
     }
     .top-store-menu > li > a > .arrow:before {
         float: right;
-        content: "\f105";
+        content: "\f107";
     }
 .sider.left .top-store-menu > li, .sider.right .top-store-menu > li {
     float: none;
@@ -306,7 +312,7 @@ display: -webkit-inline-box;
     background: none;
 }
     li.menu-active > a > .arrow:before {
-        content: "\f107" !important;
+        content: "\f106";
     }
     .top-store-menu li ul.sub-menu > li {
         width: 100%;
@@ -327,7 +333,7 @@ display: -webkit-inline-box;
         position: static;
     }
     .top-store-menu li ul.sub-menu li.menu-active > a > .arrow:before {
-        content: "\f107" !important;
+        content: "\f106";
     }
   .top-store-menu > li > a,.top-header-bar .top-store-menu > li > a, 
     .bottom-header-bar .top-store-menu > li > a {
