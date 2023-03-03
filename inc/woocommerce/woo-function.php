@@ -346,6 +346,9 @@ function top_store_not_a_shop_page() {
 // product category list
 //************************/
 function top_store_product_list_categories( $args = '' ){
+  if (!class_exists( 'WooCommerce' )) {
+      return;
+  }
     $defaults = array(
         'child_of'            => 0,
         'current_category'    => 0,
