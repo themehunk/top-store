@@ -5229,7 +5229,7 @@ margin-bottom:15px;
 display: flex;
 }
 .entry-content p {
-    margin-bottom:15px;
+    margin: 17px 0;
     line-height: 1.8;
 }
 article.thunk-post-article .thunk-readmore.button {
