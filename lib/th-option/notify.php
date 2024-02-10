@@ -87,4 +87,12 @@ class ThemeHunk_Child_Notify{
 
 $obj = New ThemeHunk_Child_Notify();
 
- } // if class end ?>
+ } // if class end 
+ function top_store_admin_child() { ?>
+	<div class="notice is-dismissible updated">
+		<p>This is the child theme</p>
+	</div>
+ <?php }
+  add_action( 'admin_notices', 'top_store_admin_child');
+
+ 
