@@ -4,7 +4,7 @@ Tags: wide-blocks, block-patterns, block-styles, editor-style, e-commerce, blog,
 Requires at least: WordPress 5.3
 Requires PHP: 5.3
 Tested up to: 6.4.3
-Stable tag: 1.4.4
+Stable tag: 1.4.5
 License: GPLv3 or later
 License URL: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -22,6 +22,11 @@ Yes our theme supports builder
 Yes, this theme is tested with latest version of WordPress, you can use it for your site.
 
 == Changelog ==
+
+
+= 1.4.5 =
+* Style improved.
+* Wp Core Style added in admin banner.
 
 = 1.4.4 =
 * Style improved.
@@ -202,8 +207,9 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 * Released: July, 1, 2020
 
 == Upgrade Notice ==
-= 1.4.4 =
+= 1.4.5 =
 * Style improved.
+* Wp Core Style added in admin banner.
 
 
 == Resources ==
