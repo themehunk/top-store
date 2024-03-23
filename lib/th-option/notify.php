@@ -60,8 +60,8 @@ class ThemeHunk_Child_Notify{
 		$display = isset($_GET['notice-disable'])?'none':'block'; 
 		?>
 
-
-          <div class="notice notice-success is-dismissible th-theme-notice">
+<!-- th-theme-notice add this class in admin notice -->
+          <div class="notice notice-success is-dismissible">
 
           	<h1>
         <?php

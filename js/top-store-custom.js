@@ -206,6 +206,19 @@
                               $('body').removeClass('mobile-menu-active');
                               $('body').removeClass('sticky-mobile-menu-active');
                               });
+                                ///////////////////////////////////////////////////// Keyboard Navigation
+                                  $(".menu-close-btn").on("click", function(){ 
+                                    // focus and select
+                                   $('.menu-toggle .menu-btn').focus().select();
+                                   // $('.royal-shop-menu a,.menu-close,.arrow').attr('tabindex',-1);
+                                });
+                                $(".menu-close-btn").on("keypress", function(){   
+                                   
+                                    // focus and select
+                                   $('.menu-toggle .menu-btn').focus().select();
+                                   // $('.royal-shop-menu a,.menu-close,.arrow').attr('tabindex',-1);
+                                });
+                                //////////////////////////////////////////////////
                              }
                          });
                     /* -----------------------------------------------------------------------------------------------
@@ -359,6 +372,7 @@
          
     }
   TopStoreLib.init();
+
 })(jQuery);
 
 
