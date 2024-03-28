@@ -4,9 +4,9 @@ if (!defined('ABSPATH')){
     exit;
 }
 
-if ( ! class_exists( 'ThemeHunk_Child_Notify' ) ){
+if ( ! class_exists( 'Top_Store_ThemeHunk_Child_Notify' ) ){
 
-class ThemeHunk_Child_Notify{
+class Top_Store_ThemeHunk_Child_Notify{
 
     function __construct(){
 
@@ -85,12 +85,12 @@ class ThemeHunk_Child_Notify{
 
 }
 
-$obj = New ThemeHunk_Child_Notify();
+$obj = New Top_Store_ThemeHunk_Child_Notify();
 
  } // if class end 
  function top_store_admin_child() { ?>
 	<div class="notice is-dismissible updated">
-		<p>This is the child theme</p>
+		<p><?php esc_html_e('This is the child theme','top-store'); ?></p>
 	</div>
  <?php }
   add_action( 'admin_notices', 'top_store_admin_child');

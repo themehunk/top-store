@@ -18,7 +18,7 @@ if (!$tabActiveWl && !$tabActiveRp && !$tabActiveImportDc && !$tabActiveGtChild 
         <div class="th-option-top-hdr">
             <div class="col-1">
                 <div class="logo-img">
-                <a target="_blank" href="<?php echo $theme_header['theme_brand_url']; ?>/?wp=top-store" class=""> <span class="logo-image"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/lib/th-option/assets/images/icon.png"/><?php echo $theme_header['theme_brand']; ?></span></a>
+                <a target="_blank" href="<?php echo $theme_header['theme_brand_url']; ?>/?wp=top-store" class=""> <span class="logo-image"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/lib/th-option/assets/images/top-store-icon.png"/><?php echo $theme_header['theme_brand']; ?></span></a>
             </div>
             </div>
             <div class="col-2">
@@ -67,7 +67,7 @@ if (!$tabActiveWl && !$tabActiveRp && !$tabActiveImportDc && !$tabActiveGtChild 
 
                 <div class="rcp theme_link th-row import-demo">
                     <div class="import-image">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/lib/th-option/assets/images/import.png">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/lib/th-option/assets/images/top-store-import.png">
                     </div>
                 <div class="title-plugin">
                 <h3><?php _e('Click Here To Import Demo Content','top-store'); ?></h3>

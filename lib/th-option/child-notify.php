@@ -4,9 +4,9 @@ if (!defined('ABSPATH')){
     exit;
 }
 
-if ( ! class_exists( 'ThemeHunk_Child_Notify' ) ){
+if ( ! class_exists( 'Top_Store_ThemeHunk_Child_Notify' ) ){
 
-class ThemeHunk_Child_Notify{
+class Top_Store_ThemeHunk_Child_Notify{
 
     function __construct(){
 
@@ -71,6 +71,6 @@ class ThemeHunk_Child_Notify{
 
 }
 
-$obj = New ThemeHunk_Child_Notify();
+$obj = New Top_Store_ThemeHunk_Child_Notify();
 
  } // if class end ?>
