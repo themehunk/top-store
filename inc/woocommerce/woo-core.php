@@ -11,13 +11,13 @@ if ( ! class_exists( 'WooCommerce' ) ){
 /**
  * Top Store WooCommerce Compatibility
  */
-if ( ! class_exists( 'top_store_Woocommerce_Ext' ) ) :
+if ( ! class_exists( 'Top_Store_Woocommerce_Ext' ) ) :
 	/**
-	 * top_store_Woocommerce_Ext Compatibility
+	 * Top_Store_Woocommerce_Ext Compatibility
 	 *
 	 * @since 1.0.0
 	 */
-	class top_store_Woocommerce_Ext{
+	class Top_Store_Woocommerce_Ext{
 
         /**
 		 * Member Variable
@@ -436,4 +436,4 @@ if ( ! class_exists( 'top_store_Woocommerce_Ext' ) ) :
 
 	}
 endif;
-top_store_Woocommerce_Ext::get_instance();
+Top_Store_Woocommerce_Ext::get_instance();

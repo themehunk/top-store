@@ -1,6 +1,6 @@
 <?php
 include_once( ABSPATH . 'wp-admin/includes/plugin-install.php' );
-class top_store_theme_option{
+class Top_Store_theme_option{
 function __construct(){
 add_action( 'admin_enqueue_scripts', array($this,'admin_scripts'));
 add_action('admin_menu', array($this,'menu_tab'));
@@ -231,4 +231,4 @@ function plugin_install_button($plugin){
 	
 	
 } // class end
-$boj = new top_store_theme_option(); ?>
+$boj = new Top_Store_theme_option(); ?>
