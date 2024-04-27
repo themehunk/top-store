@@ -178,7 +178,7 @@ define( 'TOP_STORE_THEME_SETTINGS', 'top-store-settings' );
             
             'woocommerce' => array(
                 'name' => esc_html__( 'Woocommerce', 'top-store' ),
-                'img' => 'icon-128x128.png',
+                'img' => 'icon-128x128.gif',
                 'active_filename' => 'woocommerce/woocommerce.php',
             ),
 
@@ -190,7 +190,7 @@ define( 'TOP_STORE_THEME_SETTINGS', 'top-store-settings' );
 
             'th-all-in-one-woo-cart' => array(
                  'name' => esc_html__( 'TH All In One Woo Cart', 'top-store' ),
-                  'img' => 'icon-128x128.png',
+                  'img' => 'icon-128x128.gif',
                  'active_filename' => 'th-all-in-one-woo-cart/th-all-in-one-woo-cart.php',
              ),
 
