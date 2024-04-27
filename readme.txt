@@ -25,6 +25,7 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 
 = 1.4.7 =
 * Update: Remove quantity button when only 1 product remaining in stock;
+* Update: top_store_product_query null refrence error removed.
 
 = 1.4.6 =
 * Issues resolved.
