@@ -26,7 +26,7 @@ $top_store_pages_sidebar = top_store_pages_sidebar();
                         }?>
         				<div id="primary" class="primary-content-area">
         					<div class="primary-content-wrap">
-                            <div class="page-head">
+                            <div class="page-head-woo">
                             <?php top_store_get_page_title();
                             if (function_exists('woocommerce_breadcrumb')) {
                                 woocommerce_breadcrumb();
