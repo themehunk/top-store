@@ -4,9 +4,9 @@ Theme URI: https://themehunk.com/product/top-store/
 Author: ThemeHunk
 Author URI: https://www.themehunk.com
 Description: Top Store is a powerful responsive eCommerce WordPress theme specially designed for eStore websites. Theme is deeply integrated with WooCommerce plugin to sell your products online. Best suited for websites like electronic, food, home appliances site, gadget store, jewelry shop, fashion shop, furniture, grocery, clothing, and decorative stores. Theme contains multiple widgets options, Header and footer layout combinations, Color and Background option. It also has Sidebar option for both the FrontPage and inner pages to show Widgets. Some highlighted features are Advance product search, Top slider layout, Product carousel, Product carousel with tabbed category filter, Woo Category slider, Product list layout, Top header with three layouts, Ribbon section, Brand Section, Call to Action section. It is supported by widgets like Highlight Widget, Testimonial Widget and Blog post widget slider. Theme has some special features like Quick View, Compare Products, Wishlist, Dropdown cart, AJAX Search, Pre loader, and Social icons. Top Store is Integrated with Lead Form Builder and WP Popup Builder Plugin. You can Import the whole demo in just one click. It has a neat and clean Customize panel which makes your website designing easier. Check Out Demo – https://themehunk.com/wp-themes/topstore/
-Version: 1.4.7
+Version: 1.4.8
 Requires at least: 5.0
-Tested up to: 6.5.3
+Tested up to: 6.6
 Requires PHP: 5.5
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
@@ -401,10 +401,10 @@ th,th a,dt,b, strong{
 table, td, th {
     border: 1px solid rgba(0,0,0,.1);
 }
-a{
+.top-store-light a{
  color: #666;
 }
-a:hover{
+.top-store-light a:hover{
  color:#ff0052;
 }
 dd {
@@ -417,11 +417,11 @@ ul {
 ol, ul {
     margin: 0 0 1.5em 3em;
 }
-address {
+.top-store-light address {
     margin: 0 0 1.5em;
 }
 
-blockquote {
+.top-store-light blockquote {
     border-left: 5px solid rgba(0,0,0,.05);
     padding: 15px;
     font-size: 15px;
@@ -430,17 +430,17 @@ blockquote {
    line-height: inherit;
     position: relative;
 }
-blockquote, q {
+.top-store-light blockquote, .top-store-light q {
     quotes: "" "";
 }
-pre {
+.top-store-light pre {
     background: #eee;
     margin-bottom: 1.6em;
     overflow: auto;
     max-width: 100%;
     padding: 1.6em;
 }
-code, kbd, pre, samp {
+.top-store-light code, .top-store-light kbd, .top-store-light pre, .top-store-light samp {
     font-size: 1em;
 }
 *, :after, :before {
@@ -448,7 +448,7 @@ code, kbd, pre, samp {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-body{
+body.top-store-light{
     color:#666;
     background: #f7f7f7;
     font-style: normal;
@@ -489,6 +489,17 @@ body{
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
+.widget_block article,.single .widget_block article{
+  padding:0
+  }
+  .widget_block ol{
+  margin-top:0;
+  }
+  
+  .widget_block .wp-block-heading,
+  .top-store-widget-content .widget-title{
+  margin-bottom:0.5rem;
+  }
 /* WordPress Gallery 
 ------------------------------------------ */
 
@@ -3784,7 +3795,7 @@ margin-right:15px;
 }
 .tagcloud a:hover,.thunk-tags-wrapper a:hover {
     background: #ff0052 none repeat scroll 0 0;
-    color: #fff;
+    color: #fff!important;
 }
 /******************/
 /*About us widget*/
