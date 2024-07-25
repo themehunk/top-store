@@ -4,5 +4,5 @@
     </div>
     <p><?php _e("Child theme inherit the style and functionality of parent theme, you can easily update the parent theme without losing its Customization.",'top-store'); ?> </p>
     <p><?php _e("That's why we highly recommend you to use Child theme to make your site update proof.",'top-store'); ?> </p>
-    <a href="<?php echo esc_url('https://themehunk.com/child-theme/#top-store-child'); ?>" class="button" target="_blank"><?php _e('Get Child Theme Now','top-store'); ?></a>
+    <a href="<?php echo esc_url('https://themehunk.com/?smd_process_download=1&download_id=26235'); ?>" class="button" target="_blank"><?php _e('Get Child Theme Now','top-store'); ?></a>
 </div>
