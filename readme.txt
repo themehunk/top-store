@@ -4,7 +4,7 @@ Tags: wide-blocks, block-patterns, block-styles, editor-style, e-commerce, blog,
 Requires at least: WordPress 5.5
 Requires PHP: 5.5
 Tested up to: 6.6
-Stable tag: 1.4.8
+Stable tag: 1.4.9
 License: GPLv3 or later
 License URL: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -23,8 +23,11 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 
 == Changelog ==
 
+= 1.4.9 =
+* New: New theme.json version 3 added.
+
 = 1.4.8 =
-* Update: compatible wordpress version 6.6;
+* Update: compatible wordpress version 6.6.
 
 = 1.4.7 =
 * Update: Remove quantity button when only 1 product remaining in stock;
@@ -219,8 +222,8 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 * Released: July, 1, 2020
 
 == Upgrade Notice ==
-= 1.4.8 =
-* Update: Style updated.
+= 1.4.9 =
+* New: New theme.json version 3 added.
 
 
 == Resources ==
@@ -260,10 +263,6 @@ License URL: https://www.gnu.org/licenses/gpl-3.0.en.html
 
 == animate.css ==
 animate.css, Copyright Daniel Eden License: MIT  Source : https://github.com/daneden/animate.css
-
-== OpenSans Font ==
-License: SIL OFL 1.1
-License URL: http://scripts.sil.org/OFL
 
 == Lato License ==
 License: SIL OFL 1.1
