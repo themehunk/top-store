@@ -16,6 +16,7 @@ get_template_part( 'lib/breadcrumbs/breadcrumbs');
 //custom-style
 get_template_part( 'inc/top-store-custom-style');
 // customizer
+if (is_customize_preview()) {
 get_template_part('customizer/extend-customizer/class-top-store-wp-customize-panel');
 get_template_part('customizer/extend-customizer/class-top-store-wp-customize-section');
 get_template_part('customizer/customizer-radio-image/class/class-top-store-customize-control-radio-image');
@@ -27,10 +28,11 @@ get_template_part('customizer/sortable/class-top-store-control-sortable');
 get_template_part('customizer/background/class-top-store-background-image-control');
 get_template_part('customizer/customizer-toggle/class-top-store-toggle-control');
 
-
 get_template_part('customizer/custom-customizer');
 get_template_part('customizer/customizer-constant');
 get_template_part('customizer/customizer');
+get_template_part('lib/notification/customizer-notification/thsm-custom-section');
+}
 /******************************/
 // woocommerce
 /******************************/
@@ -43,8 +45,12 @@ get_template_part('inc/woocommerce/woocommerce-ajax');
 
 //Th Option
 get_template_part( '/lib/th-option/th-option');
-get_template_part( '/lib/th-option/notify');
 
 // Probutton
 /******************************/
 get_template_part('customizer/pro-button/class-customize');
+
+/******************************/
+// Plugin Activation
+/******************************/
+get_template_part( 'lib/notification/notify');
