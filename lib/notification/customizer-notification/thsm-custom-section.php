@@ -16,8 +16,22 @@ if (class_exists('WP_Customize_Section')) {
                 <div class="ts-themehunk-custom-section">
                     <?php
                     // Add your buttons here based on the plugin status
-                    $plugin_pro_file = 'th-shop-mania-pro/th-shop-mania-pro.php';
-                    $plugin_companion_file = 'hunk-companion/hunk-companion.php';
+                    // Retrieve the theme support data
+                    $plugin_data = get_theme_support('recommend-plugins');
+
+                // Check if the theme support exists and has the plugin data
+
+                    $plugin_data = $plugin_data[0];
+
+                    // Get the specific plugin data
+                    $hunk_companion = isset($plugin_data['hunk-companion']) ? $plugin_data['hunk-companion'] : array();
+                    $th_shop_mania_pro = isset($hunk_companion['pro-plugin']) ? $hunk_companion['pro-plugin'] : array();
+
+                    // Extract the values
+                    $plugin_pro_slug = isset($th_shop_mania_pro['slug']) ? $th_shop_mania_pro['slug'] : 'top-store-pro';
+                    $plugin_pro_file = isset($th_shop_mania_pro['init']) ? $th_shop_mania_pro['init'] : 'top-store-pro/top-store-pro';
+                    $plugin_companion_slug = isset($plugin_data['hunk-companion']['slug']) ? $plugin_data['hunk-companion']['slug'] : 'hunk-companion';
+                    $plugin_companion_file = isset($plugin_data['hunk-companion']['active_filename']) ? $plugin_data['hunk-companion']['active_filename'] : '';
 
                     $plugin_pro_installed = is_plugin_active($plugin_pro_file);
                     $plugin_pro_exists = file_exists(WP_PLUGIN_DIR . '/' . $plugin_pro_file);
@@ -30,16 +44,16 @@ if (class_exists('WP_Customize_Section')) {
                         if ($plugin_pro_installed) {
                             $go_to_starter_sites_disabled = false;
                         } else {
-                            echo '<p>'. esc_html__('To take full advantage of all the features this theme has to offer, please install and activate the TH Shop Mania Pro', 'top-store') .'</p><button class="button button-primary" id="activate-th-shop-mania-pro"><span class="text">'. esc_html__('Activate', 'top-store') .'</span><span class="icon dashicons dashicons-update th-loader"></span></button>';
+                            echo '<p>'. esc_html__('To take full advantage of all the features this theme has to offer, please install and activate the TH Shop Mania Pro', 'top-store') .'</p><button class="button button-primary" id="activate-top-store-pro" data-slug="' . esc_attr($plugin_pro_slug) . '"><span class="text">'. esc_html__('Activate', 'top-store') .'</span><span class="icon dashicons dashicons-update th-loader"></span></button>';
                         }
                     } elseif ($plugin_companion_exists) {
                         if ($plugin_companion_installed) {
                             $go_to_starter_sites_disabled = false;
                         } else {
-                            echo '<p>'. esc_html__('To take full advantage of all the features this theme has to offer, please install and activate the Hunk Companion', 'top-store') .'</p><button class="button button-primary" id="activate-hunk-companion"><span class="text">'. esc_html__('Activate', 'top-store') .'</span><span class="icon dashicons dashicons-update th-loader"></span></button>';
+                            echo '<p>'. esc_html__('To take full advantage of all the features this theme has to offer, please install and activate the Hunk Companion', 'top-store') .'</p><button class="button button-primary" id="activate-hunk-companion" data-slug="' . esc_attr($plugin_companion_slug) . '"><span class="text">'. esc_html__('Activate', 'top-store') .'</span><span class="icon dashicons dashicons-update th-loader"></span></button>';
                         }
                     } else {
-                        echo '<p>'. esc_html__('To take full advantage of all the features this theme has to offer, please install and activate the Hunk Companion', 'top-store') .'</p><button class="button button-primary" id="install-hunk-companion"><span class="text">'. esc_html__('Install Now', 'top-store') .'</span><span class="icon dashicons dashicons-update th-loader"></span></button>';
+                        echo '<p>'. esc_html__('To take full advantage of all the features this theme has to offer, please install and activate the Hunk Companion', 'top-store') .'</p><button class="button button-primary" id="install-hunk-companion" data-slug="' . esc_attr($plugin_companion_slug) . '"><span class="text">'. esc_html__('Install Now', 'top-store') .'</span><span class="icon dashicons dashicons-update th-loader"></span></button>';
                     }
 
                     // Go to Starter Sites button (always present, conditionally enabled/disabled)
