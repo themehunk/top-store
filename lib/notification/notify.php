@@ -135,7 +135,7 @@ function top_store_display_admin_notice() {
             <div class="right">
                 <img src="' . esc_url(get_template_directory_uri() . '/lib/notification/banner.png') . '" />
             </div>
-
+            <a href="?notice-disable=1" class="notice-dismiss dashicons dashicons-dismiss dashicons-dismiss-icon"></a>
         </div>';
     }
 }
