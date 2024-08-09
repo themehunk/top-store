@@ -27,6 +27,7 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 * New: Admin area Plugin activation added.
 * New Custmizer plugin activation added.
 * Update: Below footer anchor rel added.
+* Update: Cookies modification.
 
 = 1.4.9 =
 * New: New theme.json version 3 added.

@@ -44,7 +44,7 @@ if (class_exists('WP_Customize_Section')) {
                         if ($plugin_pro_installed) {
                             $go_to_starter_sites_disabled = false;
                         } else {
-                            echo '<p>'. esc_html__('To take full advantage of all the features this theme has to offer, please install and activate the TH Shop Mania Pro', 'top-store') .'</p><button class="button button-primary" id="activate-top-store-pro" data-slug="' . esc_attr($plugin_pro_slug) . '"><span class="text">'. esc_html__('Activate', 'top-store') .'</span><span class="icon dashicons dashicons-update th-loader"></span></button>';
+                            echo '<p>'. esc_html__('To take full advantage of all the features this theme has to offer, please install and activate the Top Store Pro', 'top-store') .'</p><button class="button button-primary" id="activate-top-store-pro" data-slug="' . esc_attr($plugin_pro_slug) . '"><span class="text">'. esc_html__('Activate', 'top-store') .'</span><span class="icon dashicons dashicons-update th-loader"></span></button>';
                         }
                     } elseif ($plugin_companion_exists) {
                         if ($plugin_companion_installed) {
