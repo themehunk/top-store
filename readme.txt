@@ -28,7 +28,6 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 
 = 1.5.1 =
 * Fix : top_store_is_json issue resolved.
-* Update: Banner display conditional added.
 
 = 1.5.0 =
 * New: Admin area Plugin activation added.
