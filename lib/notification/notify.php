@@ -48,7 +48,7 @@ function top_store_display_admin_notice() {
         'dashboard',             // index.php
         'themes',                // themes.php
         'plugins',               // plugins.php
-        'users.php',
+        'users',
         'appearance_page_thunk_started' // appearance_page_thunk_started
     );
 
