@@ -6,6 +6,10 @@
  * @subpackage Top Store
  * @since 1.0.0
  */
+function top_store_is_json( $string ){ 
+    return is_string( $string ) && is_array( json_decode( $string, true ) ) ? true : false;
+}
+
  if ( ! function_exists( 'top_store_custom_logo' ) ) :
 /**
  * Displays the optional custom logo.

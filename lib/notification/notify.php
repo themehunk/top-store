@@ -3,39 +3,40 @@ include_once(ABSPATH . 'wp-admin/includes/plugin.php');
 
 function set_cookie() { 
  
-        $visit_time = date('F j, Y  g:i a');
+       $expire_time = time() + (86400 * 7); // 7 days in seconds
 
-            $cok_time = time()+(86457*30);
- 
-        if(!isset($_COOKIE['thms_time'])) {
- 
-            // set a cookie for 1 year
-        setcookie('thms_time', $cok_time, time()+(86457*30));
-             
-        }
+    if (!isset($_COOKIE['top_store_thms_time'])) {
+        // Set a cookie for 7 days
+        setcookie('top_store_thms_time', $expire_time, $expire_time, COOKIEPATH, COOKIE_DOMAIN);
+    }
  
     }
     function unset_cookie(){
 
             $visit_time = time();
-            $cookie_time = $_COOKIE['thms_time'];
-
-            if ($cookie_time < $visit_time) {
-                setcookie('thms_time', null, strtotime('-1 day'));
-            }
+    if (isset($_COOKIE['top_store_thms_time']) && $_COOKIE['top_store_thms_time'] < $visit_time) {
+        setcookie('top_store_thms_time', '', time() - 3600, COOKIEPATH, COOKIE_DOMAIN);
     }
+    }
+
+    function clear_notice_cookie() {
+    // Clear the cookie when the theme is switched
+    if (isset($_COOKIE['top_store_thms_time'])) {
+        setcookie('top_store_thms_time', '', time() - 3600, COOKIEPATH, COOKIE_DOMAIN);
+    }
+}
 
     if(isset($_GET['notice-disable']) && $_GET['notice-disable'] == true){
         add_action('admin_init', 'set_cookie');
         }
 
 
-        if(!isset($_COOKIE['thms_time'])) {
+        if(!isset($_COOKIE['top_store_thms_time'])) {
              add_action('admin_notices', 'top_store_display_admin_notice');
 
         }
 
-        if(isset($_COOKIE['thms_time'])) {
+        if(isset($_COOKIE['top_store_thms_time'])) {
             add_action( 'admin_notices', 'unset_cookie');
         }
 
@@ -249,5 +250,6 @@ function top_store_admin_script($hook_suffix) {
 add_action('admin_enqueue_scripts', 'top_store_admin_script');
 
 
-
+// Hook the function to clear the cookie when the theme is switched to
+add_action('after_switch_theme', 'clear_notice_cookie');
 ?>

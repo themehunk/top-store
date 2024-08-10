@@ -30,6 +30,7 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 * New: Admin area Plugin activation added.
 * New Custmizer plugin activation added.
 * Update: Below footer anchor rel added.
+* Update: Cookies modification.
 
 = 1.4.9 =
 * New: New theme.json version 3 added.
@@ -230,8 +231,8 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 * Released: July, 1, 2020
 
 == Upgrade Notice ==
-= 1.4.9 =
-* New: New theme.json version 3 added.
+= 1.5.1 =
+* Fix : top_store_is_json issue resolved.
 
 
 == Resources ==
