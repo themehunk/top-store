@@ -4,7 +4,7 @@ Tags: wide-blocks, block-patterns, block-styles, editor-style, e-commerce, blog,
 Requires at least: WordPress 5.5
 Requires PHP: 5.5
 Tested up to: 6.6
-Stable tag: 1.5.1
+Stable tag: 1.5.2
 License: GPLv3 or later
 License URL: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -23,8 +23,12 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 
 == Changelog ==
 
+= 1.5.2 =
+* Update: Banner display conditional added.
+
 = 1.5.1 =
-* Fix: Error fixed.
+* Fix : top_store_is_json issue resolved.
+* Update: Banner display conditional added.
 
 = 1.5.0 =
 * New: Admin area Plugin activation added.
@@ -231,8 +235,8 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 * Released: July, 1, 2020
 
 == Upgrade Notice ==
-= 1.5.1 =
-* Fix : top_store_is_json issue resolved.
+= 1.5.2 =
+* Update: Banner display conditional added.
 
 
 == Resources ==
