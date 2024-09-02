@@ -25,8 +25,8 @@ $wp_customize->add_control( 'top_store_sidebar_front_option', array(
         'type'     => 'select',
         'choices'    => array(
         'active-sidebar' => __('Active Both Sidebar','top-store'),
-        'disable-left-sidebar'  => __('Disable Left Sidebar (Pro)','top-store'),
-        'disable-right-sidebar' => __('Disable Right Sidebar (Pro)','top-store'),
+        'disable-left-sidebar'  => __('Disable Left Sidebar','top-store'),
+        'disable-right-sidebar' => __('Disable Right Sidebar','top-store'),
         ),
     ));
 
@@ -42,9 +42,9 @@ $wp_customize->add_control( 'top_store_sidebar_ineternal_option', array(
         'type'     => 'select',
         'choices'    => array(
         'active-sidebar' => __('Active Both Sidebar','top-store'),
-        'no-sidebar' => __('No Sidebar (Pro)','top-store'),
-        'disable-left-sidebar'  => __('Disable Left Sidebar (Pro)','top-store'),
-        'disable-right-sidebar' => __('Disable Right Sidebar (Pro)','top-store'),
+        'no-sidebar' => __('No Sidebar','top-store'),
+        'disable-left-sidebar'  => __('Disable Left Sidebar','top-store'),
+        'disable-right-sidebar' => __('Disable Right Sidebar','top-store'),
         ),
     ));
 

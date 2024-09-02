@@ -15,9 +15,9 @@
         'section' => 'top-store-section-blog-group',
         'type'    => 'select',
         'choices'    => array(
-        'full'   => __('Full Content (Pro)','top-store'),
+        'full'   => __('Full Content','top-store'),
         'excerpt' => __('Excerpt Content','top-store'), 
-        'nocontent' => __('No Content (Pro)','top-store'), 
+        'nocontent' => __('No Content','top-store'), 
         ),
          'priority'   =>9,
     ));
@@ -31,7 +31,7 @@
 	$wp_customize->add_control('top_store_blog_expt_length', array(
 			'type'        => 'number',
 			'section'     => 'top-store-section-blog-group',
-			'label'       => __( 'Excerpt Length (Pro)', 'top-store' ),
+			'label'       => __( 'Excerpt Length', 'top-store' ),
 			'input_attrs' => array(
 				'min'  => 0,
 				'step' => 1,
@@ -51,7 +51,7 @@
 	$wp_customize->add_control('top_store_blog_read_more_txt', array(
 			'type'        => 'text',
 			'section'     => 'top-store-section-blog-group',
-			'label'       => __( 'Read More Text (Pro)', 'top-store' ),
+			'label'       => __( 'Read More Text', 'top-store' ),
 			'settings' => 'top_store_blog_read_more_txt',
              'priority'   =>11,
 			
