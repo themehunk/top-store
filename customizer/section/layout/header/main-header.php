@@ -166,7 +166,7 @@ $wp_customize->add_control( new top_store_Customizer_Buttonset_Control( $wp_cust
     'sanitize_callback' => 'top_store_sanitize_checkbox',
   ) );
   $wp_customize->add_control( new top_store_Toggle_Control( $wp_customize, 'top_store_sticky_header', array(
-    'label'       => esc_html__( 'Sticky Header', 'top-store' ),
+    'label'       => esc_html__( 'Sticky Header (Pro)', 'top-store' ),
     'section'     => 'top-store-main-header',
     'type'        => 'toggle',
     'settings'    => 'top_store_sticky_header',
@@ -179,7 +179,7 @@ $wp_customize->add_setting( 'top_store_whislist_mobile_disable', array(
                 'sanitize_callback'     => 'top_store_sanitize_checkbox',
             ) );
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'top_store_whislist_mobile_disable', array(
-                'label'                 => esc_html__('Check to disable wishlist icon in mobile device', 'top-store'),
+                'label'                 => esc_html__('Check to disable wishlist icon in mobile device (Pro)', 'top-store'),
                 'type'                  => 'checkbox',
                 'section'               => 'top-store-main-header',
                 'settings'              => 'top_store_whislist_mobile_disable',
@@ -191,7 +191,7 @@ $wp_customize->add_setting( 'top_store_account_mobile_disable', array(
                 'sanitize_callback'     => 'top_store_sanitize_checkbox',
             ) );
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'top_store_account_mobile_disable', array(
-                'label'                 => esc_html__('Check to disable account icon in mobile device', 'top-store'),
+                'label'                 => esc_html__('Check to disable account icon in mobile device (Pro)', 'top-store'),
                 'type'                  => 'checkbox',
                 'section'               => 'top-store-main-header',
                 'settings'              => 'top_store_account_mobile_disable',
@@ -203,7 +203,7 @@ $wp_customize->add_setting( 'top_store_cart_mobile_disable', array(
                 'sanitize_callback'     => 'top_store_sanitize_checkbox',
             ) );
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'top_store_cart_mobile_disable', array(
-                'label'                 => esc_html__('Check to disable cart icon in mobile device', 'top-store'),
+                'label'                 => esc_html__('Check to disable cart icon in mobile device (Pro)', 'top-store'),
                 'type'                  => 'checkbox',
                 'section'               => 'top-store-main-header',
                 'settings'              => 'top_store_cart_mobile_disable',

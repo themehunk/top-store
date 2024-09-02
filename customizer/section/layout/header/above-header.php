@@ -12,7 +12,7 @@ $wp_customize->add_setting( 'top_store_above_mobile_disable', array(
                 'sanitize_callback'     => 'top_store_sanitize_checkbox',
             ) );
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'top_store_above_mobile_disable', array(
-                'label'                 => esc_html__('Disable in mobile', 'top-store'),
+                'label'                 => esc_html__('Disable in mobile (Pro)', 'top-store'),
                 'type'                  => 'checkbox',
                 'section'               => 'top-store-above-header',
                 'settings'              => 'top_store_above_mobile_disable',
@@ -61,11 +61,11 @@ $wp_customize->add_control( 'top_store_above_header_col1_set', array(
         'section' => 'top-store-above-header',
         'type'    => 'select',
         'choices'    => array(
-        'none'       => __('None','top-store'),
+        'none'       => __('None (Pro)','top-store'),
         'text'       => __('Text','top-store'),
-        'menu'       => __('Menu','top-store'),
-        'widget'     => __('Widget','top-store'),
-        'social'     => __('Social Media','top-store'),
+        'menu'       => __('Menu (Pro)','top-store'),
+        'widget'     => __('Widget (Pro)','top-store'),
+        'social'     => __('Social Media (Pro)','top-store'),
             
         ),
     ));
@@ -146,11 +146,11 @@ $wp_customize->add_control( 'top_store_above_header_col2_set', array(
         'section' => 'top-store-above-header',
         'type'    => 'select',
         'choices'    => array(
-        'none'                 => __('None','top-store'),
-        'text'             => __('Text','top-store'),
-        'menu'                 => __('Menu','top-store'),
-        'widget'                 => __('Widget','top-store'),
-        'social'             => __('Social Media','top-store'),
+        'none'       => __('None (Pro)','top-store'),
+        'text'       => __('Text (Pro)','top-store'),
+        'menu'       => __('Menu (Pro)','top-store'),
+        'widget'     => __('Widget (Pro)','top-store'),
+        'social'     => __('Social Media','top-store'),
             
         ),
     ));
