@@ -371,7 +371,27 @@ function top_store_product_list_categories( $args = '' ){
   if (!class_exists( 'WooCommerce' )) {
       return;
   }
+  $include_slugs = get_theme_mod('top_store_sidebar_category_list');
+
+  // Initialize an empty array to store category IDs
+    $include_ids = array();
+
+    // Check if the slugs array is not empty
+    if ( ! empty( $include_slugs ) && is_array( $include_slugs ) ) {
+        // Loop through each slug and get the corresponding category ID
+        foreach ( $include_slugs as $slug ) {
+            $term = get_term_by( 'slug', $slug, 'product_cat' );
+            if ( $term && ! is_wp_error( $term ) ) {
+                $include_ids[] = $term->term_id;
+            }
+        }
+    }
+
+    // Convert the array of IDs to a comma-separated list
+    $include_ids = implode( ',', $include_ids );
+
     $defaults = array(
+        'include'             => $include_ids,  // Use the IDs we've just generated
         'child_of'            => 0,
         'current_category'    => 0,
         'depth'               => 5,

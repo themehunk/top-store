@@ -146,11 +146,11 @@ $wp_customize->add_control( 'top_store_above_header_col2_set', array(
         'section' => 'top-store-above-header',
         'type'    => 'select',
         'choices'    => array(
-        'none'                 => __('None','top-store'),
-        'text'             => __('Text','top-store'),
-        'menu'                 => __('Menu','top-store'),
-        'widget'                 => __('Widget','top-store'),
-        'social'             => __('Social Media','top-store'),
+        'none'       => __('None','top-store'),
+        'text'       => __('Text','top-store'),
+        'menu'       => __('Menu ','top-store'),
+        'widget'     => __('Widget','top-store'),
+        'social'     => __('Social Media','top-store'),
             
         ),
     ));

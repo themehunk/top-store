@@ -7,7 +7,7 @@
     'sanitize_callback' => 'top_store_sanitize_checkbox',
   ) );
   $wp_customize->add_control( new top_store_Toggle_Control( $wp_customize, 'top_store_sticky_sidebar', array(
-    'label'       => esc_html__( 'Sticky Sidebar', 'top-store' ),
+    'label'       => esc_html__( 'Sticky Sidebar (Pro)', 'top-store' ),
     'section'     => 'top-store-section-sidebar-group',
     'type'        => 'toggle',
     'settings'    => 'top_store_sticky_sidebar',

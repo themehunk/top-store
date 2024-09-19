@@ -160,7 +160,6 @@ input::-moz-focus-inner, input::-moz-focus-outer {
 #customize-control-top_store_above_footer_layout label{
 	position: relative;
 }
-#customize-control-top_store_above_header_layout label:nth-of-type(3):after,
 #customize-control-top_store_above_header_layout label:nth-of-type(4):after,
 #customize-control-top_store_above_footer_layout label:nth-of-type(2):after,
 #customize-control-top_store_above_footer_layout label:nth-of-type(4):after{
@@ -176,3 +175,27 @@ input::-moz-focus-inner, input::-moz-focus-outer {
     top: 0;
     font-size: 21px;
 }
+/*.customize-control.lite label,
+.customize-control label,
+#customize-control-top_store_banner_layout label{
+	position: relative;
+}
+.customize-control.lite label:after,
+#customize-control-top_store_banner_layout label:nth-of-type(1):after,
+#customize-control-top_store_top_slide_layout label:nth-of-type(2):after{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	content: '\f160';
+	font-family: "Dashicons";
+	left: 0;
+	top: 0;
+	font-size: 21px;
+}
+#customize-control-top_store_above_header_layout label:nth-of-type(3):after,
+#customize-control-top_store_above_footer_layout label:nth-of-type(3):after{
+	display: none;
+}*/
