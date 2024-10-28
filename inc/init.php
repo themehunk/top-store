@@ -53,4 +53,4 @@ get_template_part('customizer/pro-button/class-customize');
 /******************************/
 // Plugin Activation
 /******************************/
-get_template_part( 'lib/notification/notify');
+// get_template_part( 'lib/notification/notify');
