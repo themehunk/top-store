@@ -4,7 +4,7 @@ Tags: wide-blocks, block-patterns, block-styles, editor-style, e-commerce, blog,
 Requires at least: WordPress 5.5
 Requires PHP: 5.5
 Tested up to: 6.6
-Stable tag: 1.5.4
+Stable tag: 1.5.5
 License: GPLv3 or later
 License URL: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -23,8 +23,11 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 
 == Changelog ==
 
+= Version 1.5.5 =
+* Fixed: Security issue fixed.
+
 = 1.5.4 =
-* Update: Premium features locked.
+* Update: Style Improved.
 
 = 1.5.3 =
 * Update: customizer json function issue resolved.
@@ -241,7 +244,7 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 
 == Upgrade Notice ==
 = 1.5.4 =
-* Update: Premium features locked.
+* Update: Style Improved.
 
 
 == Resources ==
