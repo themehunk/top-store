@@ -27,7 +27,7 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 * Fixed: Security issue fixed.
 
 = 1.5.4 =
-* Update: Premium features locked.
+* Update: Style Improved.
 
 = 1.5.3 =
 * Update: customizer json function issue resolved.
@@ -244,7 +244,7 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 
 == Upgrade Notice ==
 = 1.5.4 =
-* Update: Premium features locked.
+* Update: Style Improved.
 
 
 == Resources ==
