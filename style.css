@@ -4,7 +4,7 @@ Theme URI: https://themehunk.com/product/top-store/
 Author: ThemeHunk
 Author URI: https://www.themehunk.com
 Description: Top Store is a powerful responsive eCommerce WordPress theme specially designed for eStore websites. Theme is deeply integrated with WooCommerce plugin to sell your products online. Best suited for websites like electronic, food, home appliances site, gadget store, jewelry shop, fashion shop, furniture, grocery, clothing, and decorative stores. Theme contains multiple widgets options, Header and footer layout combinations, Color and Background option. It also has Sidebar option for both the FrontPage and inner pages to show Widgets. Some highlighted features are Advance product search, Top slider layout, Product carousel, Product carousel with tabbed category filter, Woo Category slider, Product list layout, Top header with three layouts, Ribbon section, Brand Section, Call to Action section. It is supported by widgets like Highlight Widget, Testimonial Widget and Blog post widget slider. Theme has some special features like Quick View, Compare Products, Wishlist, Dropdown cart, AJAX Search, Pre loader, and Social icons. Top Store is Integrated with Lead Form Builder and WP Popup Builder Plugin. You can Import the whole demo in just one click. It has a neat and clean Customize panel which makes your website designing easier. Check Out Demo – https://themehunk.com/wp-themes/topstore/
-Version: 1.5.6
+Version: 1.5.7
 Requires at least: 5.0
 Tested up to: 6.7
 Requires PHP: 5.5
@@ -7399,6 +7399,60 @@ text-decoration: underline !important;
 }
 .wp-element-button:focus, .wp-block-button__link:focus{
   outline: 1px solid #111;
+}
+/* New Wishlist 2025  */
+.summary .yith-wcwl-add-to-wishlist-button{
+    border: 1px solid #9c9c9c;
+    border-radius: 0;
+    color: #9c9c9c;
+    display:  inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    line-height: 35px;
+    width: 35px;
+    background: transparent;
+    text-align: center;
+    margin-left: 10px;
+    font-weight: normal;
+    min-width: auto;
+}
+
+.summary .yith-wcwl-add-to-wishlist-button__label{
+  display: none;
+}
+.summary .yith-wcwl-add-to-wishlist-button:before{
+    content: "\e912";
+    font-family: th-icon;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+}
+.summary .yith-wcwl-add-to-wishlist-button--added:before{
+    content: "\e909";
+}
+.summary .yith-add-to-wishlist-button-block--single{
+    margin: 0;
+    float: left;
+}
+.theme-top-store .yith-wcwl-add-to-wishlist-button svg{
+    display: none;
+}
+.theme-top-store .yith-wcwl-add-to-wishlist-button:before{
+     content: "\e912";
+    font-family: th-icon;
+}
+.theme-top-store .yith-wcwl-add-to-wishlist-button--added .yith-wcwl-add-to-wishlist-button__label{
+    display: none;
+}
+.theme-top-store .yith-wcwl-add-to-wishlist-button__label{
+  display: none;
+}
+.theme-top-store .yith-add-to-wishlist-button-block{
+  margin: 0;
 }
 @media screen and (max-width: 1300px){
   .header-icon span{
