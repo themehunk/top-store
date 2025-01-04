@@ -10,6 +10,7 @@
 if ( ! function_exists( 'is_plugin_active' ) ){
 require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 }
+$plugin_companion_file = 'hunk-companion/hunk-companion.php';
 get_template_part( 'inc/admin-function');
 get_template_part( 'inc/header-function');
 get_template_part( 'inc/footer-function');
@@ -55,4 +56,6 @@ get_template_part('customizer/pro-button/class-customize');
 /******************************/
 // Plugin Activation
 /******************************/
+if (is_customize_preview() && !is_plugin_active($plugin_companion_file)) {
 get_template_part( 'lib/notification/notify');
+}

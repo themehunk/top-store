@@ -13,3 +13,6 @@
 .customize-control-top-store-buttonset .buttonset .switch-label:last-child { border-right: none; }
 .customize-control-top-store-buttonset .buttonset .switch-input { display: none; }
 .customize-control-top-store-buttonset .buttonset .switch-input:checked + .switch-label { background-color:#72777c; color: #fff; }
+.accordion-section-title button.accordion-trigger{
+    height: auto;
+}
