@@ -106,7 +106,11 @@ define( 'TOP_STORE_THEME_SETTINGS', 'top-store-settings' );
                 'img' => 'icon-128x128.png',
                 'active_filename' => 'hunk-companion/hunk-companion.php',
             ),
-
+			'vayu-blocks' => array(
+				'name' => esc_html__( 'Vayu blocks For Gutenberg', 'top-store' ),
+				'img' => 'icon-128x128.png',
+				'active_filename' => 'vayu-blocks/vayu-blocks.php',
+				),
             'th-advance-product-search' => array(
             'name' => esc_html__( 'TH Advance Product Search', 'top-store' ),
             'img' => 'icon-128x128.gif',
@@ -122,42 +126,21 @@ define( 'TOP_STORE_THEME_SETTINGS', 'top-store-settings' );
                   'img' => 'icon-128x128.gif',
                  'active_filename' => 'th-product-compare/th-product-compare.php',
              ),
+			 'lead-form-builder' => array(
+                'name' => esc_html__( 'Lead Form Builder', 'top-store' ),
+                 'img' => 'icon-128x128.png',
+                'active_filename' => 'lead-form-builder/lead-form-builder.php',
+            ),
             'th-variation-swatches' => array(
                 'name' => esc_html__( 'TH Variation Swatches', 'top-store' ),
                  'img' => 'icon-128x128.gif',
                 'active_filename' => 'th-variation-swatches/th-variation-swatches.php',
-            ),
-			'vayu-blocks' => array(
-				'name' => esc_html__( 'Vayu blocks For Gutenberg', 'top-store' ),
-				'img' => 'icon-128x128.png',
-				'active_filename' => 'vayu-blocks/vayu-blocks.php',
-				),
-            'lead-form-builder' => array(
-                'name' => esc_html__( 'Lead Form Builder', 'top-store' ),
-                 'img' => 'icon-128x128.png',
-                'active_filename' => 'lead-form-builder/lead-form-builder.php',
             ),
             'wp-popup-builder' => array(
                 'name' => esc_html__( 'WP Popup Builder – Popup Forms & Newsletter', 'top-store' ),
                  'img' => 'icon-128x128.png',
                 'active_filename' => 'wp-popup-builder/wp-popup-builder.php',
             ), 
-            'woocommerce' => array(
-                'name' => esc_html__( 'Woocommerce', 'top-store' ),
-                 'img' => 'icon-128x128.gif',
-                'active_filename' => 'woocommerce/woocommerce.php',
-            ),
-            'themehunk-megamenu-plus' => array(
-                'name' => esc_html__( 'ThemeHunk Megamenu – Menu builder', 'top-store' ),
-                'img' => 'icon-128x128.png',
-                'active_filename' => 'themehunk-megamenu-plus/themehunk-megamenu.php',
-            ), 
-			'yith-woocommerce-wishlist' => array(
-				'name' => esc_html__( 'YITH WooCommerce Wishlist', 'top-store' ),
-				 'img' => 'icon-128x128.jpg',
-				'active_filename' => 'yith-woocommerce-wishlist/init.php',
-			),  
-
         ) );
 
         // Import Data Content plugins
@@ -376,11 +359,4 @@ if ( ! function_exists( 'wp_body_open' ) ) {
 	function wp_body_open() {
 		do_action( 'wp_body_open' );
 	}
-}
-
-if (!is_array( get_option( 'theme_mods_top-store-pro')) ) {
-function top_store_theme_switch() {
-    update_option( 'theme_mods_top-store-pro', get_option( 'theme_mods_top-store') );
-}
-add_action('switch_theme', 'top_store_theme_switch');
 }
