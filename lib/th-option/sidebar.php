@@ -21,7 +21,7 @@
             <div class="section">
                 <h3><?php _e('Leave us a review','top-store'); ?></h3>
                 <p><?php _e('We would love to hear your feedback.','top-store'); ?> </p>
-                 <a href="https://wordpress.org/support/theme/top-store/reviews/?rate=5#new-post" target="_blank" class="sidebar-link"><?php _e('Submit review','top-store'); ?></a>
+                 <a href="https://wordpress.org/support/theme/top-store/reviews/?rate=5#new-post" target="_blank" class="sidebar-link"><?php _e('Submit Review','top-store'); ?></a>
 
             </div>
             <hr>
@@ -29,7 +29,7 @@
             <div class="section">
                 <h3><?php _e('Video Tutorials','top-store'); ?></h3>
                 <p><?php _e('Want a guide? We have video tutorials to walk you through getting started.','top-store'); ?> </p>
-                <a href="https://www.youtube.com/watch?v=lyYYCNaTjrk&list=PLe42R8TvpeK3NJhL9hDq41M0BrLoUpJRq" target="_blank" class="sidebar-link"><?php _e('Watch Videos','top-store'); ?></a>
+                <a href="https://youtu.be/iI7R1gv4P0s?feature=shared" target="_blank" class="sidebar-link"><?php _e('Watch Videos','top-store'); ?></a>
             </div>
             <hr>
 

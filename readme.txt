@@ -25,6 +25,8 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 
 = Version 1.5.7 =
 * Update: Style Improved.
+* Update: Transfer data old code removed.
+* Update: Theme Options updated.
 
 = Version 1.5.6 =
 * Update: Customizer optimsation.
@@ -251,6 +253,8 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 == Upgrade Notice ==
 = Version 1.5.7 =
 * Update: Style Improved.
+* Update: Transfer data old code removed.
+* Update: Theme Options updated.
 
 
 == Resources ==
