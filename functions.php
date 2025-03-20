@@ -360,3 +360,9 @@ if ( ! function_exists( 'wp_body_open' ) ) {
 		do_action( 'wp_body_open' );
 	}
 }
+
+if (!function_exists('top_store_is_json')) {
+	function top_store_is_json( $string ){ 
+		return is_string( $string ) && is_array( json_decode( $string, true ) ) ? true : false;
+	}
+}
