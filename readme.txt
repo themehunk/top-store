@@ -3,8 +3,8 @@ Contributors: ThemeHunk
 Tags: wide-blocks, block-patterns, block-styles, editor-style, e-commerce, blog, block-patterns, grid-layout, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-logo, custom-menu, add_editor_style, featured-image-header, featured-images, footer-widgets, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready.
 Requires at least: WordPress 5.5
 Requires PHP: 5.5
-Tested up to: 6.7
-Stable tag: 1.5.7
+Tested up to: 6.8
+Stable tag: 1.5.8
 License: GPLv3 or later
 License URL: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -22,6 +22,11 @@ Yes our theme supports builder
 Yes, this theme is tested with latest version of WordPress, you can use it for your site.
 
 == Changelog ==
+
+= Version 1.5.8 =
+* Update: Banner notification enabled in admin area.
+* Update : top_store_is_json issue resolved.
+* Update: Tested with WordPress 6.8.
 
 = Version 1.5.7 =
 * Update: Style Improved.
@@ -251,10 +256,10 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 * Released: July, 1, 2020
 
 == Upgrade Notice ==
-= Version 1.5.7 =
-* Update: Style Improved.
-* Update: Transfer data old code removed.
-* Update: Theme Options updated.
+= Version 1.5.8 =
+* Update: Banner notification enabled in admin area.
+* Update : top_store_is_json issue resolved.
+* Update: Tested with WordPress 6.8.
 
 
 == Resources ==

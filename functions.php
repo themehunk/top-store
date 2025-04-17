@@ -12,7 +12,7 @@
  * Theme functions and definitions
  */
 if ( ! function_exists( 'top_store_setup' ) ) :
-define( 'TOP_STORE_THEME_VERSION','1.5.7');
+define( 'TOP_STORE_THEME_VERSION','1.5.8');
 define( 'TOP_STORE_THEME_DIR', get_template_directory() . '/' );
 define( 'TOP_STORE_THEME_URI', get_template_directory_uri() . '/' );
 define( 'TOP_STORE_THEME_SETTINGS', 'top-store-settings' );
@@ -358,5 +358,11 @@ if ( ! function_exists( 'wp_body_open' ) ) {
 	 */
 	function wp_body_open() {
 		do_action( 'wp_body_open' );
+	}
+}
+
+if (!function_exists('top_store_is_json')) {
+	function top_store_is_json( $string ){ 
+		return is_string( $string ) && is_array( json_decode( $string, true ) ) ? true : false;
 	}
 }

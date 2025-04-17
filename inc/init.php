@@ -35,7 +35,7 @@ get_template_part('customizer/customizer-toggle/class-top-store-toggle-control')
 
 get_template_part('customizer/custom-customizer');
 get_template_part('customizer/customizer');
-	if ( !is_plugin_active('hunk-companion/hunk-companion.php') ) {
+	if ( !is_plugin_active($plugin_companion_file) ) {
 	get_template_part('lib/notification/customizer-notification/thsm-custom-section');
 	}
 }
@@ -56,6 +56,6 @@ get_template_part('customizer/pro-button/class-customize');
 /******************************/
 // Plugin Activation
 /******************************/
-if (is_customize_preview() && !is_plugin_active($plugin_companion_file)) {
-get_template_part( 'lib/notification/notify');
+if ( !is_plugin_active($plugin_companion_file) ) {
+	get_template_part( 'lib/notification/notify');
 }
