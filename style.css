@@ -4,7 +4,7 @@ Theme URI: https://themehunk.com/product/top-store/
 Author: ThemeHunk
 Author URI: https://www.themehunk.com
 Description: Top Store is a powerful responsive eCommerce WordPress theme specially designed for eStore websites. Theme is deeply integrated with WooCommerce plugin to sell your products online. Best suited for websites like electronic, food, home appliances site, gadget store, jewelry shop, fashion shop, furniture, grocery, clothing, and decorative stores. Theme contains multiple widgets options, Header and footer layout combinations, Color and Background option. It also has Sidebar option for both the FrontPage and inner pages to show Widgets. Some highlighted features are Advance product search, Top slider layout, Product carousel, Product carousel with tabbed category filter, Woo Category slider, Product list layout, Top header with three layouts, Ribbon section, Brand Section, Call to Action section. It is supported by widgets like Highlight Widget, Testimonial Widget and Blog post widget slider. Theme has some special features like Quick View, Compare Products, Wishlist, Dropdown cart, AJAX Search, Pre loader, and Social icons. Top Store is Integrated with Lead Form Builder and WP Popup Builder Plugin. You can Import the whole demo in just one click. It has a neat and clean Customize panel which makes your website designing easier. Check Out Demo – https://themehunk.com/wp-themes/topstore/
-Version: 1.5.8
+Version: 1.5.9
 Requires at least: 5.0
 Tested up to: 6.8
 Requires PHP: 5.5
@@ -8130,6 +8130,12 @@ width:50%;
     padding: 0;
     margin-right: 10px;
   }
+  .thunk-icon-market .header-icon{
+    margin: 0;
+  }
+  .sticky-header-col3 .thunk-icon .cart-icon{
+    margin-left: 10px;
+  }
   #search-box form{
     width: 100%;
   }
@@ -8947,6 +8953,7 @@ display:none;
 }
 .cart-icon {
     margin-left: 0;
+    margin-right: 0;
 }
 .thunk-slide.thunk-brand .owl-nav{
   display: none;
