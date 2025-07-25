@@ -77,3 +77,43 @@ jQuery('#customize-control-top_store_top_slide_lay5_content,#customize-control-t
 
 
 }); 
+
+( function( $ ) {
+    wp.customize.bind( 'ready', function() {
+        $('#customize-control-top_store_col1_widget_redirect .menu-shortcut').on('click', function() {
+            // This opens the Widgets panel and focuses on your specific sidebar section
+            wp.customize.section('sidebar-widgets-top-header-widget-col1').expand();
+        });
+    });
+
+     wp.customize.bind( 'ready', function() {
+        $('#customize-control-top_store_col2_widget_redirect .menu-shortcut').on('click', function() {
+            // This opens the Widgets panel and focuses on your specific sidebar section
+            wp.customize.section('sidebar-widgets-top-header-widget-col2').expand();
+        });
+    });
+
+      //footer top
+      wp.customize.bind( 'ready', function() {
+        $('#customize-control-top_store_footer_col1_widget_redirect .menu-shortcut').on('click', function() {
+            // This opens the Widgets panel and focuses on your specific sidebar section
+            wp.customize.section('sidebar-widgets-footer-top-first').expand();
+        });
+    });
+
+     wp.customize.bind( 'ready', function() {
+        $('#customize-control-top_store_above_footer_col2_widget_redirect .menu-shortcut').on('click', function() {
+            // This opens the Widgets panel and focuses on your specific sidebar section
+            wp.customize.section('sidebar-widgets-footer-top-second').expand();
+        });
+    });
+
+     wp.customize.bind( 'ready', function() {
+        $('#customize-control-top_store_bottom_footer_widget_redirect .menu-shortcut').on('click', function() {
+            // This opens the Widgets panel and focuses on your specific sidebar section
+            wp.customize.section('sidebar-widgets-footer-1').expand();
+        });
+    });
+
+
+})( jQuery );

@@ -4,7 +4,7 @@ Tags: wide-blocks, block-patterns, block-styles, editor-style, e-commerce, blog,
 Requires at least: WordPress 5.5
 Requires PHP: 5.5
 Tested up to: 6.8
-Stable tag: 1.6.0
+Stable tag: 1.6.1
 License: GPLv3 or later
 License URL: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -22,6 +22,12 @@ Yes our theme supports builder
 Yes, this theme is tested with latest version of WordPress, you can use it for your site.
 
 == Changelog ==
+
+= Version 1.6.1 =
+* Update: Customizer widget redirect issue resolved.
+* Update: Woocommerce checkout page .woocommerce-checkout .thunk-content-wrap {
+    display: -webkit-flex;
+} removed now overflow:hidden added to work with both old and new checkout page.
 
 = Version 1.6.0 =
 * Update: Description and demo link of theme updated.
@@ -263,8 +269,11 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 
 == Upgrade Notice ==
 
-= Version 1.6.0 =
-* Update: Description and demo link of theme updated.
+= Version 1.6.1 =
+* Update: Customizer widget redirect issue resolved.
+* Update: Woocommerce checkout page .woocommerce-checkout .thunk-content-wrap {
+    display: -webkit-flex;
+} removed now overflow:hidden added to work with both old and new checkout page.
 
 
 == Resources ==
