@@ -25,6 +25,9 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 
 = Version 1.6.1 =
 * Update: Customizer widget redirect issue resolved.
+* Update: Woocommerce checkout page .woocommerce-checkout .thunk-content-wrap {
+    display: -webkit-flex;
+} removed now overflow:hidden added to work with both old and new checkout page.
 
 = Version 1.6.0 =
 * Update: Description and demo link of theme updated.
@@ -266,8 +269,11 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 
 == Upgrade Notice ==
 
-= Version 1.6.0 =
-* Update: Description and demo link of theme updated.
+= Version 1.6.1 =
+* Update: Customizer widget redirect issue resolved.
+* Update: Woocommerce checkout page .woocommerce-checkout .thunk-content-wrap {
+    display: -webkit-flex;
+} removed now overflow:hidden added to work with both old and new checkout page.
 
 
 == Resources ==
