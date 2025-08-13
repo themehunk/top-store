@@ -61,20 +61,4 @@ elseif(!is_404() && !is_search() && is_page()){
 ?>
 <?php do_action('top_store_site_preloader'); ?>
 <div id="page" class="top-store-site  <?php echo esc_attr($classes);?>">
-	<header>
-		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'top-store' ); ?></a>
-		<?php do_action( 'top_store_sticky_header' ); ?> 
-        <!-- sticky header -->
-		<?php if(get_theme_mod('top_store_above_mobile_disable')==true){
-			if (wp_is_mobile()!== true):
-              do_action( 'top_store_top_header' );  
-              endif;
-		     }elseif(get_theme_mod('top_store_above_mobile_disable',false)==false){
-			 do_action( 'top_store_top_header' );  
-		} ?> 
-		<!-- end top-header -->
-        <?php do_action( 'top_store_main_header' ); ?> 
-		<!-- end main-header -->
-		<?php do_action( 'top_store_below_header' ); ?> 
-		<!-- end below-header -->
-	</header> <!-- end header -->
+<?php do_action( 'top_store_header' ); ?>

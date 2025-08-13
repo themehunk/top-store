@@ -4,7 +4,7 @@ Theme URI: https://themehunk.com/product/top-store/
 Author: ThemeHunk
 Author URI: https://www.themehunk.com
 Description: Top Store is a sleek, powerful, and fully responsive WooCommerce WordPress theme crafted to help you build stunning online stores with ease. Designed for speed and flexibility, Top Store offers seamless integration with WooCommerce and popular page builders like Elementor, Gutenberg, and Beaver Builder, enabling you to create a professional eCommerce website without any coding.Built with SEO best practices, Top Store ensures your products rank higher on search engines and attract more customers. The theme features customizable layouts, multiple homepage designs, advanced product filters, and AJAX-powered shopping cart for a smooth user experience without page reloads. Whether you're selling electronics, fashion, accessories, cosmetics, home décor, or any niche products, Top Store adapts perfectly with retina-ready design and mobile-first responsiveness to showcase your products beautifully on all devices. Top Store also supports essential WooCommerce extensions like Product Compare, Wishlist, and Quick View, making it easier for customers to browse and shop. With translation-ready and RTL support, it's ideal for reaching global audiences. Check Out live Demo – https://wpthemes.themehunk.com/topstore/
-Version: 1.6.1
+Version: 1.6.2
 Requires at least: 5.0
 Tested up to: 6.8
 Requires PHP: 5.5
@@ -3077,7 +3077,7 @@ ul.products .thunk-product-hover .add_to_cart_button:hover:after,
   color:#00badb;
 }
 .thunk-wishlist a,.thunk-compare a,.thunk-quik a{
-  font-size:11px;
+  font-size: 14px;
   color: #111;
 }
 
@@ -3906,11 +3906,11 @@ font-weight: 700;
     font-size: 20px;
     line-height: 35px;
     margin-right:10px;
+    color: #fff!important;
 }
 .thunk-list-grid-switcher a.selected, .thunk-list-grid-switcher a:hover{
     background:#ff0052;
     border: 1px solid #ff0052;
-    color: #fff;
 }
 .woocommerce .thunk-list-view ul.products li.product a.button.product_type_grouped{
     width:auto;
@@ -4586,7 +4586,6 @@ margin:0px 0px 0px 10px;
     float: left;
     font-weight: 500;
     line-height: 36px;
-    margin-right: 15px;
     text-align: center;
     padding: 0 10px;
     min-width: 110px;
@@ -4780,11 +4779,13 @@ min-width:auto;
 }
 /*compare style*/
 .woocommerce .entry-summary a.th-product-compare-btn,
-.woocommerce .entry-summary .wooscp-btn{
+.woocommerce .entry-summary .th-wishlist-single a{
     border: 1px solid;
     border-radius: 0;
     color: #a7a7a7;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size:0;
     height: 35px;
     line-height: 35px;
@@ -7457,6 +7458,49 @@ text-decoration: underline !important;
 .theme-top-store .yith-add-to-wishlist-button-block{
   margin: 0;
 }
+.theme-top-store .wc-block-cart,
+.theme-top-store .wc-block-checkout{
+  font-size: 1rem;
+}
+/*******************************************************
+ * **    TH WISHLIST &  TH COMPARE LATEST STYLE Update
+ * ****************************************************/
+
+.thunk-wishlist .thw-add-to-wishlist-button-wrap{
+  height: 100%;
+}
+.thw-add-to-wishlist-button-wrap.th-wishlist-single{
+  float: left;
+}
+.thw-add-to-wishlist-button-wrap.th-wishlist-single .th-wishlist-icon-svg{
+  width: 18px;
+}
+.single-product .summary .thw-add-to-wishlist-button *{
+  color: inherit!important;
+}
+.single-product .thw-to-add-text,
+.single-product .thw-to-browse-text,
+.single-product .thunk-compare .tooltip{
+  display: none;
+}
+.single-product .summary .thunk-compare{
+  border-radius: 0;
+  background: initial;
+  margin: 0 0 0 12px;
+}
+.single-product .summary .th-product-compare-btn{
+  margin: 0!important;
+}
+.single_add_to_cart_button.button.disabled{
+  padding: 0 10px!important;
+}
+.thunk-wishlist .thw-add-to-wishlist-button *{
+  font-size: inherit!important;
+}
+.thunk-wishlist .th-wishlist-icon-svg{
+  width: 18px;
+  display: flex;
+}
 @media screen and (max-width: 1300px){
   .header-icon span{
     font-size: 8px;
@@ -7916,7 +7960,6 @@ margin:0;
     margin-top:10px;
 }
 .thunk-wishlist a, .thunk-compare a {
-    font-size: 0;
     margin:0;
     display: block;
 }
@@ -8725,7 +8768,7 @@ min-width:70px;
  .summary .yith-wcwl-wishlistexistsbrowse a,
  .woocommerce .entry-summary a.compare.button,
  .woocommerce .entry-summary a.th-product-compare-btn, 
- .woocommerce .entry-summary .wooscp-btn {
+ .woocommerce .entry-summary .th-wishlist-single a {
     height: 30px;
     line-height: 30px;
     width: 30px;

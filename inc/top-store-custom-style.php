@@ -414,26 +414,6 @@ body.top-store-dark .ribbon-btn:hover,body.top-store-dark .header-support-conten
       }
       ";
     }
-//Hide yith if WPC SMART Icon 
-if( (class_exists( 'YITH_WCWL' )) ){
-$top_store_style.=" .woocommerce .entry-summary .woosw-btn{
-  display:none;
-}";
-}elseif((class_exists( 'WPCleverWoosw' ))){
-$top_store_style.=" .woocommerce .entry-summary .yith-wcwl-add-to-wishlist{
-  display:none;
-}";
-}
-
-if( (class_exists( 'YITH_Woocompare' )) ){
-$top_store_style.=" .woocommerce .entry-summary .woosc-btn{
-  display:none;
-}";
-}elseif((class_exists( 'WPCleverWoosc' ))){
-$top_store_style.=" .woocommerce .entry-summary a.compare.button{
-  display:none;
-}";
-}
 
     //Move to Top
     $top_store_move_to_top_bg_clr = esc_html(get_theme_mod('top_store_move_to_top_bg_clr','#141415'));

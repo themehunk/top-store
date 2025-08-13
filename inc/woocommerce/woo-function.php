@@ -28,15 +28,14 @@ if ( ! function_exists( 'top_store_cart_total_item' ) ){
 if(!function_exists('top_store_whishlist_check')){
 
 function top_store_whishlist_check($pid){
-      if( class_exists( 'YITH_WCWL' ) ){
+
+      if( class_exists( 'THWL_Wishlist' ) ){
         echo top_store_whish_list($pid);
-        }elseif( class_exists( 'WPCleverWoosw' )){
-        echo top_store_wpc_whish_list($pid);          
-    }    
+        }
+
         echo top_store_add_to_compare_fltr($pid);
 
-}
-
+  }
 }
 
 /***********************************************/
@@ -221,15 +220,13 @@ remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_l
 remove_action('woocommerce_init','th_compare_add_action_shop_list');
 //To disable th compare Pro button 
 remove_action('woocommerce_init', 'tpcp_add_action_shop_list');
-//To integrate with a theme, please use bellow filters to hide the default buttons. hide default wishlist button on product archive page
-add_filter( 'woosw_button_position_archive', function() {
-    return '0';
-} );
 
-//hide default compare button on product archive page
-add_filter( 'filter_wooscp_button_archive', function() {
-    return '0';
-} );
+// To disable Wishlist button for loop button at shop page
+remove_action( 'wp', 'thwl_hook_wishlist_loop_button_position');
+
+// To disable Wishlist button for loop button at single page
+// remove_action( 'wp', 'thwl_hook_wishlist_single_button_position');
+
 /***************/
 // single page
 /***************/
@@ -276,9 +273,20 @@ if(class_exists('th_product_compare') || class_exists('Tpcp_product_compare')){
 /**********************/
 
    function top_store_whish_list($pid){
-     if( class_exists( 'YITH_WCWL' ) ){
-        echo '<div class="thunk-wishlist"><span class="thunk-wishlist-inner">'.do_shortcode('[yith_wcwl_add_to_wishlist product_id='.$pid.' icon="th-icon th-icon-heart1" label="wishlist" already_in_wishslist_text="Already" browse_wishlist_text="Added"]' ).'</span></div>';
-        } 
+
+     if( shortcode_exists( 'thwl_add_to_wishlist' )){
+        echo '<div class="thunk-wishlist"><span class="thunk-wishlist-inner">'. do_shortcode('[thwl_add_to_wishlist 
+                product_id="' . esc_attr($pid) . '" 
+                add_icon="th-icon th-icon-heart1" 
+                add_text="" 
+                add_browse_icon="th-icon th-icon-favorite"
+                browse_text=""
+                theme_style="yes"
+                icon_style="icon_only_no_style"
+                custom_class="th-wishlist-integrated"
+              ]').'</span></div>';
+       }
+
  }
 
 
@@ -303,7 +311,7 @@ function top_store_wpc_whish_list($pid){
 
 
 function top_store_whishlist_url(){
-$wishlist_page_id =  get_option( 'yith_wcwl_wishlist_page_id' );
+$wishlist_page_id =  get_option( 'thwl_page_id' );
 $wishlist_permalink = get_the_permalink( $wishlist_page_id );
 return $wishlist_permalink ;
 }

@@ -5,6 +5,23 @@
  * @subpackage Top Store
  * @since 1.0.0
  */
+if ( !function_exists('top_store_full_footer_markup') ) {
+function top_store_full_footer_markup() { ?>
+   <footer>
+         <?php 
+          // top-footer 
+          do_action( 'top_store_top_footer' ); 
+          // widget-footer
+      do_action( 'top_store_widget_footer' );
+      // below-footer
+          do_action( 'top_store_below_footer' );  
+        ?>
+     </footer> <!-- end footer -->
+    <?php }
+
+// Hook the custom footer function into 'zita_footer'
+add_action('top_store_footer', 'top_store_full_footer_markup');
+}
 /**************************************/
 //Top footer function
 /**************************************/

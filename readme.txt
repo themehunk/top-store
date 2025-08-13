@@ -4,7 +4,7 @@ Tags: wide-blocks, block-patterns, block-styles, editor-style, e-commerce, blog,
 Requires at least: WordPress 5.5
 Requires PHP: 5.5
 Tested up to: 6.8
-Stable tag: 1.6.1
+Stable tag: 1.6.2
 License: GPLv3 or later
 License URL: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -22,6 +22,19 @@ Yes our theme supports builder
 Yes, this theme is tested with latest version of WordPress, you can use it for your site.
 
 == Changelog ==
+
+= Version 1.6.2 =
+* Update:
+1. TH COMPARE INETEGRATED.
+2. Style Improved
+3. Tested with latest PHP 8.3 / 8.4.
+4. Tested with wordpress 6.8.
+5. No open code present (__load_text_domain error)
+6. TH Wishlist added in Option Panel.
+7. Hooks added at after & before of haeder and footer also class added in these tags.
+8. Product layouts style issue resolved.
+9. Update: Header implementation through hooks using do_action( 'zita_header' );
+10. Update: Footer implementation through hooks using do_action( 'zita_footer' );
 
 = Version 1.6.1 =
 * Update: Customizer widget redirect issue resolved.
