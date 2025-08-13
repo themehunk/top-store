@@ -25,40 +25,8 @@
 </head>
 <body <?php body_class();?>>
 	<?php wp_body_open();?>	
-<?php 
-$classes = '';
-if(is_page_template( 'page-contact.php' ) || is_page_template( 'page-faq.php' ) ||is_page_template( 'page-aboutus.php' )){
-$classes = 'no-sidebar';
-}
-elseif(!is_404() && !is_search() && is_page()){ 
-	$page_post_meta_sidebar = get_post_meta( $post->ID, 'top_store_disable_page_sidebar', true );
-		if ($page_post_meta_sidebar=='on'){
-			$classes = 'no-sidebar';
-		}
-}elseif(is_single()){
-	    $page_post_meta_sidebar = get_post_meta( $post->ID, 'top_store_disable_page_sidebar', true );
-		if ($page_post_meta_sidebar=='on'){
-			$classes = 'no-sidebar';
-		}
-}elseif(top_store_is_blog()){
-	    $blog_page_id = get_option( 'page_for_posts' );
-        $page_post_meta_sidebar = get_post_meta( $blog_page_id, 'top_store_disable_page_sidebar', true );
-		if ($page_post_meta_sidebar=='on'){
-			$classes = 'no-sidebar';
-		}
-}elseif(class_exists( 'WooCommerce' ) && is_shop()){
-	    $shop_page_id = get_option( 'woocommerce_shop_page_id' );
-        $page_post_meta_sidebar = get_post_meta( $shop_page_id, 'top_store_disable_page_sidebar', true );
-		if ($page_post_meta_sidebar=='on'){
-			$classes = 'no-sidebar';
-		}
-}elseif(class_exists( 'WooCommerce' ) && is_product()){
-	    $page_post_meta_sidebar = get_post_meta( $post->ID, 'top_store_disable_page_sidebar', true );
-		if ($page_post_meta_sidebar=='on'){
-			$classes = 'no-sidebar';
-		}
-}
-?>
 <?php do_action('top_store_site_preloader'); ?>
-<div id="page" class="top-store-site  <?php echo esc_attr($classes);?>">
+<div id="page" class="top-store-site">
+<?php do_action( 'top_store_before_header' ); ?>
 <?php do_action( 'top_store_header' ); ?>
+<?php do_action( 'top_store_after_header' ); ?>
