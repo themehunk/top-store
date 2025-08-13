@@ -269,7 +269,7 @@ if(class_exists('th_product_compare') || class_exists('Tpcp_product_compare')){
            }
         }
 /**********************/
-/** YITH wishlist **/
+/** thwl_add_to_wishlist **/
 /**********************/
 
    function top_store_whish_list($pid){
