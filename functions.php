@@ -12,7 +12,7 @@
  * Theme functions and definitions
  */
 if ( ! function_exists( 'top_store_setup' ) ) :
-define( 'TOP_STORE_THEME_VERSION','1.6.1');
+define( 'TOP_STORE_THEME_VERSION','1.6.2');
 define( 'TOP_STORE_THEME_DIR', get_template_directory() . '/' );
 define( 'TOP_STORE_THEME_URI', get_template_directory_uri() . '/' );
 define( 'TOP_STORE_THEME_SETTINGS', 'top-store-settings' );
@@ -126,6 +126,11 @@ define( 'TOP_STORE_THEME_SETTINGS', 'top-store-settings' );
                   'img' => 'icon-128x128.gif',
                  'active_filename' => 'th-product-compare/th-product-compare.php',
              ),
+            'th-wishlist' => array(
+				'name' => esc_html__( 'TH Wishlist for WooCommerce', 'top-store' ),
+				'img' => 'icon-128x128.gif',
+				'active_filename' => 'th-wishlist/th-wishlist.php',
+				),
 			 'lead-form-builder' => array(
                 'name' => esc_html__( 'Lead Form Builder', 'top-store' ),
                  'img' => 'icon-128x128.png',
