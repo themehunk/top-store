@@ -425,7 +425,7 @@ $top_store_menu_open = get_theme_mod('top_store_mobile_menu_open','overcenter');
     <div class="header-icon">
       <?php
       //THWL_Wishlist Icon
-      if( class_exists( 'THWL_Wishlist' ) ){
+      if( class_exists( 'THWL_Wishlist' ) || class_exists( 'YITH_WCWL' )){
       if($whs_icon == true){
       if (wp_is_mobile()!== true):
       ?>
@@ -527,17 +527,8 @@ $top_store_menu_open = get_theme_mod('top_store_mobile_menu_open','overcenter');
               
         }?></a>     
                       <?php
-                      if( class_exists( 'WPCleverWoosw' )){ ?>
 
-                      <a class="whishlist" href="<?php echo esc_url( WPcleverWoosw::get_url()); ?>">
-
-                        <i  class="th-icon th-icon-heartline" aria-hidden="true"></i>
-
-                      </a>
-
-                      <?php  }
-
-                      if( class_exists( 'THWL_Wishlist' )){
+                      if( class_exists( 'THWL_Wishlist' ) || class_exists( 'YITH_WCWL' )){
 
                       ?>
                       <a class="whishlist" href="<?php echo esc_url( top_store_whishlist_url() ); ?>"><i  class="th-icon th-icon-heartline" aria-hidden="true"></i></a>
