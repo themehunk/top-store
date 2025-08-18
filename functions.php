@@ -329,6 +329,7 @@ function top_store_scripts(){
 	wp_enqueue_style( 'top-store-style', get_stylesheet_uri(), array(), TOP_STORE_THEME_VERSION );
 	wp_enqueue_style( 'dashicons' );
 	wp_add_inline_style('top-store-style', top_store_custom_style());
+	wp_add_inline_style('top-store-style', '@font-face{font-family:"th-icon";src:url("' . esc_url(get_template_directory_uri() . '/third-party/fonts/th-icon/fonts/th-icon.ttf?k3xn19') . '") format("truetype");font-weight:normal;font-style:normal;font-display:block;}');
     //enqueue js
     wp_enqueue_script("jquery-effects-core",array( 'jquery' ));
     wp_enqueue_script( 'jquery-ui-autocomplete',array( 'jquery' ),'1.0.0',true );

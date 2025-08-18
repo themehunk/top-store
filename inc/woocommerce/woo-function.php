@@ -28,8 +28,7 @@ if ( ! function_exists( 'top_store_cart_total_item' ) ){
 if(!function_exists('top_store_whishlist_check')){
 
 function top_store_whishlist_check($pid){
-
-      if( class_exists( 'THWL_Wishlist' ) ){
+      if( class_exists( 'THWL_Wishlist') ||  class_exists( 'YITH_WCWL' ) ){ 
         echo top_store_whish_list($pid);
         }
 
@@ -286,6 +285,9 @@ if(class_exists('th_product_compare') || class_exists('Tpcp_product_compare')){
                 custom_class="th-wishlist-integrated"
               ]').'</span></div>';
        }
+       elseif( class_exists( 'YITH_WCWL' ) ){
+        echo '<div class="thunk-wishlist"><span class="thunk-wishlist-inner">'.do_shortcode('[yith_wcwl_add_to_wishlist product_id='.$pid.' icon="th-icon th-icon-heart1" label="wishlist" already_in_wishslist_text="Already" browse_wishlist_text="Added"]' ).'</span></div>';
+        } 
 
  }
 
@@ -311,7 +313,13 @@ function top_store_wpc_whish_list($pid){
 
 
 function top_store_whishlist_url(){
-$wishlist_page_id =  get_option( 'thwl_page_id' );
+  $wishlist_page_id = '';
+  if (class_exists( 'THWL_Wishlist' )) {
+    $wishlist_page_id =  get_option( 'thwl_page_id' );
+  }
+  elseif( class_exists( 'YITH_WCWL' ) ){
+    $wishlist_page_id =  get_option( 'yith_wcwl_wishlist_page_id' );
+  }
 $wishlist_permalink = get_the_permalink( $wishlist_page_id );
 return $wishlist_permalink ;
 }
