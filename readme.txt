@@ -36,6 +36,7 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 9. Update: Header implementation through hooks using do_action( 'zita_header' );
 10. Update: Footer implementation through hooks using do_action( 'zita_footer' );
 11. Update: Absolute path in th-icon issue resolved.
+12. header wishlist icon align styled.
 
 = Version 1.6.1 =
 * Update: Customizer widget redirect issue resolved.
@@ -296,6 +297,7 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 9. Update: Header implementation through hooks using do_action( 'zita_header' );
 10. Update: Footer implementation through hooks using do_action( 'zita_footer' );
 11. Update: Absolute path in th-icon issue resolved.
+12. header wishlist icon align styled.
 
 
 == Resources ==

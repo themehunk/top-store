@@ -2212,7 +2212,9 @@ color:#fff;
 padding-left:10px;
 }
 .header-icon a{
-    display: block;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
     text-align: left;
     position: relative;
     color: #fff;
