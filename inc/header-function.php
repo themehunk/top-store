@@ -6,28 +6,6 @@
 * @subpackage Top Store
 * @since 1.0.0
 */
-if ( !function_exists('top_store_full_header_markup') ) {
-function top_store_full_header_markup() { ?>
-  <header>
-    <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'top-store' ); ?></a>
-    <?php do_action( 'top_store_sticky_header' ); ?> 
-        <!-- sticky header -->
-    <?php if(get_theme_mod('top_store_above_mobile_disable')==true){
-      if (wp_is_mobile()!== true):
-              do_action( 'top_store_top_header' );  
-              endif;
-         }elseif(get_theme_mod('top_store_above_mobile_disable',false)==false){
-       do_action( 'top_store_top_header' );  
-    } ?> 
-    <!-- end top-header -->
-        <?php do_action( 'top_store_main_header' ); ?> 
-    <!-- end main-header -->
-    <?php do_action( 'top_store_below_header' ); ?> 
-    <!-- end below-header -->
-  </header> <!-- end header -->
-<?php }
-add_action('top_store_header', 'top_store_full_header_markup');
-}
 /**************************************/
 //Top Header function
 /**************************************/
@@ -359,6 +337,8 @@ $top_store_menu_open = get_theme_mod('top_store_mobile_menu_open','overcenter');
       <?php }
       }
       add_action( 'top_store_main_header', 'top_store_main_header_markup' );
+
+      if ( ! function_exists( 'top_store_main_header_optn' ) ){
       function top_store_main_header_optn(){
       $top_store_main_header_option = get_theme_mod('top_store_main_header_option','callto');
       if($top_store_main_header_option =='button'){?>
@@ -387,6 +367,7 @@ $top_store_menu_open = get_theme_mod('top_store_mobile_menu_open','overcenter');
       </div>
       <?php  }
       }
+    }
       /**************************************/
       //logo & site title function
       /**************************************/
@@ -418,6 +399,8 @@ $top_store_menu_open = get_theme_mod('top_store_mobile_menu_open','overcenter');
     /**********************************/
     // header icon function (Header Layout 1)
     /**********************************/
+   if (!function_exists('top_store_header_icon')) {
+     
     function top_store_header_icon(){
     $whs_icon = get_theme_mod('top_store_whislist_mobile_disable',false);
     $acc_icon = get_theme_mod('top_store_account_mobile_disable',false);
@@ -448,6 +431,7 @@ $top_store_menu_open = get_theme_mod('top_store_mobile_menu_open','overcenter');
               } ?>
             </div>
             <?php }
+          }
             /**************************/
             //PRELOADER
             /**************************/
@@ -571,6 +555,8 @@ $top_store_menu_open = get_theme_mod('top_store_mobile_menu_open','overcenter');
 //********************************//
 //th advance product search 
 //*******************************//
+          if (!function_exists('top_store_th_advance_product_search')) {
+      
 function top_store_th_advance_product_search(){
 
               if ( shortcode_exists('th-aps') ){
@@ -597,6 +583,7 @@ function top_store_th_advance_product_search(){
                 <?php      
 
             }
+}
 }
 
 //********************************//

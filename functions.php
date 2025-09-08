@@ -350,7 +350,11 @@ add_action( 'wp_enqueue_scripts', 'top_store_scripts' );
 /**
  * Load init.
  */
+
+function top_store_loading_main(){
 require_once trailingslashit(TOP_STORE_THEME_DIR).'inc/init.php';
+}
+add_action('init','top_store_loading_main',108);
 
 //custom function conditional check for blog page
 function top_store_is_blog (){

@@ -4799,7 +4799,10 @@ min-width:auto;
     min-width: auto;
 
 }
-
+.entry-summary .thunk-compare i,
+.entry-summary .thunk-compare .text{
+  display: none;
+}
 .woocommerce .entry-summary a.th-product-compare-btn{
   padding: 0;
 }

@@ -315,9 +315,11 @@ return $classes;
 add_filter( 'body_class', 'top_store_body_classes' );
 
 // sideabr function for internal pages
+if (!function_exists('top_store_pages_sidebar')) {
 function top_store_pages_sidebar(){
 $top_store_sidebar_ineternal_option = get_theme_mod('top_store_sidebar_ineternal_option','active-sidebar');
 return $top_store_sidebar_ineternal_option;
+}
 }
 
 // default size in upload image
@@ -325,3 +327,44 @@ function top_store_attachment_display_settings(){
     update_option( 'image_default_size', 'large' );
 }
 add_action( 'after_setup_theme', 'top_store_attachment_display_settings' );
+
+if ( !function_exists('top_store_full_header_markup') ) {
+function top_store_full_header_markup() { ?>
+  <header>
+    <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'top-store' ); ?></a>
+    <?php do_action( 'top_store_sticky_header' ); ?> 
+        <!-- sticky header -->
+    <?php if(get_theme_mod('top_store_above_mobile_disable')==true){
+      if (wp_is_mobile()!== true):
+              do_action( 'top_store_top_header' );  
+              endif;
+         }elseif(get_theme_mod('top_store_above_mobile_disable',false)==false){
+       do_action( 'top_store_top_header' );  
+    } ?> 
+    <!-- end top-header -->
+        <?php do_action( 'top_store_main_header' ); ?> 
+    <!-- end main-header -->
+    <?php do_action( 'top_store_below_header' ); ?> 
+    <!-- end below-header -->
+  </header> <!-- end header -->
+<?php }
+add_action('top_store_header', 'top_store_full_header_markup');
+}
+
+if ( !function_exists('top_store_full_footer_markup') ) {
+function top_store_full_footer_markup() { ?>
+   <footer>
+         <?php 
+          // top-footer 
+          do_action( 'top_store_top_footer' ); 
+          // widget-footer
+      do_action( 'top_store_widget_footer' );
+      // below-footer
+          do_action( 'top_store_below_footer' );  
+        ?>
+     </footer> <!-- end footer -->
+    <?php }
+
+// Hook the custom footer function into 'zita_footer'
+add_action('top_store_footer', 'top_store_full_footer_markup');
+}
