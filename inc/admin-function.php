@@ -23,11 +23,14 @@ endif;
 /*********************/
 // Menu 
 /*********************/
+if (!function_exists('top_store_add_classes_to_page_menu')) {
 function top_store_add_classes_to_page_menu( $ulclass ){
   return preg_replace( '/<ul>/', '<ul class="top-store-menu" data-menu-style="horizontal">', $ulclass, 1 );
 }
+}
 add_filter( 'wp_page_menu', 'top_store_add_classes_to_page_menu' );		
      // This theme uses wp_nav_menu() in two locations.
+if (!function_exists('top_store_custom_menu')) {
 	  function top_store_custom_menu(){
 		     register_nav_menus(array(
 		  'top-store-above-menu' => esc_html__( 'Header Above Menu', 'top-store' ),
@@ -36,8 +39,10 @@ add_filter( 'wp_page_menu', 'top_store_add_classes_to_page_menu' );
 			'top-store-footer-menu'  => esc_html__( 'Footer Menu', 'top-store' ),
 		) );
 	  }
+    }
 	  add_action( 'after_setup_theme', 'top_store_custom_menu' );
 	  // MAIN MENU
+      if (!function_exists('top_store_main_nav_menu')) {
            function top_store_main_nav_menu(){
               wp_nav_menu( array(
               'theme_location' => 'top-store-main-menu', 
@@ -47,7 +52,9 @@ add_filter( 'wp_page_menu', 'top_store_add_classes_to_page_menu' );
               'items_wrap'     => '<ul id="top-store-menu" class="top-store-menu" data-menu-style="horizontal">%3$s</ul>',
              ));
          }
+     }
           //STICKY MENU
+     if (!function_exists('top_store_stick_nav_menu')) {
            function top_store_stick_nav_menu(){
               wp_nav_menu( array(
               'theme_location' => 'top-store-sticky-menu', 
@@ -57,7 +64,9 @@ add_filter( 'wp_page_menu', 'top_store_add_classes_to_page_menu' );
               'items_wrap'     => '<ul id="top-store-stick-menu" class="top-store-menu" data-menu-style="horizontal">%3$s</ul>',
              ));
          }
+     }
          // HEADER ABOVE MENU
+      if (!function_exists('top_store_abv_nav_menu')) {
          function top_store_abv_nav_menu(){
               wp_nav_menu( array('theme_location' => 'top-store-above-menu', 
               'container'   => false, 
@@ -66,7 +75,9 @@ add_filter( 'wp_page_menu', 'top_store_add_classes_to_page_menu' );
               'items_wrap'  => '<ul id="top-store-above-menu" class="top-store-menu" data-menu-style="horizontal">%3$s</ul>',
              ));
          }
+     }
          // FOOTER TOP MENU
+           if (!function_exists('top_store_footer_nav_menu')) {
          function top_store_footer_nav_menu(){
               wp_nav_menu( array('theme_location' => 'top-store-footer-menu', 
               'container'   => false, 
@@ -75,8 +86,11 @@ add_filter( 'wp_page_menu', 'top_store_add_classes_to_page_menu' );
               'items_wrap'  => '<ul id="top-store-footer-menu" class="top-store-bottom-menu">%3$s</ul>',
              ));
          }
+     }
+     if (!function_exists(' top_store_add_classes_to_page_menu_default')) {
 function top_store_add_classes_to_page_menu_default( $ulclass ){
 return preg_replace( '/<ul>/', '<ul class="top-store-menu" data-menu-style="horizontal">', $ulclass, 1 );
+}
 }
 add_filter( 'wp_page_menu', 'top_store_add_classes_to_page_menu_default' );
 /************************/
