@@ -214,6 +214,7 @@ endif;
 /*************************/
 //Get Page Title
 /*************************/
+if ( ! function_exists( 'top_store_get_page_title' ) ){
 function top_store_get_page_title(){ ?>
 			<?php if(is_search()){ ?> 
             <h2 class="thunk-page-top-title entry-title">
@@ -238,9 +239,11 @@ function top_store_get_page_title(){ ?>
 			<?php } ?>
    <?php 
 }
+}
 /**************************/
 // Dynamic Social Link
 /**************************/
+if ( ! function_exists( 'top_store_social_links' ) ){
 function top_store_social_links(){
 $social='';
 $original_color = get_theme_mod('top_store_social_original_color',false);
@@ -282,10 +285,12 @@ endif;
 $social.='</ul>';
 return $social;
 }
+}
 
 /******************************/
 //Sticky sidebar function
 /******************************/
+if ( ! function_exists( 'top_store_stick_sidebar' ) ){
 function top_store_stick_sidebar($class){
             $top_store_sticky_sidebar = get_theme_mod( 'top_store_sticky_sidebar');
             if ($top_store_sticky_sidebar){
@@ -294,8 +299,10 @@ function top_store_stick_sidebar($class){
             return $class;
 }
 add_filter( 'top_store_stick_sidebar_class','top_store_stick_sidebar', 999 );
+}
 /*****************************/
 //add class active
+if ( ! function_exists( 'top_store_body_classes' ) ){
 function top_store_body_classes( $classes ){
 if(class_exists( 'WooCommerce' )):
 $classes[] = 'woocommerce';
@@ -312,6 +319,7 @@ $top_store_color_scheme = esc_html(get_theme_mod( 'top_store_color_scheme','opn-
          }
 return $classes;
 }
+}
 add_filter( 'body_class', 'top_store_body_classes' );
 
 // sideabr function for internal pages
@@ -323,8 +331,10 @@ return $top_store_sidebar_ineternal_option;
 }
 
 // default size in upload image
+if ( ! function_exists( 'top_store_attachment_display_settings' ) ){
 function top_store_attachment_display_settings(){
     update_option( 'image_default_size', 'large' );
+}
 }
 add_action( 'after_setup_theme', 'top_store_attachment_display_settings' );
 

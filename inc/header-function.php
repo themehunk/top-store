@@ -589,8 +589,9 @@ function top_store_th_advance_product_search(){
 //********************************//
 //th woo cart 
 //*******************************//
+if (!function_exists('top_store_th_cart')) {
 
-function top_store_th_cart(){
+  function top_store_th_cart(){
 
   if ( shortcode_exists('taiowc') ){
 
@@ -616,4 +617,5 @@ function top_store_th_cart(){
                 <?php      
 
             }
+}
 }
