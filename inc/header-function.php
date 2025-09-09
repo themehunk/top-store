@@ -1,4 +1,7 @@
 <?php
+if ( is_child_theme() && get_stylesheet() === 'top-x' ) {
+  return;
+}
 /**
 * Header Function for Top Store theme.
 *
