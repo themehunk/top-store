@@ -12,7 +12,7 @@
  * Theme functions and definitions
  */
 if ( ! function_exists( 'top_store_setup' ) ) :
-define( 'TOP_STORE_THEME_VERSION','1.6.2');
+define( 'TOP_STORE_THEME_VERSION','1.6.3');
 define( 'TOP_STORE_THEME_DIR', get_template_directory() . '/' );
 define( 'TOP_STORE_THEME_URI', get_template_directory_uri() . '/' );
 define( 'TOP_STORE_THEME_SETTINGS', 'top-store-settings' );
@@ -351,10 +351,7 @@ add_action( 'wp_enqueue_scripts', 'top_store_scripts' );
  * Load init.
  */
 
-function top_store_loading_main(){
 require_once trailingslashit(TOP_STORE_THEME_DIR).'inc/init.php';
-}
-add_action('init','top_store_loading_main',108);
 
 //custom function conditional check for blog page
 function top_store_is_blog (){

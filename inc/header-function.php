@@ -292,7 +292,7 @@ $top_store_menu_open = get_theme_mod('top_store_mobile_menu_open','overcenter');
     ?>
     <div class="main-header <?php echo esc_attr($main_header_layout);?> <?php echo esc_attr($main_header_opt);?> <?php echo esc_attr($top_store_menu_alignment);?>  <?php echo esc_attr($offcanvas);?>">
       <div class="container">
-        <div class="main-header-bar thnk-col-3">
+        <div class="main-header-bar parent-theme thnk-col-3">
           <?php if ($main_header_layout == 'mhdrfour') { ?>
           <div class="main-header-col1">
             <span class="logo-content">
