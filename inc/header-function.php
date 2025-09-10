@@ -1,7 +1,9 @@
 <?php
-if ( is_child_theme() && get_stylesheet() === 'top-x' ) {
+// below code is to remove fatal error for redeclaraion of function in child theme
+if (is_child_theme() && in_array(get_stylesheet(), ['top-x', 'just-store', 'the-store'])) {
   return;
 }
+
 /**
 * Header Function for Top Store theme.
 *
