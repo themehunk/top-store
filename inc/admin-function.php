@@ -1,4 +1,9 @@
 <?php 
+// below code is to remove fatal error for redeclaraion of function in child theme
+if (is_child_theme() && in_array(get_stylesheet(), ['top-x', 'just-store', 'the-store'])) {
+  return;
+}
+
 /**
  * Common Function for Top Store Theme.
  *
@@ -23,11 +28,14 @@ endif;
 /*********************/
 // Menu 
 /*********************/
+if (!function_exists('top_store_add_classes_to_page_menu')) {
 function top_store_add_classes_to_page_menu( $ulclass ){
   return preg_replace( '/<ul>/', '<ul class="top-store-menu" data-menu-style="horizontal">', $ulclass, 1 );
 }
+}
 add_filter( 'wp_page_menu', 'top_store_add_classes_to_page_menu' );		
      // This theme uses wp_nav_menu() in two locations.
+if (!function_exists('top_store_custom_menu')) {
 	  function top_store_custom_menu(){
 		     register_nav_menus(array(
 		  'top-store-above-menu' => esc_html__( 'Header Above Menu', 'top-store' ),
@@ -36,8 +44,10 @@ add_filter( 'wp_page_menu', 'top_store_add_classes_to_page_menu' );
 			'top-store-footer-menu'  => esc_html__( 'Footer Menu', 'top-store' ),
 		) );
 	  }
+    }
 	  add_action( 'after_setup_theme', 'top_store_custom_menu' );
 	  // MAIN MENU
+      if (!function_exists('top_store_main_nav_menu')) {
            function top_store_main_nav_menu(){
               wp_nav_menu( array(
               'theme_location' => 'top-store-main-menu', 
@@ -47,7 +57,9 @@ add_filter( 'wp_page_menu', 'top_store_add_classes_to_page_menu' );
               'items_wrap'     => '<ul id="top-store-menu" class="top-store-menu" data-menu-style="horizontal">%3$s</ul>',
              ));
          }
+     }
           //STICKY MENU
+     if (!function_exists('top_store_stick_nav_menu')) {
            function top_store_stick_nav_menu(){
               wp_nav_menu( array(
               'theme_location' => 'top-store-sticky-menu', 
@@ -57,7 +69,9 @@ add_filter( 'wp_page_menu', 'top_store_add_classes_to_page_menu' );
               'items_wrap'     => '<ul id="top-store-stick-menu" class="top-store-menu" data-menu-style="horizontal">%3$s</ul>',
              ));
          }
+     }
          // HEADER ABOVE MENU
+      if (!function_exists('top_store_abv_nav_menu')) {
          function top_store_abv_nav_menu(){
               wp_nav_menu( array('theme_location' => 'top-store-above-menu', 
               'container'   => false, 
@@ -66,7 +80,9 @@ add_filter( 'wp_page_menu', 'top_store_add_classes_to_page_menu' );
               'items_wrap'  => '<ul id="top-store-above-menu" class="top-store-menu" data-menu-style="horizontal">%3$s</ul>',
              ));
          }
+     }
          // FOOTER TOP MENU
+           if (!function_exists('top_store_footer_nav_menu')) {
          function top_store_footer_nav_menu(){
               wp_nav_menu( array('theme_location' => 'top-store-footer-menu', 
               'container'   => false, 
@@ -75,8 +91,11 @@ add_filter( 'wp_page_menu', 'top_store_add_classes_to_page_menu' );
               'items_wrap'  => '<ul id="top-store-footer-menu" class="top-store-bottom-menu">%3$s</ul>',
              ));
          }
+     }
+     if (!function_exists(' top_store_add_classes_to_page_menu_default')) {
 function top_store_add_classes_to_page_menu_default( $ulclass ){
 return preg_replace( '/<ul>/', '<ul class="top-store-menu" data-menu-style="horizontal">', $ulclass, 1 );
+}
 }
 add_filter( 'wp_page_menu', 'top_store_add_classes_to_page_menu_default' );
 /************************/
@@ -214,6 +233,7 @@ endif;
 /*************************/
 //Get Page Title
 /*************************/
+if ( ! function_exists( 'top_store_get_page_title' ) ){
 function top_store_get_page_title(){ ?>
 			<?php if(is_search()){ ?> 
             <h2 class="thunk-page-top-title entry-title">
@@ -238,9 +258,11 @@ function top_store_get_page_title(){ ?>
 			<?php } ?>
    <?php 
 }
+}
 /**************************/
 // Dynamic Social Link
 /**************************/
+if ( ! function_exists( 'top_store_social_links' ) ){
 function top_store_social_links(){
 $social='';
 $original_color = get_theme_mod('top_store_social_original_color',false);
@@ -282,10 +304,12 @@ endif;
 $social.='</ul>';
 return $social;
 }
+}
 
 /******************************/
 //Sticky sidebar function
 /******************************/
+if ( ! function_exists( 'top_store_stick_sidebar' ) ){
 function top_store_stick_sidebar($class){
             $top_store_sticky_sidebar = get_theme_mod( 'top_store_sticky_sidebar');
             if ($top_store_sticky_sidebar){
@@ -294,8 +318,10 @@ function top_store_stick_sidebar($class){
             return $class;
 }
 add_filter( 'top_store_stick_sidebar_class','top_store_stick_sidebar', 999 );
+}
 /*****************************/
 //add class active
+if ( ! function_exists( 'top_store_body_classes' ) ){
 function top_store_body_classes( $classes ){
 if(class_exists( 'WooCommerce' )):
 $classes[] = 'woocommerce';
@@ -312,16 +338,21 @@ $top_store_color_scheme = esc_html(get_theme_mod( 'top_store_color_scheme','opn-
          }
 return $classes;
 }
+}
 add_filter( 'body_class', 'top_store_body_classes' );
 
 // sideabr function for internal pages
+if (!function_exists('top_store_pages_sidebar')) {
 function top_store_pages_sidebar(){
 $top_store_sidebar_ineternal_option = get_theme_mod('top_store_sidebar_ineternal_option','active-sidebar');
 return $top_store_sidebar_ineternal_option;
 }
+}
 
 // default size in upload image
+if ( ! function_exists( 'top_store_attachment_display_settings' ) ){
 function top_store_attachment_display_settings(){
     update_option( 'image_default_size', 'large' );
+}
 }
 add_action( 'after_setup_theme', 'top_store_attachment_display_settings' );
