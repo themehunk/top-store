@@ -26,6 +26,7 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 = Version 1.6.4 =
 * Fix: TH TOP Child theme error removed.
 * Update: Theme Preview menu style updated.
+* Title attribute added in .header-icon a.
 
 = Version 1.6.3 =
 * Fix: Child theme error removed.
@@ -291,20 +292,10 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 
 == Upgrade Notice ==
 
-= Version 1.6.2 =
-* Update:
-1. TH COMPARE INETEGRATED.
-2. Style Improved
-3. Tested with latest PHP 8.3 / 8.4.
-4. Tested with wordpress 6.8.
-5. No open code present (__load_text_domain error)
-6. TH Wishlist added in Option Panel.
-7. Hooks added at after & before of haeder and footer also class added in these tags.
-8. Product layouts style issue resolved.
-9. Update: Header implementation through hooks using do_action( 'zita_header' );
-10. Update: Footer implementation through hooks using do_action( 'zita_footer' );
-11. Update: Absolute path in th-icon issue resolved.
-12. header wishlist icon align styled.
+= Version 1.6.4 =
+* Fix: TH TOP Child theme error removed.
+* Update: Theme Preview menu style updated.
+* Title attribute added in .header-icon a.
 
 
 == Resources ==

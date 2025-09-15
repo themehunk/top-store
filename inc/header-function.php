@@ -417,12 +417,12 @@ $top_store_menu_open = get_theme_mod('top_store_mobile_menu_open','overcenter');
       if($whs_icon == true){
       if (wp_is_mobile()!== true):
       ?>
-      <a class="whishlist" href="<?php echo esc_url( top_store_whishlist_url() ); ?>">
+      <a class="whishlist" href="<?php echo esc_url( top_store_whishlist_url() ); ?>" title="Show Wishlist">
         <span class="th-whishlist-text tooltip"><?php esc_html_e('Wishlist','top-store');?></span> <span><?php esc_html_e('Wishlist','top-store');?></span><i class="th-icon th-icon-heartline"></i></a>
         
         <?php endif; }
         elseif($whs_icon == false){?>
-        <a class="whishlist" href="<?php echo esc_url( top_store_whishlist_url() ); ?>">
+        <a class="whishlist" href="<?php echo esc_url( top_store_whishlist_url() ); ?>" title="Show Wishlist">
           <span class="th-whishlist-text tooltip"><?php esc_html_e('Wishlist','top-store');?></span>
           <span><?php esc_html_e('Wishlist','top-store');?></span><i class="th-icon th-icon-heartline"></i></a>
           <?php  }
