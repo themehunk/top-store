@@ -1,6 +1,6 @@
 <?php
 // below code is to remove fatal error for redeclaraion of function in child theme
-if (is_child_theme() && in_array(get_stylesheet(), ['top-x', 'just-store', 'the-store'])) {
+if (is_child_theme() && in_array(get_stylesheet(), ['top-x', 'just-store', 'the-store','th-top'])) {
   return;
 }
 
@@ -379,7 +379,7 @@ $top_store_menu_open = get_theme_mod('top_store_mobile_menu_open','overcenter');
       if ( ! function_exists( 'top_store_logo' ) ){
       function top_store_logo(){
       $title_disable          = get_theme_mod( 'title_disable','enable');
-      $tagline_disable        = get_theme_mod( 'tagline_disable','enable');
+      $tagline_disable        = get_theme_mod( 'tagline_disable','');
       $description            = get_bloginfo( 'description', 'display' );
       top_store_custom_logo();
       if($title_disable!='' || $tagline_disable!=''){
@@ -418,13 +418,13 @@ $top_store_menu_open = get_theme_mod('top_store_mobile_menu_open','overcenter');
       if (wp_is_mobile()!== true):
       ?>
       <a class="whishlist" href="<?php echo esc_url( top_store_whishlist_url() ); ?>">
-        <span class="th-whishlist-text"><?php _e('My Favourite','top-store');?></span> <span><?php _e('Wishlist','top-store');?></span><i class="th-icon th-icon-heartline"></i></a>
+        <span class="th-whishlist-text tooltip"><?php esc_html_e('Wishlist','top-store');?></span> <span><?php esc_html_e('Wishlist','top-store');?></span><i class="th-icon th-icon-heartline"></i></a>
         
         <?php endif; }
         elseif($whs_icon == false){?>
         <a class="whishlist" href="<?php echo esc_url( top_store_whishlist_url() ); ?>">
-          <span class="th-whishlist-text"><?php _e('My Favourite','top-store');?></span>
-          <span><?php _e('Wishlist','top-store');?></span><i class="th-icon th-icon-heartline"></i></a>
+          <span class="th-whishlist-text tooltip"><?php esc_html_e('Wishlist','top-store');?></span>
+          <span><?php esc_html_e('Wishlist','top-store');?></span><i class="th-icon th-icon-heartline"></i></a>
           <?php  }
           } 
               if($acc_icon == true){

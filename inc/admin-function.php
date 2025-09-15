@@ -1,6 +1,6 @@
 <?php 
 // below code is to remove fatal error for redeclaraion of function in child theme
-if (is_child_theme() && in_array(get_stylesheet(), ['top-x', 'just-store', 'the-store'])) {
+if (is_child_theme() && in_array(get_stylesheet(), ['top-x', 'just-store', 'the-store','th-top'])) {
   return;
 }
 
