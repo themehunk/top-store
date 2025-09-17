@@ -1,8 +1,34 @@
 <?php
 // below code is to remove fatal error for redeclaraion of function in child theme
-if (is_child_theme() && in_array(get_stylesheet(), ['top-x', 'just-store', 'the-store','th-top'])) {
-  return;
+ 
+
+if (is_child_theme()) {
+    $theme = wp_get_theme();
+    $child_theme_version = $theme->get('Version');
+    
+    if (get_stylesheet() === 'top-x') {
+        // For 'top-x' theme, check version and apply your condition
+        if ($child_theme_version == '1.0.0' || $child_theme_version == '1.0.1' || $child_theme_version == '1.0.2' || $child_theme_version == '1.0.3') {
+             return;
+        }
+    } elseif (get_stylesheet() === 'the-store') {
+        // For 'the-store' theme, check version and apply your condition
+        if ($child_theme_version == '1.0.0' || $child_theme_version == '1.0.1' || $child_theme_version == '1.0.2') {
+            return;
+        }
+    } elseif (get_stylesheet() === 'th-top') {
+        // For 'th-top' theme, check version and apply your condition
+        if ($child_theme_version == '1.0.0' || $child_theme_version == '1.0.1' || $child_theme_version == '1.0.2' || $child_theme_version == '1.0.3' || $child_theme_version == '1.0.4' || $child_theme_version == '1.0.5' || $child_theme_version == '1.0.6' ) {
+            return;
+        }
+    } elseif (get_stylesheet() === 'just-store') {
+        // For 'th-top' theme, check version and apply your condition
+        if ( $child_theme_version == '1.0.0') {
+            return;
+        }
+    }
 }
+
 
 /**
 * Header Function for Top Store theme.

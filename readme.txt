@@ -27,6 +27,7 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 * Fix: TH TOP Child theme error removed.
 * Update: Theme Preview menu style updated.
 * Title attribute added in .header-icon a.
+* Child theme tested with current running version error free.
 
 = Version 1.6.3 =
 * Fix: Child theme error removed.
@@ -296,6 +297,7 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 * Fix: TH TOP Child theme error removed.
 * Update: Theme Preview menu style updated.
 * Title attribute added in .header-icon a.
+* Child theme tested with current running version error free.
 
 
 == Resources ==
