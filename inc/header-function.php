@@ -1,8 +1,34 @@
 <?php
 // below code is to remove fatal error for redeclaraion of function in child theme
-if (is_child_theme() && in_array(get_stylesheet(), ['top-x', 'just-store', 'the-store'])) {
-  return;
+ 
+
+if (is_child_theme()) {
+    $theme = wp_get_theme();
+    $child_theme_version = $theme->get('Version');
+    
+    if (get_stylesheet() === 'top-x') {
+        // For 'top-x' theme, check version and apply your condition
+        if ($child_theme_version == '1.0.0' || $child_theme_version == '1.0.1' || $child_theme_version == '1.0.2' || $child_theme_version == '1.0.3') {
+             return;
+        }
+    } elseif (get_stylesheet() === 'the-store') {
+        // For 'the-store' theme, check version and apply your condition
+        if ($child_theme_version == '1.0.0' || $child_theme_version == '1.0.1' || $child_theme_version == '1.0.2') {
+            return;
+        }
+    } elseif (get_stylesheet() === 'th-top') {
+        // For 'th-top' theme, check version and apply your condition
+        if ($child_theme_version == '1.0.0' || $child_theme_version == '1.0.1' || $child_theme_version == '1.0.2' || $child_theme_version == '1.0.3' || $child_theme_version == '1.0.4' || $child_theme_version == '1.0.5' || $child_theme_version == '1.0.6' ) {
+            return;
+        }
+    } elseif (get_stylesheet() === 'just-store') {
+        // For 'th-top' theme, check version and apply your condition
+        if ( $child_theme_version == '1.0.0') {
+            return;
+        }
+    }
 }
+
 
 /**
 * Header Function for Top Store theme.
@@ -379,7 +405,7 @@ $top_store_menu_open = get_theme_mod('top_store_mobile_menu_open','overcenter');
       if ( ! function_exists( 'top_store_logo' ) ){
       function top_store_logo(){
       $title_disable          = get_theme_mod( 'title_disable','enable');
-      $tagline_disable        = get_theme_mod( 'tagline_disable','enable');
+      $tagline_disable        = get_theme_mod( 'tagline_disable','');
       $description            = get_bloginfo( 'description', 'display' );
       top_store_custom_logo();
       if($title_disable!='' || $tagline_disable!=''){
@@ -417,14 +443,14 @@ $top_store_menu_open = get_theme_mod('top_store_mobile_menu_open','overcenter');
       if($whs_icon == true){
       if (wp_is_mobile()!== true):
       ?>
-      <a class="whishlist" href="<?php echo esc_url( top_store_whishlist_url() ); ?>">
-        <span class="th-whishlist-text"><?php _e('My Favourite','top-store');?></span> <span><?php _e('Wishlist','top-store');?></span><i class="th-icon th-icon-heartline"></i></a>
+      <a class="whishlist" href="<?php echo esc_url( top_store_whishlist_url() ); ?>" title="Show Wishlist">
+        <span class="th-whishlist-text tooltip"><?php esc_html_e('Wishlist','top-store');?></span> <span><?php esc_html_e('Wishlist','top-store');?></span><i class="th-icon th-icon-heartline"></i></a>
         
         <?php endif; }
         elseif($whs_icon == false){?>
-        <a class="whishlist" href="<?php echo esc_url( top_store_whishlist_url() ); ?>">
-          <span class="th-whishlist-text"><?php _e('My Favourite','top-store');?></span>
-          <span><?php _e('Wishlist','top-store');?></span><i class="th-icon th-icon-heartline"></i></a>
+        <a class="whishlist" href="<?php echo esc_url( top_store_whishlist_url() ); ?>" title="Show Wishlist">
+          <span class="th-whishlist-text tooltip"><?php esc_html_e('Wishlist','top-store');?></span>
+          <span><?php esc_html_e('Wishlist','top-store');?></span><i class="th-icon th-icon-heartline"></i></a>
           <?php  }
           } 
               if($acc_icon == true){

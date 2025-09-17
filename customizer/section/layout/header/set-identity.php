@@ -47,7 +47,7 @@ $wp_customize->add_control('title_disable', array(
     ));
 $wp_customize->get_section('title_tagline')->priority = 1;
 $wp_customize->add_setting('tagline_disable', array(
-        'default'           => 'enable',
+        'default'           => '',
         'capability'        => 'edit_theme_options',
         'sanitize_callback' => 'top_store_sanitize_checkbox',
     ));

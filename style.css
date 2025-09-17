@@ -4,7 +4,7 @@ Theme URI: https://themehunk.com/product/top-store/
 Author: ThemeHunk
 Author URI: https://www.themehunk.com
 Description: Top Store is a sleek, powerful, and fully responsive WooCommerce WordPress theme crafted to help you build stunning online stores with ease. Designed for speed and flexibility, Top Store offers seamless integration with WooCommerce and popular page builders like Elementor, Gutenberg, and Beaver Builder, enabling you to create a professional eCommerce website without any coding.Built with SEO best practices, Top Store ensures your products rank higher on search engines and attract more customers. The theme features customizable layouts, multiple homepage designs, advanced product filters, and AJAX-powered shopping cart for a smooth user experience without page reloads. Whether you're selling electronics, fashion, accessories, cosmetics, home décor, or any niche products, Top Store adapts perfectly with retina-ready design and mobile-first responsiveness to showcase your products beautifully on all devices. Top Store also supports essential WooCommerce extensions like Product Compare, Wishlist, and Quick View, making it easier for customers to browse and shop. With translation-ready and RTL support, it's ideal for reaching global audiences. Check Out live Demo – https://wpthemes.themehunk.com/topstore/
-Version: 1.6.3
+Version: 1.6.4
 Requires at least: 5.0
 Tested up to: 6.8
 Requires PHP: 5.5
@@ -7353,7 +7353,7 @@ text-decoration: underline !important;
     color: #fff;
 }
 .cart-icon a .th-icon {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 }
 .woocommerce .entry-summary .th-product-compare-btn.btn_type.th-added-compare{
   font-size: 0;
@@ -7506,6 +7506,21 @@ text-decoration: underline !important;
 .thunk-wishlist .th-wishlist-icon-svg{
   width: 18px;
   display: flex;
+}
+.header-icon .tooltip{
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+}
+.header-icon a:hover .tooltip{
+  opacity: 1;
+  visibility: visible;
+}
+.header-icon .tooltip{
+  display: none;
 }
 @media screen and (max-width: 1300px){
   .header-icon span{
