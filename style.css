@@ -4,9 +4,9 @@ Theme URI: https://themehunk.com/product/top-store/
 Author: ThemeHunk
 Author URI: https://www.themehunk.com
 Description: Top Store is a sleek, powerful, and fully responsive WooCommerce WordPress theme crafted to help you build stunning online stores with ease. Designed for speed and flexibility, Top Store offers seamless integration with WooCommerce and popular page builders like Elementor, Gutenberg, and Beaver Builder, enabling you to create a professional eCommerce website without any coding.Built with SEO best practices, Top Store ensures your products rank higher on search engines and attract more customers. The theme features customizable layouts, multiple homepage designs, advanced product filters, and AJAX-powered shopping cart for a smooth user experience without page reloads. Whether you're selling electronics, fashion, accessories, cosmetics, home décor, or any niche products, Top Store adapts perfectly with retina-ready design and mobile-first responsiveness to showcase your products beautifully on all devices. Top Store also supports essential WooCommerce extensions like Product Compare, Wishlist, and Quick View, making it easier for customers to browse and shop. With translation-ready and RTL support, it's ideal for reaching global audiences. Check Out live Demo – https://wpthemes.themehunk.com/topstore/
-Version: 1.6.4
+Version: 1.6.5
 Requires at least: 5.0
-Tested up to: 6.8
+Tested up to: 6.9
 Requires PHP: 5.5
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
@@ -7522,6 +7522,18 @@ text-decoration: underline !important;
 .header-icon .tooltip{
   display: none;
 }
+.woo-variation-swatches .variable-items-wrapper{
+  gap: 9px;
+}
+ .thunk-single-product-summary-wrap .woocommerce-product-gallery .flex-control-nav {
+        overflow-y: auto!important;
+  }
+   .thunk-single-product-summary-wrap .woocommerce-product-gallery .flex-control-nav::-webkit-scrollbar {
+        display: none;
+   }
+    .single-product .woo-variation-swatches .variable-items-wrapper{
+    max-width: 400px;
+   }
 @media screen and (max-width: 1300px){
   .header-icon span{
     font-size: 8px;

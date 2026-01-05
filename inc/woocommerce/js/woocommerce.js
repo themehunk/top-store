@@ -13,6 +13,7 @@
             $this.AddtoCartQuanty();
             $this.AutoCompleteSearch(); 
             $this.belowfooter();
+            $this.singleProductGalleryHeight();
           },
         listGridView: function (){
             var wrapper = $('.thunk-list-grid-switcher');
@@ -261,6 +262,38 @@ AutoCompleteSearch: function () {
         }
       }
     },
+
+            singleProductGalleryHeight: function () {
+
+    var $window = $(window);
+
+    function setFlexNavHeight() {
+
+        // Apply only above 768px
+        if ($window.width() <= 768) {
+            $('.woocommerce-product-gallery .flex-control-nav').css('max-height', '');
+            return;
+        }
+
+        var $viewport = $('.woocommerce-product-gallery .flex-viewport');
+        var $nav = $('.woocommerce-product-gallery .flex-control-nav');
+
+        if ($viewport.length && $nav.length) {
+            var viewportHeight = $viewport.outerHeight();
+            $nav.css('max-height', viewportHeight + 'px');
+        }
+    }
+
+    // Run after images & flexslider are fully loaded
+    $window.on('load', function () {
+        setFlexNavHeight();
+    });
+
+    // Recalculate on resize
+    $window.on('resize', function () {
+        setFlexNavHeight();
+    });
+},
 
       }
     TopStoreWooLib.init();
