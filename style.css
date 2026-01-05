@@ -8782,7 +8782,7 @@ line-height: 23px!important;
 .woocommerce div.product div.images .flex-control-thumbs li,
  .woocommerce div.product div.images .flex-control-thumbs li {
     margin-right:7.5px;
-    margin-bottom:15px;
+    margin-bottom:5px;
     margin-top:7.5px;
 }
 h1 {
@@ -9065,7 +9065,12 @@ bottom: 125px;
 .icon_style .thaps-search-form {
     min-width: 300px!important;
   }
-
+  .woocommerce div.product div.images .flex-control-thumbs{
+    flex-wrap: wrap;
+  }
+.woocommerce div.product div.images .flex-control-thumbs li{
+  width: 14%;
+}
 }
 
 @media screen and (max-width:550px){
