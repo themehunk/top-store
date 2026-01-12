@@ -7620,6 +7620,13 @@ text-decoration: underline !important;
 }
 
 @media screen and (max-width: 1024px){
+  .thunk-wishlist .th-wishlist-icon-svg{
+    width: 16px;
+  }
+    .thunk-product .thw-icon{
+    display: flex;
+    align-items: center;
+  }
   .woocommerce div.product .product_title{
     margin-top: 18px;
   }
