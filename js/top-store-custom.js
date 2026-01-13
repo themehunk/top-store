@@ -335,7 +335,7 @@
                       /**************************************************/
                       // Show-hide Scroll to top & move-to-top arrow
                       /**************************************************/
-                        jQuery("body").prepend("<a id='move-to-top' class='animate' href='#'><i class='fa fa-angle-up'></i></a>"); 
+                        jQuery("body").prepend("<a id='move-to-top' class='animate' href='#'><svg width='1.44em' height='1em' viewBox='0 0 26 18' fill='none' xmlns='http://www.w3.org/2000/svg' style='display: inline-block; vertical-align: middle;'><path d='M7 12L13 6L19 12' stroke='currentColor' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/></svg></a>"); 
                         var scrollDes = 'html,body';  
                         /*Opera does a strange thing if we use 'html' and 'body' together so my solution is to do the UA sniffing thing*/
                         if(navigator.userAgent.match(/opera/i)){

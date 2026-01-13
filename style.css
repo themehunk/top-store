@@ -4,7 +4,7 @@ Theme URI: https://themehunk.com/product/top-store/
 Author: ThemeHunk
 Author URI: https://www.themehunk.com
 Description: Top Store is a sleek, powerful, and fully responsive WooCommerce WordPress theme crafted to help you build stunning online stores with ease. Designed for speed and flexibility, Top Store offers seamless integration with WooCommerce and popular page builders like Elementor, Gutenberg, and Beaver Builder, enabling you to create a professional eCommerce website without any coding.Built with SEO best practices, Top Store ensures your products rank higher on search engines and attract more customers. The theme features customizable layouts, multiple homepage designs, advanced product filters, and AJAX-powered shopping cart for a smooth user experience without page reloads. Whether you're selling electronics, fashion, accessories, cosmetics, home décor, or any niche products, Top Store adapts perfectly with retina-ready design and mobile-first responsiveness to showcase your products beautifully on all devices. Top Store also supports essential WooCommerce extensions like Product Compare, Wishlist, and Quick View, making it easier for customers to browse and shop. With translation-ready and RTL support, it's ideal for reaching global audiences. Check Out live Demo – https://wpthemes.themehunk.com/topstore/
-Version: 1.6.5
+Version: 1.6.6
 Requires at least: 5.0
 Tested up to: 6.9
 Requires PHP: 5.5
@@ -856,6 +856,10 @@ position:relative;
 .main-header.mhdrfive #search-box input[type="text"]{
   width: 100%;
 }
+.header-support-icon .callto-icon svg{
+  color: inherit;
+  vertical-align: initial!important;
+}
 .th-search-wrapper{
     position: absolute;
     top: 0;
@@ -1247,7 +1251,8 @@ margin:0;
     background-color: #00badb;
     font-size: 15px;
 }
-.header-support-icon .callto-icon{
+.header-support-icon .callto-icon,
+.header-support-icon .callto-icon:hover{
     color: #fff;
 }
 .header-support-content{
@@ -1856,6 +1861,10 @@ height: auto;
 flex: 12;
     margin-left: 5px;
 }
+.toggle-cat-wrap .cat-icon{
+  display: flex;
+  align-items: center;
+}
 /* Vertical Menu Styles
 ----------------------------------------*/
 .menu-category-list ul[data-menu-style="vertical"] {
@@ -2219,6 +2228,7 @@ padding-left:10px;
     position: relative;
     color: #fff;
     padding: 0px 20px 0px 20px;
+    gap: 9px;
 }
 .header-icon a:hover{
     color:#ff0052;
@@ -2897,10 +2907,12 @@ z-index: 1;
 .thunk-compare .compare-button a{
   width: 100%;
   background-color:transparent;
-  color: #2d2f2d;
   font-size: 0;
   padding:0;
   font-weight:normal;
+}
+.compare-button a{
+  color: #2d2f2d;
 }
 .thunk-compare .compare-button a:hover{
   background-color:transparent;
@@ -6426,23 +6438,18 @@ line-height: 2;
 color: #fff;
 -webkit-border-radius:5px;
 -moz-border-radius:5px;
-border-radius:5px;   
+border-radius:5px; 
+ right: 30px;
+bottom: 152px;  
+background-color:#141415;
+font-size:18px;
 }
-#move-to-top{
-    background-color:#141415;
-    font-size:18px;
-}
-#move-to-top{
-    right: 30px;
-    bottom: 30px;
+#move-to-top svg{
+  vertical-align: initial!important;
 }
 #move-to-top:not(.filling){
     opacity: 0;
     visibility: hidden;
-}
-#move-to-top i{
- font-family: fontawesome;
-  font-weight: normal;
 }
 #move-to-top:hover{
 opacity:1;
@@ -7338,9 +7345,12 @@ text-decoration: underline !important;
     text-align: center;
     font-size: 0.69rem;
     border-radius: 100%;
-    top: -4px;
-    left: -10px;
+    top: -9px;
+    left: 21px;
     z-index: 1;
+}
+.thunk-icon-market .taiowcp-cart-count{
+  position: relative;
 }
 /*All in one woo cart */
 .cart-icon .taiowc-cart-item,.cart-icon .taiowcp-cart-item {
@@ -7381,9 +7391,6 @@ text-decoration: underline !important;
 }
 .wp-block-latest-comments__comment{
   line-height: inherit;
-}
-#move-to-top{
-  bottom: 152px;
 }
 .wp-element-button{
   padding: 5px 12px;
@@ -7613,6 +7620,13 @@ text-decoration: underline !important;
 }
 
 @media screen and (max-width: 1024px){
+  .thunk-wishlist .th-wishlist-icon-svg{
+    width: 16px;
+  }
+    .thunk-product .thw-icon{
+    display: flex;
+    align-items: center;
+  }
   .woocommerce div.product .product_title{
     margin-top: 18px;
   }
@@ -7695,8 +7709,12 @@ background:transparent!important;
 
 
 .thunk-icon-market .cart-count-item {
-    top: -18px;
-    left: -10px;
+    top: -12px;
+    left: -9px;
+}
+.menu-toggle svg path,
+.menu-btn svg path{
+  stroke-width: 1.5px;
 }
 .header-icon a{
   padding: 0 20px;
