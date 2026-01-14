@@ -7336,18 +7336,8 @@ text-decoration: underline !important;
 }
 
 .thunk-icon-market .cart-count-item {
-    position: absolute;
-    background: #111;
-    height: 25px;
-    width: 25px;
-    line-height: 25px;
-    color: #fff;
-    text-align: center;
-    font-size: 0.69rem;
-    border-radius: 100%;
-    top: -9px;
-    left: 21px;
-    z-index: 1;
+    top: -2px;
+    left: 25px;
 }
 .thunk-icon-market .taiowcp-cart-count{
   position: relative;
@@ -7709,8 +7699,8 @@ background:transparent!important;
 
 
 .thunk-icon-market .cart-count-item {
-    top: -12px;
-    left: -9px;
+    left: 14px;
+    top: -7px;
 }
 .menu-toggle svg path,
 .menu-btn svg path{
