@@ -349,26 +349,6 @@ $top_store_menu_open = get_theme_mod('top_store_mobile_menu_open','overcenter');
           <div class="main-header-col3">
             <div class="thunk-icon-market">
               <?php if ( class_exists( 'WooCommerce' ) ){ top_store_header_icon();}?>
-              <?php if(class_exists( 'WooCommerce' )){
-              if(get_theme_mod('top_store_cart_mobile_disable')==true){
-              if (wp_is_mobile()!== true):
-              
-              ?>
-              <div class="cart-icon" >
-
-                  <?php top_store_th_cart(); ?> 
-
-                
-              </div>
-              <?php  endif; }
-              elseif(get_theme_mod('top_store_cart_mobile_disable')==false){?>
-              <div class="cart-icon" >
-
-                 <?php top_store_th_cart(); ?> 
-                
-
-              </div>
-              <?php  } } ?>
             </div>
           </div>
           <?php  } ?>
@@ -458,13 +438,12 @@ $top_store_menu_open = get_theme_mod('top_store_mobile_menu_open','overcenter');
       if (wp_is_mobile()!== true):
       ?>
       <a class="whishlist" href="<?php echo esc_url( top_store_whishlist_url() ); ?>" title="Show Wishlist">
-        <span class="th-whishlist-text tooltip"><?php esc_html_e('Wishlist','top-store');?></span> <span><?php esc_html_e('Wishlist','top-store');?></span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart w-6 h-6 stroke-[1.5px]" aria-hidden="true"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg></a>
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart w-6 h-6 stroke-[1.5px]" aria-hidden="true"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg></a>
         
         <?php endif; }
         elseif($whs_icon == false){?>
         <a class="whishlist" href="<?php echo esc_url( top_store_whishlist_url() ); ?>" title="Show Wishlist">
-          <span class="th-whishlist-text tooltip"><?php esc_html_e('Wishlist','top-store');?></span>
-          <span><?php esc_html_e('Wishlist','top-store');?></span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart w-6 h-6 stroke-[1.5px]" aria-hidden="true"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg></a>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart w-6 h-6 stroke-[1.5px]" aria-hidden="true"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg></a>
           <?php  }
           } 
               if($acc_icon == true){
@@ -474,6 +453,28 @@ $top_store_menu_open = get_theme_mod('top_store_mobile_menu_open','overcenter');
               }elseif($acc_icon == false){
               top_store_account();
               } ?>
+
+             <?php if(class_exists( 'WooCommerce' )){
+              if(get_theme_mod('top_store_cart_mobile_disable')==true){
+              if (wp_is_mobile()!== true):
+              
+              ?>
+              <div class="cart-icon" >
+
+                  <?php top_store_th_cart(); ?> 
+
+                
+              </div>
+              <?php  endif; }
+              elseif(get_theme_mod('top_store_cart_mobile_disable')==false){?>
+              <div class="cart-icon" >
+
+                 <?php top_store_th_cart(); ?> 
+                
+
+              </div>
+              <?php  } } ?>
+
             </div>
             <?php }
           }
