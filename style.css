@@ -2150,15 +2150,13 @@ color:#fff;
     margin: 0;
     display: block;
 }
-.header-icon a{
-  position: relative;
-}
+
 .header-icon a i {
     font-size: 18px;
     line-height: inherit;
     font-weight: bold;
 }
-.header-icon a:after {
+.header-icon > a:after {
     position: absolute;
     top: 0;
     right: 0;
@@ -2214,13 +2212,12 @@ color:#fff;
   display: flex;
 }
 .cart-icon{
-  /*width: 20%;
-  padding-left:20px;*/
+  padding-left: 20px;
 }
 .header-icon .account span{
 padding-left:10px;
 }
-.header-icon a{
+.header-icon > *{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -6204,26 +6201,6 @@ width: auto;
 .sticky-header .taiowcp-content,.sticky-header .taiowc-content{
 padding:0!important;
 }
-
-.sticky-header .taiowcp-cart-item,.sticky-header .taiowc-cart-item{
-padding:0
-}
-
-.sticky-header .cart-count-item {
-    position: absolute;
-    background: #111;
-    height: 28px;
-    width: 28px;
-    line-height:28px;
-    color: #fff;
-    text-align: center;
-    font-size: 0.68rem;
-    border-radius: 100%;
-   top: -18px;
-    right: -18px;
-    left: auto;
-    z-index: 1;
-}
 .sticky-header .taiowcp-cart-close:after,
 .sticky-header .taiowc-cart-close:after {
     font-family: dashicons;
@@ -7333,11 +7310,6 @@ text-decoration: underline !important;
 .cart-plugin-active-msg{
    color: #eee;
     margin-left: 1rem;
-}
-
-.thunk-icon-market .cart-count-item {
-    top: -2px;
-    left: 25px;
 }
 .thunk-icon-market .taiowcp-cart-count{
   position: relative;
