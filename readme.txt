@@ -24,7 +24,9 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 == Changelog ==
 
 = Version 1.6.7 =
-* Update : style updated.
+* Update: Svg Icons replaced.
+* Update: Style updated & cart icon issue resolved.
+* Update: Header icon structure updated and style modified.
 
 = Version 1.6.6 =
 * Update : Icons replaced into svg.
