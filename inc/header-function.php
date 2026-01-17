@@ -104,11 +104,7 @@ if ( has_nav_menu('top-store-above-menu' ) ){?>
   <div class="menu-toggle">
     <button type="button" class="menu-btn" id="menu-btn-abv">
     <div class="btn">
-      <svg width="1.44em" height="1em" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: inline-block; vertical-align: middle;">
-  <path d="M4 4.5H22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
-  <path d="M4 9H22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
-  <path d="M4 13.5H22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
-</svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-text-align-justify w-5 h-5 text-gray-500 group-hover:text-gray-700" aria-hidden="true"><path d="M3 5h18"></path><path d="M3 12h18"></path><path d="M3 19h18"></path></svg>
     </div>
     </button>
   </div>
@@ -155,11 +151,7 @@ if ( has_nav_menu('top-store-above-menu' ) ){?>
   <div class="menu-toggle">
     <button type="button" class="menu-btn" id="menu-btn-abv">
     <div class="btn">
-     <svg width="1.44em" height="1em" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: inline-block; vertical-align: middle;">
-  <path d="M4 4.5H22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
-  <path d="M4 9H22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
-  <path d="M4 13.5H22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
-</svg>
+     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-text-align-justify w-5 h-5 text-gray-500 group-hover:text-gray-700" aria-hidden="true"><path d="M3 5h18"></path><path d="M3 12h18"></path><path d="M3 19h18"></path></svg>
     </div>
     </button>
   </div>
@@ -207,11 +199,7 @@ if ( has_nav_menu('top-store-above-menu' ) ){?>
   <div class="menu-toggle">
     <button type="button" class="menu-btn" id="menu-btn-abv">
     <div class="btn">
-      <svg width="1.44em" height="1em" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: inline-block; vertical-align: middle;">
-  <path d="M4 4.5H22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
-  <path d="M4 9H22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
-  <path d="M4 13.5H22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
-</svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-text-align-justify w-5 h-5 text-gray-500 group-hover:text-gray-700" aria-hidden="true"><path d="M3 5h18"></path><path d="M3 12h18"></path><path d="M3 19h18"></path></svg>
     </div>
     </button>
   </div>
@@ -263,10 +251,10 @@ $top_store_menu_open = get_theme_mod('top_store_mobile_menu_open','overcenter');
           <div class="toggle-cat-wrap">
             <p class="cat-toggle" tabindex="0">
               <span class="cat-icon">
-               <svg width="1.44em" height="1em" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: inline-block; vertical-align: middle;">
-  <path d="M4 4.5H22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M4 9H22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M4 13.5H22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg" style="display: inline-block; vertical-align: middle;">
+  <path d="M5 7h14"></path>
+  <path d="M5 12h9"></path>
+  <path d="M5 17h11"></path>
 </svg>
               </span>
               <span class="toggle-title"><?php _e('Category','top-store'); ?></span>
@@ -281,11 +269,7 @@ $top_store_menu_open = get_theme_mod('top_store_mobile_menu_open','overcenter');
             <div class="menu-toggle">
               <button type="button" class="menu-btn" id="menu-btn">
               <div class="btn">
-                <svg width="1.44em" height="1em" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: inline-block; vertical-align: middle;">
-  <path d="M4 4.5H22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
-  <path d="M4 9H22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
-  <path d="M4 13.5H22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
-</svg>
+       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-text-align-justify w-5 h-5 text-gray-500 group-hover:text-gray-700" aria-hidden="true"><path d="M3 5h18"></path><path d="M3 12h18"></path><path d="M3 19h18"></path></svg>
               </div>
               <span class="icon-text"><?php _e('Menu','top-store'); ?></span>
               </button>
@@ -518,11 +502,7 @@ $top_store_menu_open = get_theme_mod('top_store_mobile_menu_open','overcenter');
                       <div class="menu-toggle">
                         <button type="button" class="menu-btn" id="menu-btn-stk">
                         <div class="btn">
-                          <svg width="1.44em" height="1em" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: inline-block; vertical-align: middle;">
-  <path d="M4 4.5H22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
-  <path d="M4 9H22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
-  <path d="M4 13.5H22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
-</svg>
+             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-text-align-justify w-5 h-5 text-gray-500 group-hover:text-gray-700" aria-hidden="true"><path d="M3 5h18"></path><path d="M3 12h18"></path><path d="M3 19h18"></path></svg>
                         </div>
                         </button>
                       </div>
