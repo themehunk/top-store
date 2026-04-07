@@ -7517,6 +7517,10 @@ text-decoration: underline !important;
    header .taiowcp-wrap{
     margin-left: -9px;
    }
+   .woocommerce div.product form.cart.variations_form{
+  flex-direction: column;
+  align-items: anchor-center;
+}
 @media screen and (max-width: 1300px){
   .header-icon span{
     font-size: 8px;
@@ -7531,10 +7535,6 @@ text-decoration: underline !important;
   .woocommerce .entry-summary .th-wishlist-single a {
     margin-left: 0;
   }*/
-}
-.woocommerce div.product form.cart.variations_form{
-  flex-direction: column;
-  align-items: anchor-center;
 }
 @media screen and (max-width: 1200px){
 /*hedaer*/
