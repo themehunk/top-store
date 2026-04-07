@@ -25,6 +25,7 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 
 = Version 1.6.8 =
 * Update: Style Updated.
+* Update: .woocommerce div.product form.cart.variations_form css added.
 
 = Version 1.6.7 =
 * Update: Svg Icons replaced.
