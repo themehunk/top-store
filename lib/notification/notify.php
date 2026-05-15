@@ -191,7 +191,7 @@ add_action('wp_ajax_top_store_install_and_activate_callback', 'top_store_install
 // Callback function to install and activate plugin
 function top_store_install_and_activate_callback() {
 
-    if ( ! current_user_can( 'administrator' ) ) {
+     if ( ! current_user_can( 'manage_options' ) ) {
 
         wp_die( - 1, 403 );
         

@@ -29,6 +29,7 @@ $data = apply_filters(
                     'th_option_localize_vars',
                     array(
                         'oneClickDemo' =>esc_url( admin_url( 'themes.php?page=themehunk-site-library' )),
+                        'nonce'   => wp_create_nonce( 'th_admin_nonce' ),
 
                         )
                 );
@@ -61,6 +62,21 @@ function tab_page() {
 // Home Page Setup
 
 function default_home() {
+
+     // Verify nonce.
+    check_ajax_referer( 'th_admin_nonce', 'nonce' );
+
+    // Capability check.
+    if ( ! current_user_can( 'edit_theme_options' ) ) {
+
+        wp_send_json_error(
+            array(
+                'message' => esc_html__( 'You are not allowed to perform this action.', 'top-store' ),
+            ),
+            403
+        );
+    }
+
 $pages = get_pages(array(
     'meta_key' => '_wp_page_template',
     'meta_value' => 'frontpage.php'
@@ -104,6 +120,10 @@ function _check_homepage_setup(){
           * Setup Homepage
           */
         public function th_activeplugin(){
+
+             // Verify nonce.
+    check_ajax_referer( 'th_admin_nonce', 'nonce' );
+
       if ( ! current_user_can( 'install_plugins' ) || ! isset( $_POST['init'] ) || ! $_POST['init'] ) {
         wp_send_json_error(
           array(
@@ -113,7 +133,15 @@ function _check_homepage_setup(){
         );
       }
 
-      $plugin_init = ( isset( $_POST['init'] ) ) ? esc_attr( $_POST['init'] ) : '';
+      // $plugin_init = ( isset( $_POST['init'] ) ) ? esc_attr( $_POST['init'] ) : '';
+
+      $plugin_init = isset( $_POST['init'] )
+                ? plugin_basename(
+                    sanitize_text_field(
+                        wp_unslash( $_POST['init'] )
+                    )
+                )
+                : '';
 
       $activate = activate_plugin( $plugin_init);
 
