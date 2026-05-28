@@ -121,18 +121,30 @@ function _check_homepage_setup(){
           */
         public function th_activeplugin(){
 
+        //caching/plugins/extra whitespace/old localized objec that why we are not using check_ajax_referer( 'th_admin_nonce', 'nonce' );
+            
              // Verify nonce.
-    check_ajax_referer( 'th_admin_nonce', 'nonce' );
+      $nonce = isset($_POST['nonce'])
+        ? sanitize_text_field( wp_unslash($_POST['nonce']) )
+        : '';
 
-      if ( ! current_user_can( 'install_plugins' ) || ! isset( $_POST['init'] ) || ! $_POST['init'] ) {
-        wp_send_json_error(
-          array(
+    if ( ! wp_verify_nonce( $nonce, 'th_admin_nonce' ) ) {
+
+        wp_send_json_error([
             'success' => false,
-            'message' => __( 'No plugin specified', 'top-store' ),
-          )
-        );
-      }
+            'message' => 'Security check failed'
+        ]);
 
+    }
+
+    if ( ! current_user_can( 'install_plugins' ) ) {
+
+        wp_send_json_error([
+            'success' => false,
+            'message' => 'Permission denied'
+        ]);
+
+    }
       // $plugin_init = ( isset( $_POST['init'] ) ) ? esc_attr( $_POST['init'] ) : '';
 
       $plugin_init = isset( $_POST['init'] )
@@ -142,6 +154,8 @@ function _check_homepage_setup(){
                     )
                 )
                 : '';
+
+      
 
       $activate = activate_plugin( $plugin_init);
 
