@@ -25,7 +25,7 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 
 = Version 1.7.1 =
 * Update: variation product wishlist design break.
-* Update: store one and vayu block not install or active plugin topstore option, 
+* Update: Resolved Store One and Vayu Block plugin install/activation issue affecting TopStore options visibility
 * Update: wordpress 7.0 compatibly check
 
 = Version 1.7.0 =

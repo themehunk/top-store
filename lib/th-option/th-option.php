@@ -6,7 +6,7 @@ add_action( 'admin_enqueue_scripts', array($this,'admin_scripts'));
 add_action('admin_menu', array($this,'menu_tab'));
 
     // AJAX.
-    add_action( 'wp_ajax_th_activeplugin',array($this,'th_activeplugin') );
+    add_action( 'wp_ajax_top_store_activeplugin',array($this,'th_activeplugin') );
     add_action( 'wp_ajax_default_home',array($this, 'default_home') );
     
 }
@@ -120,7 +120,6 @@ function _check_homepage_setup(){
           * Setup Homepage
           */
         public function th_activeplugin(){
-
         //caching/plugins/extra whitespace/old localized objec that why we are not using check_ajax_referer( 'th_admin_nonce', 'nonce' );
             
              // Verify nonce.
