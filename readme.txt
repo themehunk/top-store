@@ -2,7 +2,7 @@
 Contributors: ThemeHunk
 Tags: wide-blocks, block-patterns, block-styles, editor-style, e-commerce, blog, block-patterns, grid-layout, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-logo, custom-menu, add_editor_style, featured-image-header, featured-images, footer-widgets, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready.
 Requires at least: WordPress 5.5
-Requires PHP: 5.5
+Requires PHP: 7.0
 Tested up to: 7.0
 Stable tag: 1.7.1
 License: GPLv3 or later
