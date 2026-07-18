@@ -262,7 +262,7 @@ if(class_exists('th_product_compare') || class_exists('Tpcp_product_compare')){
     global $product;
     $pid = $product->get_id();
     echo '<div class="thunk-compare"><span class="compare-list"><div class="woocommerce product compare-button">
-          <a class="th-product-compare-btn compare" data-th-product-id="'.$pid.'"></a>
+          <a class="th-product-compare-btn compare" data-th-product-id="'.$pid.'">⇆</a>
           </div></span></div>';
 
            }
