@@ -7483,8 +7483,12 @@ text-decoration: underline !important;
   font-size: inherit!important;
 }
 .thunk-wishlist .th-wishlist-icon-svg{
-  width: 16px;
+  width: 12px;
+  height: 12px;
   display: flex;
+}
+.wp-theme-top-store li .thunk-compare .compare-button a{
+  font-size: 12px;
 }
 .header-icon .tooltip{
   position: absolute;
