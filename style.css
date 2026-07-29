@@ -4,7 +4,7 @@ Theme URI: https://themehunk.com/product/top-store/
 Author: ThemeHunk
 Author URI: https://www.themehunk.com
 Description: Top Store is a sleek, powerful, and fully responsive WooCommerce WordPress theme crafted to help you build stunning online stores with ease. Designed for speed and flexibility, Top Store offers seamless integration with WooCommerce and popular page builders like Elementor, Gutenberg, and Beaver Builder, enabling you to create a professional eCommerce website without any coding.Built with SEO best practices, Top Store ensures your products rank higher on search engines and attract more customers. The theme features customizable layouts, multiple homepage designs, advanced product filters, and AJAX-powered shopping cart for a smooth user experience without page reloads. Whether you're selling electronics, fashion, accessories, cosmetics, home décor, or any niche products, Top Store adapts perfectly with retina-ready design and mobile-first responsiveness to showcase your products beautifully on all devices. Top Store also supports essential WooCommerce extensions like Product Compare, Wishlist, and Quick View, making it easier for customers to browse and shop. With translation-ready and RTL support, it's ideal for reaching global audiences. Check Out live Demo – https://wpthemes.themehunk.com/topstore/
-Version: 1.7.2
+Version: 1.7.3
 Requires at least: 5.0
 Tested up to: 7.0
 Requires PHP: 7.0
@@ -7483,8 +7483,12 @@ text-decoration: underline !important;
   font-size: inherit!important;
 }
 .thunk-wishlist .th-wishlist-icon-svg{
-  width: 18px;
+  width: 12px;
+  height: 12px;
   display: flex;
+}
+.wp-theme-top-store li .thunk-compare .compare-button a{
+  font-size: 12px;
 }
 .header-icon .tooltip{
   position: absolute;
@@ -7519,10 +7523,31 @@ text-decoration: underline !important;
    header .taiowcp-wrap{
     margin-left: -9px;
    }
-   .woocommerce div.product form.cart.variations_form{
-  flex-direction: column;
-  align-items: anchor-center;
-}
+ .summary .thunk-compare .th-product-compare-btn::before{
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 100%;
+        transform: translateX(-50%) translateY(8px);
+        border-width: 6px;
+        border-style: solid;
+        border-color: #1f2937 transparent transparent transparent;
+        opacity: 0;
+        visibility: hidden;
+        transition: .25s ease;
+        pointer-events: none;
+        z-index: 9999;
+    }
+
+    /* Hover */
+    .summary .thunk-compare .th-product-compare-btn:hover::before{
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(0);
+    }
+    .wp-theme-top-store .thunk-compare .compare-button a{
+      margin: 0;
+    }
 @media screen and (max-width: 1300px){
   .header-icon span{
     font-size: 8px;
@@ -7602,8 +7627,9 @@ text-decoration: underline !important;
 }
 
 @media screen and (max-width: 1024px){
-  .thunk-wishlist .th-wishlist-icon-svg{
-    width: 16px;
+  .thunk-wishlist .th-wishlist-icon-svg,
+  .thw-add-to-wishlist-button-wrap.th-wishlist-single .th-wishlist-icon-svg{
+    width: 14px;
   }
     .thunk-product .thw-icon{
     display: flex;
